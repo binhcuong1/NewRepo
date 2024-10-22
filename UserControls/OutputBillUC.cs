@@ -24,8 +24,8 @@ namespace QuanLyCuaHang.UserControls
             viewModel = new BillViewModel();
             dbContext = new ConveStoreDBContext();
 
-            cbbLoaiSP.SelectedItem = null;
-            cbbSanPham.SelectedItem = null;
+            cmbProductType.SelectedItem = null;
+            cmbProduct.SelectedItem = null;
 
             dvgXuatHoaDon.RowHeadersVisible = false;
             dvgXuatHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -42,43 +42,43 @@ namespace QuanLyCuaHang.UserControls
         {
             var loaiSanPhamList = dbContext.LOAISANPHAMs.ToList();
 
-            cbbLoaiSP.DataSource = loaiSanPhamList;
-            cbbLoaiSP.DisplayMember = "TenTheLoai";
-            cbbLoaiSP.ValueMember = "MaTheLoai";
+            cmbProductType.DataSource = loaiSanPhamList;
+            cmbProductType.DisplayMember = "TenTheLoai";
+            cmbProductType.ValueMember = "MaTheLoai";
         }
 
         private void LoadProductGatetoryToComboBox()
         {
             var loaiSanPhamList = dbContext.LOAISANPHAMs.ToList();
 
-            cbbLoaiSP.DataSource = loaiSanPhamList;
-            cbbLoaiSP.DisplayMember = "TenTheLoai";
-            cbbLoaiSP.ValueMember = "MaTheLoai";
+            cmbProductType.DataSource = loaiSanPhamList;
+            cmbProductType.DisplayMember = "TenTheLoai";
+            cmbProductType.ValueMember = "MaTheLoai";
         }
 
-        private void cbbLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbLoaiSP.SelectedItem == null || cbbLoaiSP.SelectedValue == null)
+            if (cmbProductType.SelectedItem == null || cmbProductType.SelectedValue == null)
             {
                 return;
             }
 
-            var selectedMaTheLoai = cbbLoaiSP.SelectedValue.ToString();
+            var selectedMaTheLoai = cmbProductType.SelectedValue.ToString();
 
             var sanPhamList = dbContext.SANPHAMs
                 .Where(sp => sp.MaTheLoai == selectedMaTheLoai)
                 .ToList();
 
-            cbbSanPham.DataSource = sanPhamList;
-            cbbSanPham.DisplayMember = "TenSP";
-            cbbSanPham.ValueMember = "MaSP";
+            cmbProduct.DataSource = sanPhamList;
+            cmbProduct.DisplayMember = "TenSP";
+            cmbProduct.ValueMember = "MaSP";
 
-            cbbSanPham.SelectedItem = null;
+            cmbProduct.SelectedItem = null;
         }
 
-        private void bttThemMon_Click(object sender, EventArgs e)
+        private void bttAddProduct_Click(object sender, EventArgs e)
         {
-            var selectedSanPham = cbbSanPham.SelectedItem as SANPHAM;
+            var selectedSanPham = cmbProduct.SelectedItem as SANPHAM;
             int soLuong = (int)numericUpDownSoLuong.Value;
 
             if (selectedSanPham != null)
@@ -252,7 +252,7 @@ namespace QuanLyCuaHang.UserControls
             lblTongTien.Text = tongTien.ToString("N0") + " VND";
         }
 
-        private void bttThanhToan_Click(object sender, EventArgs e)
+        private void bttPay_Click(object sender, EventArgs e)
         {
             if (billList.Any())
             {

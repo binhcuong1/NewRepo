@@ -35,7 +35,6 @@ namespace QuanLyCuaHang.UserControls
         {
 
         }
-
         public void BindBillToGrid()
         {
             var hoaDonList = viewModel.LoadHoaDon();
@@ -50,13 +49,11 @@ namespace QuanLyCuaHang.UserControls
             dvgListHoaDon.Columns["TenKH"].Visible = false;
             dvgListHoaDon.Columns["Sdt"].Visible = false;
         }
-
         private void dateTimePickerNgayLap_ValueChanged(object sender, EventArgs e)
         {
             dateTimePickerNgayLap.CustomFormat = "dd/MM/yyyy";
             selectedDate = dateTimePickerNgayLap.Value;
         }
-
         private void dvgListHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -85,7 +82,6 @@ namespace QuanLyCuaHang.UserControls
                 }
             }
         }
-
         private string GetCustomerNameByMaKH(string maKH)
         {
             using (var dbContext = new ConveStoreDBContext())
@@ -96,17 +92,16 @@ namespace QuanLyCuaHang.UserControls
                 return customerName;
             }
         }
-
         private void ResetSearchFields()
         {
-            txtSoHD.Clear();
+            txtBillID.Clear();
             txtCustomerPhoneNumer.Clear();
             dateTimePickerNgayLap.CustomFormat = " ";
             dateTimePickerNgayLap.Format = DateTimePickerFormat.Custom;
         }
-        private void bttFind_Click(object sender, EventArgs e)
+        private void bttSearch_Click(object sender, EventArgs e)
         {
-            string maHD = txtSoHD.Text.Trim();
+            string maHD = txtBillID.Text.Trim();
             string customerPhoneNumber = txtCustomerPhoneNumer.Text.Trim();
             DateTime? ngayLap = dateTimePickerNgayLap.Value != null && dateTimePickerNgayLap.CustomFormat != " "
                                 ? dateTimePickerNgayLap.Value.Date
@@ -159,5 +154,6 @@ namespace QuanLyCuaHang.UserControls
             ResetSearchFields();
             BindBillToGrid();
         }
+   
     }
 }
