@@ -116,3 +116,31 @@ C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.csproj.
 C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCu.9E0F4810.Up2Date
 C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.exe
 C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.pdb
+D:\source\repos\TestClone(2)\bin\Debug\QuanLyCuaHang.exe.config
+D:\source\repos\TestClone(2)\bin\Debug\QuanLyCuaHang.exe
+D:\source\repos\TestClone(2)\bin\Debug\QuanLyCuaHang.pdb
+D:\source\repos\TestClone(2)\bin\Debug\EntityFramework.dll
+D:\source\repos\TestClone(2)\bin\Debug\EntityFramework.SqlServer.dll
+D:\source\repos\TestClone(2)\bin\Debug\EntityFramework.xml
+D:\source\repos\TestClone(2)\bin\Debug\EntityFramework.SqlServer.xml
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.AddBillUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.SaleForm.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.TestForm.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.AddProductUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.BillDetailForm.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.HomePageForm.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.LoginForm.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.ProductGatetoryForm.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.UserControls.CustomerInfoUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.ProductCategoryUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.UserControls.BillListUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.UserControls.OutputBillUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.UserControls.PurchaseHistoryUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.UserControls.ShiftUC.resources
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.exe
+D:\source\repos\TestClone(2)\obj\Debug\QuanLyCuaHang.pdb
