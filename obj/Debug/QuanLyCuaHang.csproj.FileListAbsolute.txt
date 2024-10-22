@@ -1,0 +1,118 @@
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.exe.config
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.exe
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.pdb
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Login.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.exe
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
+C:\Users\Quoc Dat\OneDrive\Máy tính\Chế Quốc Đạt\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.HomePage.resources
+D:\source\repos\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.exe.config
+D:\source\repos\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.exe
+D:\source\repos\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.HomePage.resources
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Login.resources
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.exe
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QuanLyCuaHang\bin\Debug\EntityFramework.dll
+D:\source\repos\QuanLyCuaHang\bin\Debug\EntityFramework.SqlServer.dll
+D:\source\repos\QuanLyCuaHang\bin\Debug\EntityFramework.xml
+D:\source\repos\QuanLyCuaHang\bin\Debug\EntityFramework.SqlServer.xml
+D:\source\repos\QuanLyCuaHang\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\QuanLyCuaHang.exe.config
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\QuanLyCuaHang.exe
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\EntityFramework.dll
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\EntityFramework.SqlServer.dll
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\EntityFramework.xml
+D:\source\repos\QLCuaHangTienLoi(DoAn)\bin\Debug\EntityFramework.SqlServer.xml
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.HomePage.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.Login.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.exe
+D:\source\repos\QLCuaHangTienLoi(DoAn)\obj\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\QuanLyCuaHang.exe.config
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\QuanLyCuaHang.exe
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\EntityFramework.dll
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\EntityFramework.SqlServer.dll
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\EntityFramework.xml
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\bin\Debug\EntityFramework.SqlServer.xml
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.exe
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.UCProductCategory.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.HomePageForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.LoginForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.TestForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.ProductGatetoryForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Copy\obj\Debug\QuanLyCuaHang.AddProductUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\QuanLyCuaHang.exe.config
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\QuanLyCuaHang.exe
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\EntityFramework.dll
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\EntityFramework.SqlServer.dll
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\EntityFramework.xml
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\bin\Debug\EntityFramework.SqlServer.xml
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.AddProductUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.HomePageForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.LoginForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.ProductGatetoryForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.exe
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.pdb
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.UserControls.ShiftUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.UserControls.OutputBillUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.UserControls.BillListUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.BillDetailForm.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.AddBillUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.ProductCategoryUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.UserControls.CustomerInfoUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.UserControls.PurchaseHistoryUC.resources
+D:\source\repos\QLCuaHangTienLoi(DoAn) - Dang Lam\obj\Debug\QuanLyCuaHang.TestForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\QuanLyCuaHang.exe.config
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\QuanLyCuaHang.exe
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\QuanLyCuaHang.pdb
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\EntityFramework.dll
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\EntityFramework.xml
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.AddBillUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.SaleForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.TestForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.AddProductUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.BillDetailForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.HomePageForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.LoginForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.ProductGatetoryForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.UserControls.CustomerInfoUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.ProductCategoryUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.UserControls.BillListUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.UserControls.OutputBillUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.UserControls.PurchaseHistoryUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.UserControls.ShiftUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.exe
+C:\Users\Quoc Dat\OneDrive\Máy tính\New folder\obj\Debug\QuanLyCuaHang.pdb

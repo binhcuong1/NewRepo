@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2ACB6F8-96F4-4B75-B589-779489F24A10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyCuaHang</RootNamespace>
+    <AssemblyName>QuanLyCuaHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBillUC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBillUC.Designer.cs">
+      <DependentUpon>AddBillUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleForm.Designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ultilities\Services.cs" />
+    <Compile Include="UserControls\AddProductUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddProductUC.Designer.cs">
+      <DependentUpon>AddProductUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillDetailForm.Designer.cs">
+      <DependentUpon>BillDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePageForm.Designer.cs">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LoginDBContext.cs" />
+    <Compile Include="ProductGatetoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductGatetoryForm.Designer.cs">
+      <DependentUpon>ProductGatetoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\CALAMVIEC.cs" />
+    <Compile Include="Model\CHITIETCALAMVIEC.cs" />
+    <Compile Include="Model\CHITIETDONDATHANG.cs" />
+    <Compile Include="Model\CHITIETHOADON.cs" />
+    <Compile Include="Model\CHITIETTHANHTOAN.cs" />
+    <Compile Include="Model\CHITITETKHUYENMAI.cs" />
+    <Compile Include="Model\CHUCVUNHANVIEN.cs" />
+    <Compile Include="Model\ConveStoreDBContext.cs" />
+    <Compile Include="Model\DONDATHANG.cs" />
+    <Compile Include="Model\HOADON.cs" />
+    <Compile Include="Model\KHACHHANG.cs" />
+    <Compile Include="Model\KHUYENMAI.cs" />
+    <Compile Include="Model\LOAICALAMVIEC.cs" />
+    <Compile Include="Model\LOAISANPHAM.cs" />
+    <Compile Include="Model\NHACUNGCAP.cs" />
+    <Compile Include="Model\NHANVIEN.cs" />
+    <Compile Include="Model\PHANHOIKHACHHANG.cs" />
+    <Compile Include="Model\PHUONGTHUCTHANHTOAN.cs" />
+    <Compile Include="Model\SANPHAM.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\TAIKHOAN.cs" />
+    <Compile Include="Model\TONKHO.cs" />
+    <Compile Include="UserControls\CustomerInfoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomerInfoUC.Designer.cs">
+      <DependentUpon>CustomerInfoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductCategoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductCategoryUC.Designer.cs">
+      <DependentUpon>ProductCategoryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ultilities\UserSession.cs" />
+    <Compile Include="UserControls\BillListUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BillListUC.Designer.cs">
+      <DependentUpon>BillListUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OutputBillUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OutputBillUC.Designer.cs">
+      <DependentUpon>OutputBillUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PurchaseHistoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PurchaseHistoryUC.Designer.cs">
+      <DependentUpon>PurchaseHistoryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ShiftUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ShiftUC.Designer.cs">
+      <DependentUpon>ShiftUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\BillViewModel.cs" />
+    <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\GatetoryViewModel.cs" />
+    <Compile Include="ViewModel\InvoiceDetailViewModel.cs" />
+    <Compile Include="ViewModel\ProductViewModel.cs" />
+    <Compile Include="ViewModel\PurchaseHistoryViewModel.cs" />
+    <Compile Include="ViewModel\SaleViewModel.cs" />
+    <Compile Include="ViewModel\ShiftViewModel.cs" />
+    <Compile Include="ViewModel\SupplierViewModel.cs" />
+    <EmbeddedResource Include="AddBillUC.resx">
+      <DependentUpon>AddBillUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleForm.resx">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AddProductUC.resx">
+      <DependentUpon>AddProductUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillDetailForm.resx">
+      <DependentUpon>BillDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductGatetoryForm.resx">
+      <DependentUpon>ProductGatetoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\CustomerInfoUC.resx">
+      <DependentUpon>CustomerInfoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductCategoryUC.resx">
+      <DependentUpon>ProductCategoryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BillListUC.resx">
+      <DependentUpon>BillListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OutputBillUC.resx">
+      <DependentUpon>OutputBillUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PurchaseHistoryUC.resx">
+      <DependentUpon>PurchaseHistoryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ShiftUC.resx">
+      <DependentUpon>ShiftUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_1728303181186.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a59c512-cc67-439c-a907-6015ad2f1c13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a59c512-cc67-439c-a907-6015ad2f1c131.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b722752541.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29 %281%29 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29 %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29 %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b72275254 %281%29 %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b722752542.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_1728307544794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283075447941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hình nền đt đẹp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283075447942.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a59c512-cc67-439c-a907-6015ad2f1c132.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5899798135097_9d779a601d1b58a807719b6b722752543.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283031811861.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283031811862.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c84fb740471d58ba9597ace28969d490.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a59c512-cc67-439c-a907-6015ad2f1c133.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
