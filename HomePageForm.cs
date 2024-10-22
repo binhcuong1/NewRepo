@@ -151,4 +151,5 @@ namespace QuanLyCuaHang
             saleForm.ShowDialog();
         }
     }
+    //datdaden
 }
