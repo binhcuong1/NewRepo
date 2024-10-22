@@ -39,6 +39,7 @@ namespace QuanLyCuaHang
         private void ProductGatetoryForm_Load(object sender, EventArgs e)
         {
             // Đưa panel về sau
+            // Có thay đổi chỗ này
             pnlAddProduct.Visible = false;
 
             BindToComboBox();
