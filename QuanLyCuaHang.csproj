@@ -79,6 +79,12 @@
     <Compile Include="SaleForm.Designer.cs">
       <DependentUpon>SaleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,7 @@
     <Compile Include="ViewModel\PurchaseHistoryViewModel.cs" />
     <Compile Include="ViewModel\SaleViewModel.cs" />
     <Compile Include="ViewModel\ShiftViewModel.cs" />
+    <Compile Include="ViewModel\StaffViewModel.cs" />
     <Compile Include="ViewModel\SupplierViewModel.cs" />
     <EmbeddedResource Include="AddBillForm.resx">
       <DependentUpon>AddBillForm.cs</DependentUpon>
@@ -186,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>

@@ -200,3 +200,4 @@ D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCu.9E0F4810.Up2Date
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.exe
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.pdb
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.PurchaseHistoryForm.resources
+D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.StaffForm.resources

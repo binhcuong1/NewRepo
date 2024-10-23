@@ -19,6 +19,9 @@ namespace QuanLyCuaHang
         public HomePageForm()
         {
             InitializeComponent();
+
+            panel1.SendToBack();
+            pnlContainBill.SendToBack();
         }
 
         
