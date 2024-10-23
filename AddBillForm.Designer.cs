@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCuaHang
 {
-    partial class AddBillUC
+    partial class AddBillForm
     {
         /// <summary>
         /// Required designer variable.

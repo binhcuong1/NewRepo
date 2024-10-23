@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang
 {
-    public partial class AddBillUC : Form
+    public partial class AddBillForm : Form
     {
-        public AddBillUC()
+        public AddBillForm()
         {
             InitializeComponent();
         }
