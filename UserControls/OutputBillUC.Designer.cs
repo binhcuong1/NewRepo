@@ -39,10 +39,10 @@
             this.bttPay = new System.Windows.Forms.Button();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvgXuatHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(148, 12);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(173, 12);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(196, 22);
             this.txtPhoneNumber.TabIndex = 9;
@@ -132,15 +132,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Tên Khách Hàng";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -150,21 +141,14 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "SĐT Khách Hàng";
             // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Location = new System.Drawing.Point(148, 58);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(196, 22);
-            this.txtCustomerName.TabIndex = 9;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtCustomerName);
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
             this.groupBox1.Controls.Add(this.bttAddProduct);
             this.groupBox1.Controls.Add(this.numericUpDownSoLuong);
+            this.groupBox1.Controls.Add(this.cmbPaymentMethod);
             this.groupBox1.Controls.Add(this.cmbProduct);
             this.groupBox1.Controls.Add(this.cmbProductType);
             this.groupBox1.Location = new System.Drawing.Point(39, 404);
@@ -172,6 +156,23 @@
             this.groupBox1.Size = new System.Drawing.Size(706, 144);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Hình thức thanh toán";
+            // 
+            // cmbPaymentMethod
+            // 
+            this.cmbPaymentMethod.FormattingEnabled = true;
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(173, 63);
+            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
+            this.cmbPaymentMethod.Size = new System.Drawing.Size(196, 24);
+            this.cmbPaymentMethod.TabIndex = 4;
             // 
             // OutputBillUC
             // 
@@ -181,7 +182,7 @@
             this.Controls.Add(this.dvgXuatHoaDon);
             this.Controls.Add(this.bttPay);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OutputBillUC";
             this.Size = new System.Drawing.Size(1188, 581);
             this.Load += new System.EventHandler(this.OutputBillUC_Load);
@@ -205,9 +206,9 @@
         private System.Windows.Forms.Button bttPay;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbPaymentMethod;
     }
 }
