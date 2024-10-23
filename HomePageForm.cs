@@ -36,7 +36,7 @@ namespace QuanLyCuaHang
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            
+             // aaaaaaaaaaaaa
         }
 
         #region Clicks Of Product

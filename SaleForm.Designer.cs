@@ -49,21 +49,19 @@
             // 
             // txtSaleName
             // 
-            this.txtSaleName.Location = new System.Drawing.Point(312, 534);
-            this.txtSaleName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSaleName.Location = new System.Drawing.Point(208, 342);
             this.txtSaleName.Name = "txtSaleName";
-            this.txtSaleName.Size = new System.Drawing.Size(205, 31);
+            this.txtSaleName.Size = new System.Drawing.Size(138, 22);
             this.txtSaleName.TabIndex = 17;
             // 
             // dgvSale
             // 
             this.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSale.Location = new System.Drawing.Point(138, 150);
-            this.dgvSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvSale.Location = new System.Drawing.Point(92, 96);
             this.dgvSale.Name = "dgvSale";
             this.dgvSale.RowHeadersWidth = 51;
             this.dgvSale.RowTemplate.Height = 24;
-            this.dgvSale.Size = new System.Drawing.Size(1090, 345);
+            this.dgvSale.Size = new System.Drawing.Size(727, 221);
             this.dgvSale.TabIndex = 15;
             // 
             // entityCommand1
@@ -78,10 +76,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(144, 62);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(96, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(361, 69);
+            this.label6.Size = new System.Drawing.Size(226, 42);
             this.label6.TabIndex = 29;
             this.label6.Text = "Khuyến Mãi ";
             // 
@@ -90,83 +87,74 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(134, 543);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(89, 348);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 25);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Khuyến Mãi";
             // 
             // btnSearchSale
             // 
-            this.btnSearchSale.Location = new System.Drawing.Point(726, 520);
-            this.btnSearchSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearchSale.Location = new System.Drawing.Point(484, 333);
             this.btnSearchSale.Name = "btnSearchSale";
-            this.btnSearchSale.Size = new System.Drawing.Size(52, 53);
+            this.btnSearchSale.Size = new System.Drawing.Size(35, 34);
             this.btnSearchSale.TabIndex = 27;
             this.btnSearchSale.UseVisualStyleBackColor = true;
             // 
             // btnDeleteSale
             // 
-            this.btnDeleteSale.Location = new System.Drawing.Point(642, 519);
-            this.btnDeleteSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDeleteSale.Location = new System.Drawing.Point(428, 332);
             this.btnDeleteSale.Name = "btnDeleteSale";
-            this.btnDeleteSale.Size = new System.Drawing.Size(58, 53);
+            this.btnDeleteSale.Size = new System.Drawing.Size(39, 34);
             this.btnDeleteSale.TabIndex = 26;
             this.btnDeleteSale.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(878, 708);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker2.Location = new System.Drawing.Point(585, 453);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(298, 31);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 25;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(312, 700);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(208, 448);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(262, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(176, 22);
             this.dateTimePicker1.TabIndex = 24;
             // 
             // txtSalePrice
             // 
-            this.txtSalePrice.Location = new System.Drawing.Point(878, 615);
-            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSalePrice.Location = new System.Drawing.Point(585, 394);
             this.txtSalePrice.Name = "txtSalePrice";
-            this.txtSalePrice.Size = new System.Drawing.Size(224, 31);
+            this.txtSalePrice.Size = new System.Drawing.Size(151, 22);
             this.txtSalePrice.TabIndex = 23;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(660, 620);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(440, 397);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 25);
+            this.label4.Size = new System.Drawing.Size(128, 16);
             this.label4.TabIndex = 22;
             this.label4.Text = "Mức Giá Khuyến Mãi";
             // 
             // cmbProductID
             // 
             this.cmbProductID.FormattingEnabled = true;
-            this.cmbProductID.Location = new System.Drawing.Point(312, 608);
-            this.cmbProductID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbProductID.Location = new System.Drawing.Point(208, 389);
             this.cmbProductID.Name = "cmbProductID";
-            this.cmbProductID.Size = new System.Drawing.Size(262, 33);
+            this.cmbProductID.Size = new System.Drawing.Size(176, 24);
             this.cmbProductID.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(134, 620);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(89, 397);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 25);
+            this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 20;
             this.label3.Text = "Tên Sản Phẩm";
             // 
@@ -174,10 +162,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(660, 708);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(440, 453);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 25);
+            this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Ngày kết thúc";
             // 
@@ -185,27 +172,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(134, 708);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(89, 453);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 25);
+            this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ngày Bắt Đầu";
             // 
             // btnAddSale
             // 
-            this.btnAddSale.Location = new System.Drawing.Point(556, 519);
-            this.btnAddSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddSale.Location = new System.Drawing.Point(371, 332);
             this.btnAddSale.Name = "btnAddSale";
-            this.btnAddSale.Size = new System.Drawing.Size(58, 56);
+            this.btnAddSale.Size = new System.Drawing.Size(39, 36);
             this.btnAddSale.TabIndex = 16;
             this.btnAddSale.UseVisualStyleBackColor = true;
             // 
             // SaleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 800);
+            this.ClientSize = new System.Drawing.Size(908, 512);
             this.Controls.Add(this.txtSaleName);
             this.Controls.Add(this.dgvSale);
             this.Controls.Add(this.label6);
@@ -221,8 +206,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddSale);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SaleForm";
-            this.Text = "SaleForm";
+            this.Text = "&&&&&";
             this.Load += new System.EventHandler(this.SaleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).EndInit();
             this.ResumeLayout(false);

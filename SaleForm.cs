@@ -143,6 +143,7 @@ namespace QuanLyCuaHang
                 //            }
                 //        }
                 //    }
+                // thay đoi
             }
             catch (Exception ex)
             {
