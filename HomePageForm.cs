@@ -21,6 +21,7 @@ namespace QuanLyCuaHang
             InitializeComponent();
         }
 
+        
         // Hàm mở form
         void OpenForm(Form f)
         {
@@ -75,21 +76,25 @@ namespace QuanLyCuaHang
             OpenUserControl(new OutputBillUC(), pnlOfHai);
         }
 
+        // Nút mở ra xem hóa đơn
         private void ToolStripMenuItem_BillView_Click(object sender, EventArgs e)
         {
             OpenUserControl(new BillListUC(), pnlOfHai);
         }
 
+        // Nút mở ra thông tin khách hàng
         private void ToolStripMenuItem_CustomerInfo_Click(object sender, EventArgs e)
         {
             OpenForm(new CustomerIntoForm());
         }
 
+        // Nút mở ra lịch sử khách hàng
         private void ToolStripMenuItem_PurchaseHistory_Click(object sender, EventArgs e)
         {
             OpenForm(new PurchaseHistoryForm());
         }
 
+        // Nút mở ra khuyến mãi
         private void ToolStripMenuItem_Sale_Click(object sender, EventArgs e)
         {
             OpenForm(new SaleForm());

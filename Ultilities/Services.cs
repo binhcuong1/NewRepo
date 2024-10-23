@@ -21,5 +21,6 @@ namespace QuanLyCuaHang.Ultilities
             // Gán vị trí cho panel
             panel.Location = new Point(x, y);
         }
+
     }
 }
