@@ -54,7 +54,6 @@ namespace QuanLyCuaHang
             double tongTien = chiTietHoaDon.Sum(ct => ct.ThanhTien);
 
             lblTongTien.Text = $"Tổng tiền: {tongTien:N0} VND";
-
         }
     }
 }

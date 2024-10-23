@@ -19,9 +19,8 @@ namespace QuanLyCuaHang
         public HomePageForm()
         {
             InitializeComponent();
-
-            panel1.SendToBack();
-            pnlContainBill.SendToBack();
+            pnlOfHai.SendToBack();
+            pnlOfDat.SendToBack();
         }
 
         
@@ -103,5 +102,9 @@ namespace QuanLyCuaHang
             OpenForm(new SaleForm());
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
