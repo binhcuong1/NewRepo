@@ -62,6 +62,7 @@ namespace QuanLyCuaHang
             if (accountCurrent != null)
             {
                 UserSession.MaNhanVienDangNhap = accountCurrent.MaNV;
+                MessageBox.Show($"Đăng nhập thành công. Mã nhân viên: {UserSession.MaNhanVienDangNhap}");
                 OnLoginSuccess?.Invoke(accountCurrent.MaNV);
                 return accountCurrent.CHUCVUNHANVIEN.TenChucVu;
             }

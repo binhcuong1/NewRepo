@@ -62,23 +62,17 @@ namespace QuanLyCuaHang.UserControls
                 string soHD = row.Cells["SoHD"].Value?.ToString();
                 string maKH = row.Cells["MaKH"].Value?.ToString();
 
-                if (!string.IsNullOrEmpty(soHD) && !string.IsNullOrEmpty(maKH))
+                if (!string.IsNullOrEmpty(soHD))
                 {
-                    string customerName = GetCustomerNameByMaKH(maKH);
+                    // Nếu có mã hóa đơn, vẫn tiếp tục mở BillDetailForm
+                    string customerName = string.IsNullOrEmpty(maKH) ? "Khách hàng không xác định" : GetCustomerNameByMaKH(maKH);
 
-                    if (!string.IsNullOrEmpty(customerName))
-                    {
-                        BillDetailForm chiTietForm = new BillDetailForm(soHD, customerName);
-                        chiTietForm.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không tìm thấy tên khách hàng cho Mã Khách Hàng này.");
-                    }
+                    BillDetailForm chiTietForm = new BillDetailForm(soHD, customerName);
+                    chiTietForm.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Mã hóa đơn hoặc mã khách hàng không hợp lệ.");
+                    MessageBox.Show("Mã hóa đơn không hợp lệ.");
                 }
             }
         }

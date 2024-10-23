@@ -21,6 +21,8 @@ namespace QuanLyCuaHang
             InitializeComponent();
             pnlOfDat.SendToBack();
             pnlOfHai.SendToBack();
+            pnlOfHai.SendToBack();
+            pnlOfDat.SendToBack();
         }
 
         
@@ -94,6 +96,13 @@ namespace QuanLyCuaHang
         private void ToolStripMenuItem_Sale_Click(object sender, EventArgs e)
         {
             OpenForm(new SaleForm());
+        }
+    }
+}
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

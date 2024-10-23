@@ -36,6 +36,7 @@ namespace QuanLyCuaHang.UserControls
         {
             LoadProductGatetoryToComboBox();
             LoadProductToComboBox();
+            LoadPaymentMethodToCombobox();
         }
 
         private void LoadProductToComboBox()
@@ -56,6 +57,14 @@ namespace QuanLyCuaHang.UserControls
             cmbProductType.ValueMember = "MaTheLoai";
         }
 
+        public void LoadPaymentMethodToCombobox()
+        {
+            var hinhThucThanhToanList = dbContext.PHUONGTHUCTHANHTOANs.ToList();
+
+            cmbPaymentMethod.DataSource = hinhThucThanhToanList;
+            cmbPaymentMethod.DisplayMember = "PhuongThuc";
+            cmbPaymentMethod.ValueMember = "MaLTT";
+        }
         private void cmbProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbProductType.SelectedItem == null || cmbProductType.SelectedValue == null)
@@ -75,7 +84,6 @@ namespace QuanLyCuaHang.UserControls
 
             cmbProduct.SelectedItem = null;
         }
-
         private void bttAddProduct_Click(object sender, EventArgs e)
         {
             var selectedSanPham = cmbProduct.SelectedItem as SANPHAM;
@@ -126,91 +134,68 @@ namespace QuanLyCuaHang.UserControls
                 TinhTongTien();
             }
         }
-
         private void ThemHoaDonMoi()
         {
             using (var transaction = dbContext.Database.BeginTransaction())
             {
                 try
                 {
+                    // Kiểm tra số điện thoại có hợp lệ không
                     if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
                     {
                         MessageBox.Show("Số điện thoại không được để trống. Đang thêm hóa đơn mới...");
                         return;
                     }
 
+                    // Tìm kiếm khách hàng trong cơ sở dữ liệu
                     var khachHang = dbContext.KHACHHANGs
                         .FirstOrDefault(kh => kh.Sdt == txtPhoneNumber.Text);
 
-                    #region nào merge code thì mở
-                    //if (khachHang != null)
-                    //{
-                    //    // Hiển thị tên khách hàng vào txtCustomerName
-                    //    txtCustomerName.Text = khachHang.TenKH;
-                    //}
-                    //else
-                    //{
-                    //    // Nếu không tìm thấy khách hàng
+                    // Nếu không tìm thấy khách hàng, hỏi người dùng có muốn thêm không
+                    if (khachHang == null)
+                    {
+                        var result = MessageBox.Show("Khách hàng không tồn tại. Bạn có muốn thêm khách hàng mới không?", "Thông báo", MessageBoxButtons.YesNo);
 
-                    //    var result = MessageBox.Show("Khách hàng không tồn tại. Bạn có muốn thêm khách hàng mới không?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            // Mở form thêm khách hàng mới
+                            using (CustomerIntoForm customerInfoForm = new CustomerIntoForm())
+                            {
+                                customerInfoForm.ShowDialog();  // Mở form thêm khách hàng
 
-                    //    if (result == DialogResult.Yes)
-                    //    {
-                    //        // Hiển thị UserControl để thêm khách hàng mới
-                    //        CustomerInfoUC customerInfo = new CustomerInfoUC();
-                    //        var form = new Form
-                    //        {
-                    //            Text = "Thêm Khách Hàng Mới",
-                    //            Size = new Size(400, 300),
-                    //            StartPosition = FormStartPosition.CenterParent
-                    //        };
+                                // Sau khi form đóng lại, kiểm tra xem khách hàng đã được thêm chưa
+                                khachHang = dbContext.KHACHHANGs
+                                    .FirstOrDefault(kh => kh.Sdt == txtPhoneNumber.Text);
 
-                    //        customerInfo.Dock = DockStyle.Fill;
-                    //        form.Controls.Add(customerInfo);
-                    //        form.ShowDialog();
+                                // Nếu không thêm khách hàng thành công, dừng việc thêm hóa đơn
+                                if (khachHang == null)
+                                {
+                                    MessageBox.Show("Không thể thêm khách hàng mới. Vui lòng thử lại.");
+                                    return;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            // Nếu chọn "No", tạo hóa đơn mà không có khách hàng
+                            MessageBox.Show("Đang lưu hóa đơn mà không có khách hàng.");
+                        }
+                    }
 
-                    //        // Kiểm tra xem khách hàng đã được thêm hay chưa
-                    //        if (customerInfo.IsCustomerAdded)
-                    //        {
-                    //            khachHang = new KHACHHANG
-                    //            {
-                    //                MaKH = customerInfo.MaKH,
-                    //                TenKH = customerInfo.TenKhachHang,
-                    //                Sdt = txtPhoneNumber.Text
-                    //            };
-
-                    //            dbContext.KHACHHANGs.Add(khachHang);
-                    //            dbContext.SaveChanges();
-
-                    //            // Cập nhật tên khách hàng vào txtCustomerName
-                    //            txtCustomerName.Text = khachHang.TenKH;
-                    //        }
-                    //        else
-                    //        {
-                    //            MessageBox.Show("Không thêm khách hàng. Vui lòng thử lại.");
-                    //            return; // Ngưng thêm hóa đơn
-                    //        }
-                    //    }
-                    //    else
-                    //    {
-                    //        // Nếu chọn No, tạo hóa đơn mới không cần mã khách hàng
-                    //        MessageBox.Show("Đang lưu hóa đơn mới mà không có khách hàng.");
-                    //    }
-                    //}
-                    #endregion
-
+                    // Tiếp tục quá trình tạo hóa đơn
                     var hoaDonMoi = new HOADON
                     {
                         SoHD = CreateNewSoHD(),
                         NgayLap = DateTime.Now,
                         TongTien = billList.Sum(hd => hd.ThanhTien),
-                        MaKH = khachHang?.MaKH,
-                        MaNV = UserSession.MaNhanVienDangNhap,
+                        MaKH = khachHang?.MaKH,  // Lưu mã khách hàng nếu có
+                        MaNV = UserSession.MaNhanVienDangNhap
                     };
 
                     dbContext.HOADONs.Add(hoaDonMoi);
                     dbContext.SaveChanges();
 
+                    // Lưu chi tiết hóa đơn
                     foreach (var chiTiet in billList)
                     {
                         var sanPham = dbContext.SANPHAMs.FirstOrDefault(sp => sp.MaSP == chiTiet.MaSP);
@@ -232,11 +217,34 @@ namespace QuanLyCuaHang.UserControls
                             MessageBox.Show($"Không tìm thấy sản phẩm với mã {chiTiet.MaSP}");
                         }
                     }
+                    // Lưu phương thức thanh toán vào bảng CHI_THANHTOAN
+                    if (cmbPaymentMethod.SelectedValue != null)
+                    {
+                        var maPTTT = cmbPaymentMethod.SelectedValue.ToString();
+                        var chiThanhToan = new CHITIETTHANHTOAN
+                        {
+                            SoHD = hoaDonMoi.SoHD,
+                            MaLTT = maPTTT,
+                            NgayThanhToan = DateTime.Now,
+                        };
 
+                        dbContext.CHITIETTHANHTOANs.Add(chiThanhToan);
+                        dbContext.SaveChanges();  // Thêm dòng này nếu chưa có
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn phương thức thanh toán.");
+                        return; // Ngừng nếu không có phương thức thanh toán nào được chọn
+                    }
+
+                    // Lưu tất cả thay đổi vào cơ sở dữ liệu và commit giao dịch
                     dbContext.SaveChanges();
                     transaction.Commit();
 
                     MessageBox.Show("Thêm hóa đơn mới thành công!");
+
+                    BillDetailForm billDetailForm = new BillDetailForm(hoaDonMoi.SoHD, khachHang?.TenKH ?? "Khách hàng không xác định");
+                    billDetailForm.ShowDialog();
                 }
                 catch (Exception ex)
                 {
@@ -245,13 +253,11 @@ namespace QuanLyCuaHang.UserControls
                 }
             }
         }
-
         private void TinhTongTien()
         {
             double tongTien = billList.Sum(item => item.ThanhTien);
             lblTongTien.Text = tongTien.ToString("N0") + " VND";
         }
-
         private void bttPay_Click(object sender, EventArgs e)
         {
             if (billList.Any())
@@ -263,7 +269,6 @@ namespace QuanLyCuaHang.UserControls
                 MessageBox.Show("Không có sản phẩm nào trong hóa đơn để thêm.");
             }
         }
-
         private string CreateNewSoHD()
         {
             var maxSoHD = dbContext.HOADONs
