@@ -40,7 +40,7 @@ namespace QuanLyCuaHang
         {
             // Đưa panel về sau
             pnlAddProduct.Visible = false;
-
+            // Sửa tại chỗ này
             BindToComboBox();
 
             BindToGrid(productList);
