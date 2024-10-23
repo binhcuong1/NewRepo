@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// source that
+
 namespace QuanLyCuaHang
 {
     public partial class SaleForm : Form
@@ -27,7 +29,8 @@ namespace QuanLyCuaHang
 
         private void SaleForm_Load(object sender, EventArgs e)
         {
-
+            BindToGrid(sales);
+            BindTocmbProductID(Products);
         }
 
         private void loadcmbProductID()
@@ -53,6 +56,7 @@ namespace QuanLyCuaHang
             }).ToList();
 
         }
+
         private void KhuyenMaiForm_Load(object sender, EventArgs e)
         {
             BindToGrid(sales);
@@ -102,7 +106,32 @@ namespace QuanLyCuaHang
 
         }
 
-        private void btnDeleteSale_Click(object sender, EventArgs e)
+        private void btnAddSale_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                CHITITETKHUYENMAI km = new CHITITETKHUYENMAI()
+                {
+                    MaKM = txtSaleName.Text,
+                    MaSP = cmbProductID.SelectedValue.ToString(),
+                    NgayBatDau = dateTimePicker1.Value,
+                    NgayKetThuc = dateTimePicker2.Value,
+                    MucGiaKhuyenMai = Double.Parse(txtSalePrice.Text)
+
+                };
+                dbContext.CHITITETKHUYENMAIs.Add(km);
+                dbContext.SaveChanges();
+                MessageBox.Show("Thanh Cong");
+                LoadSaleName();
+                BindToGrid(sales);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "That Bai");
+            }
+        }
+
+        private void btnDeleteSale_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -123,27 +152,6 @@ namespace QuanLyCuaHang
                     MessageBox.Show("Không Có");
                 }
 
-
-                //    foreach (DataGridViewRow selectedRow in dgvSale.SelectedRows)
-                //    {
-                //        var saleViewModel = selectedRow.DataBoundItem as SaleViewModel;
-                //        if (saleViewModel != null)
-                //        {    
-                //            var saleToDelete = dbContext.CHITITETKHUYENMAI
-                //                .FirstOrDefault(x => x.MaKM == saleViewModel.MaKM);
-
-                //            if (saleToDelete != null)
-                //            {
-
-                //                dbContext.CHITITETKHUYENMAI.Remove(saleToDelete);
-                //            }
-                //            else
-                //            {
-                //                MessageBox.Show("Đéo có");
-                //            }
-                //        }
-                //    }
-                // thay đoi
             }
             catch (Exception ex)
             {
@@ -151,7 +159,7 @@ namespace QuanLyCuaHang
             }
         }
 
-        private void btnSearchSale_Click(object sender, EventArgs e)
+        private void btnSearchSale_Click_1(object sender, EventArgs e)
         {
             try
             {
