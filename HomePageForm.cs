@@ -102,5 +102,6 @@ namespace QuanLyCuaHang
         {
             OpenForm(new SaleForm());
         }
+
     }
 }

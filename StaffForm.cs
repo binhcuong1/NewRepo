@@ -18,6 +18,7 @@ namespace QuanLyCuaHang
 
         List<StaffViewModel> staffList;
 
+        // Sửa dòng này
         public StaffForm()
         {
             InitializeComponent();

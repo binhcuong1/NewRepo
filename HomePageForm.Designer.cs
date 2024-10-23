@@ -68,6 +68,7 @@
             this.danhMụcToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
             this.menuStrip1.Size = new System.Drawing.Size(1894, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -84,12 +85,12 @@
             this.khuyếnMãiToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 38);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 36);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(273, 6);
             // 
             // toolStripMenuItem1
             // 
@@ -97,7 +98,7 @@
             this.caLàmViệcToolStripMenuItem,
             this.lươngToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(359, 44);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(276, 44);
             this.toolStripMenuItem1.Text = "Nhân Viên";
             // 
             // caLàmViệcToolStripMenuItem
@@ -118,7 +119,7 @@
             this.sảnPhẩmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmProductCategory});
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản Phẩm";
             // 
             // tsmProductCategory
@@ -134,7 +135,7 @@
             this.xuấtHóaĐơnToolStripMenuItem,
             this.xemHóaĐơnToolStripMenuItem});
             this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
-            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.hóaĐơnToolStripMenuItem.Text = "Hóa Đơn";
             // 
             // xuấtHóaĐơnToolStripMenuItem
@@ -157,7 +158,7 @@
             this.thôngTinToolStripMenuItem,
             this.lịchSửToolStripMenuItem});
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.kháchHàngToolStripMenuItem.Text = "Khách Hàng";
             // 
             // thôngTinToolStripMenuItem
@@ -177,27 +178,28 @@
             // doanhThuToolStripMenuItem
             // 
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
-            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.doanhThuToolStripMenuItem.Text = "Doanh Thu";
             // 
             // khuyếnMãiToolStripMenuItem
             // 
             this.khuyếnMãiToolStripMenuItem.Name = "khuyếnMãiToolStripMenuItem";
-            this.khuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.khuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.khuyếnMãiToolStripMenuItem.Text = "Khuyến Mãi";
             this.khuyếnMãiToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Sale_Click);
             // 
             // pnlOfProductCategory
             // 
             this.pnlOfProductCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlOfProductCategory.Location = new System.Drawing.Point(1739, 78);
+            this.pnlOfProductCategory.Location = new System.Drawing.Point(1738, 78);
             this.pnlOfProductCategory.Name = "pnlOfProductCategory";
             this.pnlOfProductCategory.Size = new System.Drawing.Size(640, 292);
             this.pnlOfProductCategory.TabIndex = 1;
             // 
             // pnlOfHai
             // 
-            this.pnlOfHai.Location = new System.Drawing.Point(25, 927);
+            this.pnlOfHai.Location = new System.Drawing.Point(38, 1448);
+            this.pnlOfHai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlOfHai.Name = "pnlOfHai";
             this.pnlOfHai.Size = new System.Drawing.Size(1810, 908);
             this.pnlOfHai.TabIndex = 2;
@@ -205,9 +207,9 @@
             // pnlOfDat
             // 
             this.pnlOfDat.Controls.Add(this.pnlOfProductCategory);
-            this.pnlOfDat.Location = new System.Drawing.Point(1695, 937);
+            this.pnlOfDat.Location = new System.Drawing.Point(1695, 938);
             this.pnlOfDat.Name = "pnlOfDat";
-            this.pnlOfDat.Size = new System.Drawing.Size(1751, 898);
+            this.pnlOfDat.Size = new System.Drawing.Size(1750, 898);
             this.pnlOfDat.TabIndex = 0;
             // 
             // entityCommand1
@@ -224,7 +226,8 @@
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(382, 54);
+            this.panel1.Location = new System.Drawing.Point(573, 84);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1131, 220);
             this.panel1.TabIndex = 3;
@@ -245,7 +248,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(178, 57);
+            this.label1.Location = new System.Drawing.Point(267, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(434, 42);
             this.label1.TabIndex = 0;
@@ -256,16 +260,18 @@
             this.pnlContainBill.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlContainBill.BackColor = System.Drawing.Color.Red;
             this.pnlContainBill.Controls.Add(this.label3);
-            this.pnlContainBill.Location = new System.Drawing.Point(257, 298);
+            this.pnlContainBill.Location = new System.Drawing.Point(386, 466);
+            this.pnlContainBill.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlContainBill.Name = "pnlContainBill";
-            this.pnlContainBill.Size = new System.Drawing.Size(1423, 458);
+            this.pnlContainBill.Size = new System.Drawing.Size(2134, 716);
             this.pnlContainBill.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(417, 195);
+            this.label3.Location = new System.Drawing.Point(626, 305);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(575, 55);
             this.label3.TabIndex = 0;
