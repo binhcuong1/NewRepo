@@ -67,12 +67,6 @@
     <Compile Include="CustomerIntoForm.Designer.cs">
       <DependentUpon>CustomerIntoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PurchaseHistoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PurchaseHistoryForm.Designer.cs">
-      <DependentUpon>PurchaseHistoryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SaleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,7 +171,6 @@
     <Compile Include="ViewModel\GatetoryViewModel.cs" />
     <Compile Include="ViewModel\InvoiceDetailViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
-    <Compile Include="ViewModel\PurchaseHistoryViewModel.cs" />
     <Compile Include="ViewModel\SaleViewModel.cs" />
     <Compile Include="ViewModel\ShiftViewModel.cs" />
     <Compile Include="ViewModel\StaffViewModel.cs" />
@@ -187,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerIntoForm.resx">
       <DependentUpon>CustomerIntoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PurchaseHistoryForm.resx">
-      <DependentUpon>PurchaseHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
