@@ -196,6 +196,18 @@ namespace QuanLyCuaHang
                 MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            DialogResult dg = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dg == DialogResult.Yes)
+            {
+                HomePageForm homePageForm = new HomePageForm();
+                this.Hide();
+                homePageForm.Show();
+            }
+        }
     }
 
 }

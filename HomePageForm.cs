@@ -19,6 +19,8 @@ namespace QuanLyCuaHang
         public HomePageForm()
         {
             InitializeComponent();
+            pnlOfDat.SendToBack();
+            pnlOfHai.SendToBack();
             pnlOfHai.SendToBack();
             pnlOfDat.SendToBack();
         }
@@ -90,17 +92,13 @@ namespace QuanLyCuaHang
             OpenForm(new CustomerIntoForm());
         }
 
-        // Nút mở ra lịch sử khách hàng
-        private void ToolStripMenuItem_PurchaseHistory_Click(object sender, EventArgs e)
-        {
-            OpenForm(new PurchaseHistoryForm());
-        }
-
         // Nút mở ra khuyến mãi
         private void ToolStripMenuItem_Sale_Click(object sender, EventArgs e)
         {
             OpenForm(new SaleForm());
         }
+    }
+}
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

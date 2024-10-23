@@ -36,17 +36,15 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnSearchCustomerInfo = new System.Windows.Forms.Button();
             this.btnDelectCustomerInfo = new System.Windows.Forms.Button();
             this.btnEditCustomerInfo = new System.Windows.Forms.Button();
             this.btnAddCustomerInfo = new System.Windows.Forms.Button();
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.dgvCustomerInfo = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnResertCustomerInfo = new System.Windows.Forms.Button();
-            this.btnSearchCustomerInfo = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -56,7 +54,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(250, 173);
+            this.txtDiaChi.Location = new System.Drawing.Point(250, 122);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(1032, 40);
@@ -65,7 +63,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 178);
+            this.label4.Location = new System.Drawing.Point(9, 127);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 33);
@@ -74,7 +72,7 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(250, 294);
+            this.txtSDT.Location = new System.Drawing.Point(250, 199);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(306, 40);
@@ -83,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 302);
+            this.label3.Location = new System.Drawing.Point(9, 207);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(199, 33);
@@ -105,7 +103,7 @@
             this.groupBox2.Controls.Add(this.txtTimKiem);
             this.groupBox2.Controls.Add(this.btnSearchCustomerInfo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(348, 522);
+            this.groupBox2.Location = new System.Drawing.Point(350, 430);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -117,16 +115,29 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(134, 37);
+            this.label5.Location = new System.Drawing.Point(140, 44);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(232, 33);
+            this.label5.Size = new System.Drawing.Size(258, 33);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Tên Khách Hàng";
+            this.label5.Text = "Nhập tên hoặc sdt ";
+            // 
+            // btnSearchCustomerInfo
+            // 
+            this.btnSearchCustomerInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearchCustomerInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCustomerInfo.Location = new System.Drawing.Point(994, 20);
+            this.btnSearchCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearchCustomerInfo.Name = "btnSearchCustomerInfo";
+            this.btnSearchCustomerInfo.Size = new System.Drawing.Size(195, 70);
+            this.btnSearchCustomerInfo.TabIndex = 31;
+            this.btnSearchCustomerInfo.Text = "Tìm";
+            this.btnSearchCustomerInfo.UseVisualStyleBackColor = false;
+            this.btnSearchCustomerInfo.Click += new System.EventHandler(this.btnSearchCustomerInfo_Click);
             // 
             // btnDelectCustomerInfo
             // 
-            this.btnDelectCustomerInfo.Location = new System.Drawing.Point(1310, 369);
+            this.btnDelectCustomerInfo.Location = new System.Drawing.Point(1316, 234);
             this.btnDelectCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelectCustomerInfo.Name = "btnDelectCustomerInfo";
             this.btnDelectCustomerInfo.Size = new System.Drawing.Size(181, 70);
@@ -137,7 +148,7 @@
             // 
             // btnEditCustomerInfo
             // 
-            this.btnEditCustomerInfo.Location = new System.Drawing.Point(1310, 256);
+            this.btnEditCustomerInfo.Location = new System.Drawing.Point(1098, 234);
             this.btnEditCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditCustomerInfo.Name = "btnEditCustomerInfo";
             this.btnEditCustomerInfo.Size = new System.Drawing.Size(182, 70);
@@ -148,7 +159,7 @@
             // 
             // btnAddCustomerInfo
             // 
-            this.btnAddCustomerInfo.Location = new System.Drawing.Point(1308, 133);
+            this.btnAddCustomerInfo.Location = new System.Drawing.Point(862, 234);
             this.btnAddCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddCustomerInfo.Name = "btnAddCustomerInfo";
             this.btnAddCustomerInfo.Size = new System.Drawing.Size(183, 70);
@@ -159,7 +170,7 @@
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(810, 70);
+            this.txtTenKH.Location = new System.Drawing.Point(250, 55);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(472, 40);
@@ -168,36 +179,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(560, 75);
+            this.label2.Location = new System.Drawing.Point(0, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(232, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên Khách Hàng";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 75);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mã Khách Hàng";
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(250, 75);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(278, 40);
-            this.txtMaKH.TabIndex = 0;
-            // 
             // dgvCustomerInfo
             // 
             this.dgvCustomerInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustomerInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomerInfo.Location = new System.Drawing.Point(386, 674);
+            this.dgvCustomerInfo.Location = new System.Drawing.Point(388, 582);
             this.dgvCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvCustomerInfo.Name = "dgvCustomerInfo";
             this.dgvCustomerInfo.RowHeadersWidth = 51;
@@ -215,24 +208,21 @@
             this.groupBox1.Controls.Add(this.btnDelectCustomerInfo);
             this.groupBox1.Controls.Add(this.btnEditCustomerInfo);
             this.groupBox1.Controls.Add(this.btnAddCustomerInfo);
-            this.groupBox1.Controls.Add(this.btnResertCustomerInfo);
             this.groupBox1.Controls.Add(this.txtTenKH);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtMaKH);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(244, 14);
+            this.groupBox1.Location = new System.Drawing.Point(245, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1518, 459);
+            this.groupBox1.Size = new System.Drawing.Size(1518, 324);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Khách Hàng";
             // 
             // btnResertCustomerInfo
             // 
-            this.btnResertCustomerInfo.Location = new System.Drawing.Point(1308, 16);
+            this.btnResertCustomerInfo.Location = new System.Drawing.Point(1531, 582);
             this.btnResertCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResertCustomerInfo.Name = "btnResertCustomerInfo";
             this.btnResertCustomerInfo.Size = new System.Drawing.Size(183, 70);
@@ -240,19 +230,6 @@
             this.btnResertCustomerInfo.Text = "Làm Mới ";
             this.btnResertCustomerInfo.UseVisualStyleBackColor = true;
             this.btnResertCustomerInfo.Click += new System.EventHandler(this.btnResertCustomerInfo_Click);
-            // 
-            // btnSearchCustomerInfo
-            // 
-            this.btnSearchCustomerInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnSearchCustomerInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchCustomerInfo.Location = new System.Drawing.Point(994, 20);
-            this.btnSearchCustomerInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSearchCustomerInfo.Name = "btnSearchCustomerInfo";
-            this.btnSearchCustomerInfo.Size = new System.Drawing.Size(195, 70);
-            this.btnSearchCustomerInfo.TabIndex = 31;
-            this.btnSearchCustomerInfo.Text = "Tìm";
-            this.btnSearchCustomerInfo.UseVisualStyleBackColor = false;
-            this.btnSearchCustomerInfo.Click += new System.EventHandler(this.btnSearchCustomerInfo_Click);
             // 
             // contextMenuStrip1
             // 
@@ -282,6 +259,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvCustomerInfo);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnResertCustomerInfo);
             this.Name = "CustomerIntoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerIntoForm";
@@ -309,8 +287,6 @@
         private System.Windows.Forms.Button btnAddCustomerInfo;
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.DataGridView dgvCustomerInfo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnResertCustomerInfo;

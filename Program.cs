@@ -18,9 +18,11 @@ namespace QuanLyCuaHang
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
             Application.Run(new HomePageForm());
+            //Application.Run(new Login());
+            Application.Run(new HomePageForm());
             //Application.Run(new ProductGatetoryForm());
             //Application.Run(new StaffForm());
-            //Application.Run(new PurchaseHistoryForm());
+            //Application.Run(new SaleForm());
         }
     }
 }
