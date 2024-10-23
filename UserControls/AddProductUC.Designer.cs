@@ -45,9 +45,10 @@
             // 
             this.btnAddProduct.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Location = new System.Drawing.Point(627, 421);
+            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.Location = new System.Drawing.Point(386, 574);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(139, 54);
+            this.btnAddProduct.Size = new System.Drawing.Size(272, 84);
             this.btnAddProduct.TabIndex = 0;
             this.btnAddProduct.Text = "Thêm";
             this.btnAddProduct.UseVisualStyleBackColor = false;
@@ -55,83 +56,86 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(334, 40);
+            this.txtProductName.Location = new System.Drawing.Point(565, 167);
             this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(228, 49);
+            this.txtProductName.Size = new System.Drawing.Size(347, 49);
             this.txtProductName.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 57);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(142, 174);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 32);
+            this.label1.Size = new System.Drawing.Size(367, 42);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nhập Tên Sản Phẩm";
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(334, 114);
+            this.txtPrice.Location = new System.Drawing.Point(565, 270);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(228, 49);
+            this.txtPrice.Size = new System.Drawing.Size(347, 49);
             this.txtPrice.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(82, 131);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(142, 277);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 32);
+            this.label2.Size = new System.Drawing.Size(255, 42);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nhập Đơn Giá";
             // 
             // cmbSupplier
             // 
+            this.cmbSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.Location = new System.Drawing.Point(344, 216);
+            this.cmbSupplier.Location = new System.Drawing.Point(565, 371);
             this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(275, 33);
+            this.cmbSupplier.Size = new System.Drawing.Size(347, 50);
             this.cmbSupplier.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 217);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(142, 379);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 32);
+            this.label3.Size = new System.Drawing.Size(344, 42);
             this.label3.TabIndex = 6;
             this.label3.Text = "Chọn nhà cung cấp";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(78, 278);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(142, 473);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 32);
+            this.label4.Size = new System.Drawing.Size(264, 42);
             this.label4.TabIndex = 6;
             this.label4.Text = "Chọn Thể Loại";
             // 
             // cmbCategory
             // 
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(344, 277);
+            this.cmbCategory.Location = new System.Drawing.Point(565, 465);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(275, 33);
+            this.cmbCategory.Size = new System.Drawing.Size(347, 50);
             this.cmbCategory.TabIndex = 7;
             // 
             // btnBackToProductGateFrm
             // 
             this.btnBackToProductGateFrm.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnBackToProductGateFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackToProductGateFrm.Location = new System.Drawing.Point(28, 421);
+            this.btnBackToProductGateFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToProductGateFrm.Location = new System.Drawing.Point(3, 0);
             this.btnBackToProductGateFrm.Name = "btnBackToProductGateFrm";
-            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(139, 54);
+            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(241, 74);
             this.btnBackToProductGateFrm.TabIndex = 0;
             this.btnBackToProductGateFrm.Text = "Quay Lại";
             this.btnBackToProductGateFrm.UseVisualStyleBackColor = false;
@@ -153,7 +157,7 @@
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.btnAddProduct);
             this.Name = "AddProductUC";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(1000, 700);
             this.Load += new System.EventHandler(this.AddProductUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductGatetoryForm));
             this.dgvProductGatetoryOfForm = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearchIDorNameOfProduct = new System.Windows.Forms.TextBox();
             this.lblOfIDorNameProduct = new System.Windows.Forms.Label();
             this.btnFilterDataOfProductGate = new System.Windows.Forms.Button();
@@ -38,14 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpenProductUC = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.pnlAddProduct = new System.Windows.Forms.Panel();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlAddProduct = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductGatetoryOfForm)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,13 +60,48 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvProductGatetoryOfForm.Location = new System.Drawing.Point(140, 504);
+            this.dgvProductGatetoryOfForm.Location = new System.Drawing.Point(140, 501);
             this.dgvProductGatetoryOfForm.Name = "dgvProductGatetoryOfForm";
             this.dgvProductGatetoryOfForm.RowHeadersWidth = 82;
             this.dgvProductGatetoryOfForm.RowTemplate.Height = 33;
-            this.dgvProductGatetoryOfForm.Size = new System.Drawing.Size(1618, 638);
+            this.dgvProductGatetoryOfForm.Size = new System.Drawing.Size(1618, 641);
             this.dgvProductGatetoryOfForm.TabIndex = 0;
             this.dgvProductGatetoryOfForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductGatetoryOfForm_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã Sản Phẩm";
+            this.Column1.MinimumWidth = 10;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên Sản Phẩm";
+            this.Column2.MinimumWidth = 10;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 350;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Đơn Giá";
+            this.Column3.MinimumWidth = 10;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Nhà Cung Cấp";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 300;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Thể Loại";
+            this.Column5.MinimumWidth = 10;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 350;
             // 
             // txtSearchIDorNameOfProduct
             // 
@@ -165,14 +200,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.BtnBackToHomePage_Click);
             // 
-            // pnlAddProduct
-            // 
-            this.pnlAddProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlAddProduct.BackgroundImage")));
-            this.pnlAddProduct.Location = new System.Drawing.Point(1805, 33);
-            this.pnlAddProduct.Name = "pnlAddProduct";
-            this.pnlAddProduct.Size = new System.Drawing.Size(800, 500);
-            this.pnlAddProduct.TabIndex = 6;
-            // 
             // btnDeleteProduct
             // 
             this.btnDeleteProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -203,40 +230,13 @@
             this.panel1.Size = new System.Drawing.Size(1657, 393);
             this.panel1.TabIndex = 8;
             // 
-            // Column1
+            // pnlAddProduct
             // 
-            this.Column1.HeaderText = "Mã Sản Phẩm";
-            this.Column1.MinimumWidth = 10;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên Sản Phẩm";
-            this.Column2.MinimumWidth = 10;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 350;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Đơn Giá";
-            this.Column3.MinimumWidth = 10;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nhà Cung Cấp";
-            this.Column4.MinimumWidth = 10;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 300;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Thể Loại";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 350;
+            this.pnlAddProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlAddProduct.BackgroundImage")));
+            this.pnlAddProduct.Location = new System.Drawing.Point(1805, 33);
+            this.pnlAddProduct.Name = "pnlAddProduct";
+            this.pnlAddProduct.Size = new System.Drawing.Size(1000, 700);
+            this.pnlAddProduct.TabIndex = 6;
             // 
             // ProductGatetoryForm
             // 

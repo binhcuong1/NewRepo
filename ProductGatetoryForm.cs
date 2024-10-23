@@ -145,6 +145,7 @@ namespace QuanLyCuaHang
             Ultilities.Services.SetCenterPanel(this, pnlAddProduct);
 
             pnlAddProduct.Visible = true;
+            pnlAddProduct.BringToFront();
 
             AddProductUC addProductUC = new AddProductUC(ref pnlAddProduct);
             pnlAddProduct.Controls.Add(addProductUC);
