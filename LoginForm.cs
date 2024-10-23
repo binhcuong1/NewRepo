@@ -56,14 +56,22 @@ namespace QuanLyCuaHang
         // Kiểm tra tài khoản đăng nhập và phân quyền
         public string IsLogin(string username, string password)
         {
-            var accountCurrent = db.TAIKHOANs.FirstOrDefault
-                (u => u.TenTK == username && u.MatKhau == password);
+            var accountCurrent = db.TAIKHOANs
+                .FirstOrDefault(u => u.TenTK == username && u.MatKhau == password);
+
 
             if (accountCurrent != null)
             {
-                UserSession.MaNhanVienDangNhap = accountCurrent.MaNV;
-                MessageBox.Show($"Đăng nhập thành công. Mã nhân viên: {UserSession.MaNhanVienDangNhap}");
-                OnLoginSuccess?.Invoke(accountCurrent.MaNV);
+                UserSession.MaNhanVienDangNhap = accountCurrent.MaNV; // Lưu mã nhân viên
+
+                // Lấy tên nhân viên từ bảng NHANVIEN
+                string tenNhanVien = accountCurrent.NHANVIEN.TenNV; // Lưu tên nhân viên
+
+                // Lưu thông tin vào session
+                UserSession.TenNhanVien = tenNhanVien; // Lưu tên nhân viên
+                UserSession.ChucVu = accountCurrent.CHUCVUNHANVIEN.TenChucVu; // Lưu chức vụ
+
+                OnLoginSuccess?.Invoke(accountCurrent.MaNV); // Gọi sự kiện đăng nhập thành công
                 return accountCurrent.CHUCVUNHANVIEN.TenChucVu;
             }
             else

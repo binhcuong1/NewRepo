@@ -11,5 +11,7 @@ namespace QuanLyCuaHang.Ultilities
     public class UserSession
     {
         public static string MaNhanVienDangNhap { get; set; }
-}
+        public static string TenNhanVien { get; set; }
+        public static string ChucVu { get; set; }
+    }
 }
