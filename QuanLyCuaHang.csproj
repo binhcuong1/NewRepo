@@ -67,6 +67,9 @@
     <Compile Include="CustomerIntoForm.Designer.cs">
       <DependentUpon>CustomerIntoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SaleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +100,6 @@
     </Compile>
     <Compile Include="BillDetailForm.Designer.cs">
       <DependentUpon>BillDetailForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomePageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HomePageForm.Designer.cs">
-      <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -187,6 +184,9 @@
     <EmbeddedResource Include="CustomerIntoForm.resx">
       <DependentUpon>CustomerIntoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,9 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BillDetailForm.resx">
       <DependentUpon>BillDetailForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HomePageForm.resx">
-      <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

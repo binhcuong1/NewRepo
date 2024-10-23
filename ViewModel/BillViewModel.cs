@@ -53,26 +53,81 @@ namespace QuanLyCuaHang.ViewModel
         }
         public List<BillViewModel> LoadHoaDon()
         {
-            var list = (from hoaDon in dbContext.HOADONs.AsNoTracking()
-                        join chiTietThanhToan in dbContext.CHITIETTHANHTOANs.AsNoTracking()
-                        on hoaDon.SoHD equals chiTietThanhToan.SoHD
-                        join phuongThucThanhToan in dbContext.PHUONGTHUCTHANHTOANs.AsNoTracking()
-                        on chiTietThanhToan.MaLTT equals phuongThucThanhToan.MaLTT
-                        select new BillViewModel
-                        {
-                            SoHD = hoaDon.SoHD,
-                            NgayLap = hoaDon.NgayLap,
-                            GhiChu = hoaDon.GhiChu,
-                            MaKH = hoaDon.MaKH,
-                            MaNV = hoaDon.MaNV,
-                            MaPH = hoaDon.MaPH,
-                            PhuongThuc = phuongThucThanhToan.PhuongThuc,
-                            NgayThanhToan = chiTietThanhToan.NgayThanhToan,
-                        }).ToList();
+            //var list = (from hoaDon in dbContext.HOADONs.AsNoTracking()
+            //            join chiTietThanhToan in dbContext.CHITIETTHANHTOANs.AsNoTracking()
+            //            on hoaDon.SoHD equals chiTietThanhToan.SoHD
+            //            join phuongThucThanhToan in dbContext.PHUONGTHUCTHANHTOANs.AsNoTracking()
+            //            on chiTietThanhToan.MaLTT equals phuongThucThanhToan.MaLTT
+            //            select new BillViewModel
+            //            {
+            //                SoHD = hoaDon.SoHD,
+            //                NgayLap = hoaDon.NgayLap,
+            //                GhiChu = hoaDon.GhiChu,
+            //                MaKH = hoaDon.MaKH,
+            //                MaNV = hoaDon.MaNV,
+            //                MaPH = hoaDon.MaPH,
+            //                PhuongThuc = phuongThucThanhToan.PhuongThuc,
+            //                NgayThanhToan = chiTietThanhToan.NgayThanhToan,
+            ////            }).ToList();
+
+            //return list;
+
+            // Lấy dữ liệu cơ bản trước (không bao gồm GetPTTT và GetNgayThanhToan)
+            var list = dbContext.CHITIETHOADONs.Select(ct => new BillViewModel
+            {
+                SoHD = ct.SoHD,
+                NgayLap = ct.HOADON.NgayLap,
+                GhiChu = ct.HOADON.GhiChu,
+                MaKH = ct.HOADON.MaKH,
+                MaNV = ct.HOADON.MaNV,
+                MaPH = ct.HOADON.MaPH,
+                // PhuongThuc và NgayThanhToan sẽ được xử lý sau
+            }).ToList();
+
+            // Xử lý các phương thức không thể dịch ra SQL
+            foreach (var item in list)
+            {
+                item.PhuongThuc = GetPTTT(item.SoHD); // Gọi phương thức riêng sau khi đã lấy dữ liệu
+                item.NgayThanhToan = GetNgayThanhToan(item.SoHD);
+            }
+
             return list;
+        }
+        string GetPTTT(string currBillID)
+        {
+            // Lấy hóa đơn
+            var h = dbContext.HOADONs.FirstOrDefault(hd => hd.SoHD == currBillID);
+            if (h == null)
+            {
+                return "Không tìm thấy hóa đơn";
+            }
+
+            // Lấy chi tiết thanh toán dựa trên hóa đơn
+            var ct = dbContext.CHITIETTHANHTOANs.FirstOrDefault(cc => cc.SoHD == h.SoHD);
+            if (ct == null)
+            {
+                return "Không tìm thấy chi tiết thanh toán";
+            }
+
+            // Lấy phương thức thanh toán dựa trên chi tiết thanh toán
+            var pt = dbContext.PHUONGTHUCTHANHTOANs.FirstOrDefault(pp => pp.MaLTT == ct.MaLTT);
+            if (pt == null)
+            {
+                return "Không tìm thấy phương thức thanh toán";
+            }
+
+            // Trả về phương thức thanh toán
+            return pt.PhuongThuc;
         }
 
 
+        DateTime? GetNgayThanhToan(string currBillID)
+        {
+            HOADON h = dbContext.HOADONs.FirstOrDefault(hd => hd.SoHD == currBillID);
 
+            CHITIETTHANHTOAN ct = dbContext.CHITIETTHANHTOANs.FirstOrDefault(cc => cc.SoHD == h.SoHD);
+
+            return ct.NgayThanhToan;
+        }
     }
 }
