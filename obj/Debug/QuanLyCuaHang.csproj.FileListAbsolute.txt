@@ -193,10 +193,10 @@ D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.Properties.Resources.reso
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.ProductCategoryUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.BillListUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.OutputBillUC.resources
-D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.PurchaseHistoryUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.ShiftUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCu.9E0F4810.Up2Date
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.exe
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.pdb
+D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.PurchaseHistoryForm.resources

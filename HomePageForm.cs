@@ -87,7 +87,7 @@ namespace QuanLyCuaHang
 
         private void ToolStripMenuItem_PurchaseHistory_Click(object sender, EventArgs e)
         {
-            OpenUserControl(new PurchaseHistoryUC(), pnlOfDat);
+            OpenForm(new PurchaseHistoryForm());
         }
 
         private void ToolStripMenuItem_Sale_Click(object sender, EventArgs e)
