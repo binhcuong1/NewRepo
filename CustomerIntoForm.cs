@@ -47,6 +47,7 @@ namespace QuanLyCuaHang
         {
             dgvCustomerInfo.DataSource = customerList;
         }
+     
         private string GenerateMaKH()
         {
             // Lấy mã khách hàng lớn nhất hiện tại từ cơ sở dữ liệu
@@ -222,14 +223,15 @@ namespace QuanLyCuaHang
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (this.Parent != null)
-            {
-                this.Parent.Controls.Remove(this); // Loại bỏ UserControl hiện tại khỏi Form chứa nó
-            }
+            DialogResult dg = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Nếu cần, bạn có thể hiển thị lại trang chủ hoặc form khác ở đây
-            HomePageForm homeForm = new HomePageForm();
-            homeForm.Show(); // Hiển thị form trang chủ hoặc form khác
+            if (dg == DialogResult.Yes)
+            {
+                HomePageForm homePageForm = new HomePageForm();
+                this.Hide();
+                homePageForm.Show();
+            }
         }
+
     }
 }

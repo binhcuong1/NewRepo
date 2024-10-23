@@ -200,3 +200,31 @@ D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCu.9E0F4810.Up2Date
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.exe
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.pdb
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.PurchaseHistoryForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\QuanLyCuaHang.exe.config
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\QuanLyCuaHang.exe
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\QuanLyCuaHang.pdb
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\EntityFramework.dll
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\EntityFramework.xml
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.AddBillForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.CustomerIntoForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.PurchaseHistoryForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.SaleForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.TestForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.AddProductUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.BillDetailForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.HomePageForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.LoginForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.ProductGatetoryForm.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.ProductCategoryUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.UserControls.BillListUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.UserControls.OutputBillUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.UserControls.ShiftUC.resources
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCu.9E0F4810.Up2Date
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.exe
+C:\Users\Quoc Dat\OneDrive\Máy tính\DoAnLiems\obj\Debug\QuanLyCuaHang.pdb
