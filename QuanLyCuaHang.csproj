@@ -61,6 +61,12 @@
     <Compile Include="AddBillForm.Designer.cs">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerIntoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerIntoForm.Designer.cs">
+      <DependentUpon>CustomerIntoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,12 +135,6 @@
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TAIKHOAN.cs" />
     <Compile Include="Model\TONKHO.cs" />
-    <Compile Include="UserControls\CustomerInfoUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\CustomerInfoUC.Designer.cs">
-      <DependentUpon>CustomerInfoUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ProductCategoryUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +178,9 @@
     <EmbeddedResource Include="AddBillForm.resx">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerIntoForm.resx">
+      <DependentUpon>CustomerIntoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,9 +212,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\CustomerInfoUC.resx">
-      <DependentUpon>CustomerInfoUC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ProductCategoryUC.resx">
       <DependentUpon>ProductCategoryUC.cs</DependentUpon>
     </EmbeddedResource>

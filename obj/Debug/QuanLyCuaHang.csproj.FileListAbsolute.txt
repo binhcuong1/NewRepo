@@ -181,6 +181,7 @@ D:\source\repos\SourceGit_Main\bin\Debug\EntityFramework.xml
 D:\source\repos\SourceGit_Main\bin\Debug\EntityFramework.SqlServer.xml
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.csproj.AssemblyReference.cache
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.AddBillForm.resources
+D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.CustomerIntoForm.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.SaleForm.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.TestForm.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.AddProductUC.resources
@@ -189,7 +190,6 @@ D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.HomePageForm.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.LoginForm.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.ProductGatetoryForm.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
-D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.CustomerInfoUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.ProductCategoryUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.BillListUC.resources
 D:\source\repos\SourceGit_Main\obj\Debug\QuanLyCuaHang.UserControls.OutputBillUC.resources

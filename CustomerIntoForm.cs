@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.UserControls
+namespace QuanLyCuaHang
 {
-    public partial class CustomerInfoUC : UserControl
+    public partial class CustomerIntoForm : Form
     {
         public ConveStoreDBContext dbContext;
         private List<CustomerViewModel> customerList;
 
-        public CustomerInfoUC()
+        public CustomerIntoForm()
         {
             InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace QuanLyCuaHang.UserControls
             dgvCustomerInfo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void CustomerInfoUC_Load(object sender, EventArgs e)
+        private void CustomerIntoForm_Load(object sender, EventArgs e)
         {
             BindToGrid();
         }
@@ -47,11 +47,38 @@ namespace QuanLyCuaHang.UserControls
         {
             dgvCustomerInfo.DataSource = customerList;
         }
+        private string GenerateMaKH()
+        {
+            // Lấy mã khách hàng lớn nhất hiện tại từ cơ sở dữ liệu
+            var lastCustomer = dbContext.KHACHHANGs
+                .OrderByDescending(kh => kh.MaKH)
+                .FirstOrDefault();
+
+            string newMaKH;
+
+            if (lastCustomer != null)
+            {
+                // Tách phần số từ MaKH hiện tại (ví dụ: "KH001" -> 1)
+                int currentNumber = int.Parse(lastCustomer.MaKH.Substring(2));
+
+                // Tăng phần số lên 1
+                newMaKH = "KH" + (currentNumber + 1).ToString("D3"); // "D3" để đảm bảo 3 chữ số
+            }
+            else
+            {
+                // Nếu không có khách hàng nào, bắt đầu từ KH001
+                newMaKH = "KH001";
+            }
+
+            return newMaKH;
+        }
 
         private void btnAddCustomerInfo_Click(object sender, EventArgs e)
         {
             try
             {
+                // Gọi hàm GenerateMaKH để tạo mã khách hàng mới
+                string newMaKH = GenerateMaKH();
                 KHACHHANG newKhachHang = new KHACHHANG();
                 newKhachHang.MaKH = txtMaKH.Text;
                 newKhachHang.TenKH = txtTenKH.Text;
@@ -191,6 +218,18 @@ namespace QuanLyCuaHang.UserControls
             // Không xóa dữ liệu hiện tại của dgvCustomerInfo
 
             MessageBox.Show("Dữ liệu khách hàng đã được làm mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (this.Parent != null)
+            {
+                this.Parent.Controls.Remove(this); // Loại bỏ UserControl hiện tại khỏi Form chứa nó
+            }
+
+            // Nếu cần, bạn có thể hiển thị lại trang chủ hoặc form khác ở đây
+            HomePageForm homeForm = new HomePageForm();
+            homeForm.Show(); // Hiển thị form trang chủ hoặc form khác
         }
     }
 }

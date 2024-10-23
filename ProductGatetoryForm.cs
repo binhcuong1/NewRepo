@@ -153,9 +153,14 @@ namespace QuanLyCuaHang
 
         private void BtnBackToHomePage_Click(object sender, EventArgs e)
         {
-            HomePageForm homePageForm = new HomePageForm();
-            this.Hide();
-            homePageForm.Show();
+            DialogResult dg = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (dg == DialogResult.Yes)
+            {
+                HomePageForm homePageForm = new HomePageForm();
+                this.Hide();
+                homePageForm.Show();
+            }
         }
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
