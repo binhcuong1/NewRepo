@@ -120,18 +120,12 @@ namespace QuanLyCuaHang.UserControls
                 }
                 dvgXuatHoaDon.DataSource = null;
                 dvgXuatHoaDon.DataSource = billList;
-                dvgXuatHoaDon.Columns["SoHD"].Visible = false;
-                dvgXuatHoaDon.Columns["MaKH"].Visible = false;
-                dvgXuatHoaDon.Columns["NgayLap"].Visible = false;
-                dvgXuatHoaDon.Columns["PhuongThuc"].Visible = false;
-                dvgXuatHoaDon.Columns["NgayThanhToan"].Visible = false;
-                dvgXuatHoaDon.Columns["GhiChu"].Visible = false;
-                dvgXuatHoaDon.Columns["MaNV"].Visible = false;
-                dvgXuatHoaDon.Columns["MaPH"].Visible = false;
-                dvgXuatHoaDon.Columns["TenKH"].Visible = false;
-                dvgXuatHoaDon.Columns["Sdt"].Visible = false;
+
+                dvgXuatHoaDon.Columns["SoHD"].Visible = false; 
+                dvgXuatHoaDon.Columns["PhuongThuc"].Visible = false;  
+
                 numericUpDownSoLuong.Value = 0;
-                TinhTongTien();
+                TinhTongTien();  
             }
         }
         private void ThemHoaDonMoi()

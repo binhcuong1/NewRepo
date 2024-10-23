@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,17 +57,28 @@ namespace QuanLyCuaHang.UserControls
 
         public void LoadShiftToGrid()
         {
-            var caLamViecList = viewModel.LoadData();
+            var caLamViecList = LoadData();  
             dgvOfShiftUC.DataSource = caLamViecList;
 
-            dgvOfShiftUC.Columns["TenNV"].HeaderText = "Tên Nhân Viên";
-            dgvOfShiftUC.Columns["TenCa"].HeaderText = "Ca Làm Việc";
             dgvOfShiftUC.Columns["MaLoaiCa"].Visible = false;
             dgvOfShiftUC.Columns["MaCa"].Visible = false;
-            dgvOfShiftUC.Columns["GioBatDau"].HeaderText = "Giờ Bắt Đầu";
-            dgvOfShiftUC.Columns["GioKetThuc"].HeaderText = "Giờ Kết Thúc";
-            dgvOfShiftUC.Columns["NgayLam"].HeaderText = "Ngày Làm";
-            dgvOfShiftUC.Columns["TrangThai"].HeaderText = "Trạng Thái";
+        }
+
+        public List<ShiftViewModel> LoadData()
+        {
+            var list = dbContext.CHITIETCALAMVIECs.Select(ct => new ShiftViewModel
+            {
+                MaNV = ct.MaNV ?? "",
+                TenNV = ct.NHANVIEN.TenNV,
+                MaCa = ct.MaCa,
+                MaLoaiCa = ct.CALAMVIEC.MaLoaiCa,
+                TenCa = ct.CALAMVIEC.LOAICALAMVIEC.TenCa,
+                GioBatDau = ct.CALAMVIEC.LOAICALAMVIEC.GioBatDau,
+                GioKetThuc = ct.CALAMVIEC.LOAICALAMVIEC.GioKetThuc,
+                NgayLam = ct.CALAMVIEC.NgayLam,
+                TrangThai = ct.TrangThai == true ? "Đã làm" : "Chưa làm"
+            }).ToList();
+            return list;
         }
 
         private void LoadShiftToComboBox()
@@ -145,15 +157,52 @@ namespace QuanLyCuaHang.UserControls
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string maNhanVien = cmbStaff.SelectedValue?.ToString() ?? string.Empty;
-
             string tenCa = cmbShift.Text.Trim();
-
             string ngayLam = dateTimePickerNgayLam.CustomFormat == " " ? string.Empty : dateTimePickerNgayLam.Value.ToString("yyyy-MM-dd");
 
-            List<ShiftViewModel> ketQuaTimKiem = viewModel.TimKiemTheoTieuChi(ngayLam, maNhanVien, tenCa);
-
+            // Gọi phương thức tìm kiếm và cập nhật DataGridView
+            List<ShiftViewModel> ketQuaTimKiem = TimKiemTheoTieuChi(ngayLam, maNhanVien, tenCa);
             dgvOfShiftUC.DataSource = ketQuaTimKiem;
+
             ResetSearchFields();
+        }
+
+        public List<ShiftViewModel> TimKiemTheoTieuChi(string ngayLam, string maNhanVien, string tenCa)
+        {
+            var ketQua = dbContext.CHITIETCALAMVIECs.AsQueryable();
+
+            if (!string.IsNullOrEmpty(maNhanVien))
+            {
+                ketQua = ketQua.Where(ct => ct.NHANVIEN.MaNV == maNhanVien);
+            }
+
+            if (!string.IsNullOrEmpty(tenCa))
+            {
+                ketQua = ketQua.Where(ct => ct.CALAMVIEC.LOAICALAMVIEC.TenCa.Contains(tenCa));
+            }
+
+            if (!string.IsNullOrEmpty(ngayLam))
+            {
+                DateTime ngayLamDate;
+                if (DateTime.TryParse(ngayLam, out ngayLamDate))
+                {
+                    ketQua = ketQua.Where(ct =>
+                        ct.CALAMVIEC.NgayLam.HasValue &&
+                        DbFunctions.TruncateTime(ct.CALAMVIEC.NgayLam.Value) == DbFunctions.TruncateTime(ngayLamDate));
+                }
+            }
+
+            return ketQua.Select(ct => new ShiftViewModel
+            {
+                TenCa = ct.CALAMVIEC.LOAICALAMVIEC.TenCa,
+                MaCa = ct.CALAMVIEC.MaCa,
+                GioBatDau = ct.CALAMVIEC.LOAICALAMVIEC.GioBatDau,
+                GioKetThuc = ct.CALAMVIEC.LOAICALAMVIEC.GioKetThuc,
+                NgayLam = ct.CALAMVIEC.NgayLam,
+                TrangThai = (ct.TrangThai ?? false) ? "Đã làm" : "Chưa làm",
+                MaNV = ct.MaNV,
+                TenNV = ct.NHANVIEN.TenNV
+            }).ToList();
         }
 
         private void btnAddAndUpdate_Click(object sender, EventArgs e)
@@ -164,7 +213,7 @@ namespace QuanLyCuaHang.UserControls
 
                 if (CaLamViecHienTai != null)
                 {
-                    string maNhanVien = cmbStaff.SelectedValue?.ToString() ?? "NV000"; // Lấy mã NV hoặc "NV000" nếu không có lựa chọn
+                    string maNhanVien = cmbStaff.SelectedValue?.ToString() ?? "NV000"; 
 
                     if (CaLamViecHienTai.MaNV == "NV000")
                     {

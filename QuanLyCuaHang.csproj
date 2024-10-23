@@ -169,6 +169,8 @@
     <Compile Include="UserControls\ShiftUC.Designer.cs">
       <DependentUpon>ShiftUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BillDetailViewModel.cs" />
+    <Compile Include="ViewModel\BillListViewModel.cs" />
     <Compile Include="ViewModel\BillViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\GatetoryViewModel.cs" />

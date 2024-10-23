@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,18 +14,18 @@ namespace QuanLyCuaHang.UserControls
 {
     public partial class BillListUC : UserControl
     {
-        private BillViewModel viewModel;
         private DateTime? selectedDate = null;
-
+        private ConveStoreDBContext dbContext;
         public BillListUC()
         {
             InitializeComponent();
-            viewModel = new BillViewModel();
+            dbContext = new ConveStoreDBContext();
             BindBillToGrid();
 
             dateTimePickerNgayLap.CustomFormat = " ";
             dateTimePickerNgayLap.Format = DateTimePickerFormat.Custom;
 
+            dvgListHoaDon.Columns["MaKH"].Visible = false;
             dvgListHoaDon.RowHeadersVisible = false;
             dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -37,17 +38,74 @@ namespace QuanLyCuaHang.UserControls
         }
         public void BindBillToGrid()
         {
-            var hoaDonList = viewModel.LoadHoaDon();
+            var hoaDonList = LoadHoaDon(); // Gọi phương thức lấy dữ liệu
             dvgListHoaDon.DataSource = hoaDonList;
 
-            dvgListHoaDon.Columns["MaSP"].Visible = false;
-            dvgListHoaDon.Columns["TenSP"].Visible = false;
-            dvgListHoaDon.Columns["SoLuong"].Visible = false;
-            dvgListHoaDon.Columns["DonGiA"].Visible = false;
-            dvgListHoaDon.Columns["MucGiaKhuyenMai"].Visible = false;
-            dvgListHoaDon.Columns["ThanhTien"].Visible = false;
-            dvgListHoaDon.Columns["TenKH"].Visible = false;
-            dvgListHoaDon.Columns["Sdt"].Visible = false;
+        }
+        public List<BillListViewModel> LoadHoaDon()
+        {
+            var list = dbContext.HOADONs.Select(ct => new BillListViewModel
+            {
+                SoHD = ct.SoHD,
+                NgayLap = ct.NgayLap,
+                GhiChu = ct.GhiChu,
+                MaNV = ct.MaNV,
+                MaPH = ct.MaPH,
+                MaKH = ct.MaKH,
+                TenKH = ct.KHACHHANG.TenKH,
+                Sdt = ct.KHACHHANG.Sdt,
+            }).ToList();
+
+            // Xử lý các phương thức riêng như trước
+            foreach (var item in list)
+            {
+                item.PhuongThuc = GetPTTT(item.SoHD); // Gọi phương thức riêng để lấy Phương thức thanh toán
+                item.NgayThanhToan = GetNgayThanhToan(item.SoHD); // Gọi phương thức riêng để lấy Ngày thanh toán
+            }
+
+            return list;
+        }
+
+        // Phương thức để lấy Phương thức thanh toán
+        private string GetPTTT(string currBillID)
+        {
+            var h = dbContext.HOADONs.FirstOrDefault(hd => hd.SoHD == currBillID);
+            if (h == null)
+            {
+                return "Không tìm thấy hóa đơn";
+            }
+
+            var ct = dbContext.CHITIETTHANHTOANs.FirstOrDefault(cc => cc.SoHD == h.SoHD);
+            if (ct == null)
+            {
+                return "Không tìm thấy chi tiết thanh toán";
+            }
+
+            var pt = dbContext.PHUONGTHUCTHANHTOANs.FirstOrDefault(pp => pp.MaLTT == ct.MaLTT);
+            if (pt == null)
+            {
+                return "Không tìm thấy phương thức thanh toán";
+            }
+
+            return pt.PhuongThuc;
+        }
+
+        // Phương thức để lấy Ngày thanh toán
+        private DateTime? GetNgayThanhToan(string currBillID)
+        {
+            var h = dbContext.HOADONs.FirstOrDefault(hd => hd.SoHD == currBillID);
+            if (h == null)
+            {
+                return null;
+            }
+
+            var ct = dbContext.CHITIETTHANHTOANs.FirstOrDefault(cc => cc.SoHD == h.SoHD);
+            if (ct == null)
+            {
+                return null;
+            }
+
+            return ct.NgayThanhToan;
         }
         private void dateTimePickerNgayLap_ValueChanged(object sender, EventArgs e)
         {
@@ -64,7 +122,6 @@ namespace QuanLyCuaHang.UserControls
 
                 if (!string.IsNullOrEmpty(soHD))
                 {
-                    // Nếu có mã hóa đơn, vẫn tiếp tục mở BillDetailForm
                     string customerName = string.IsNullOrEmpty(maKH) ? "Khách hàng không xác định" : GetCustomerNameByMaKH(maKH);
 
                     BillDetailForm chiTietForm = new BillDetailForm(soHD, customerName);
@@ -101,7 +158,7 @@ namespace QuanLyCuaHang.UserControls
                                 ? dateTimePickerNgayLap.Value.Date
                                 : (DateTime?)null;
 
-            List<BillViewModel> hoaDonList = viewModel.LoadHoaDon();
+            List<BillListViewModel> hoaDonList = LoadHoaDon();
             ResetSearchFields();
 
             if (!string.IsNullOrEmpty(maHD))
