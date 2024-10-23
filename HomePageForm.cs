@@ -21,6 +21,24 @@ namespace QuanLyCuaHang
             InitializeComponent();
         }
 
+        // Hàm mở form
+        void OpenForm(Form f)
+        {
+            //ProductGatetoryForm productGatetoryForm = new ProductGatetoryForm();
+            f.Show();
+            this.Hide();
+        }
+
+        // Hàm mở usercontrol
+        void OpenUserControl(UserControl uc, Panel pnl)
+        {
+            Ultilities.Services.SetCenterPanel(this, pnl);
+            pnlOfHai.Visible = true;
+            pnlOfHai.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            pnl.Controls.Add(uc);
+        }
+
         public HomePageForm(string roleCurrent)
         {
             InitializeComponent();
@@ -36,120 +54,45 @@ namespace QuanLyCuaHang
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-             // aaaaaaaaaaaaa
+             
         }
 
-        #region Clicks Of Product
+        // Nút mở ra danh mục sản phẩm
         private void ToolStripMenu_ProductCategory_Click(object sender, EventArgs e)
         {
-            //// Kiểm tra UC đã có trong panel chưa
-            //bool isHaveControlUC = pnlOfProductCategory.Controls.Count > 0 && 
-            //    pnlOfProductCategory.Controls[0] is UCProductCategory;
-
-            //if (isHaveControlUC) return;
-
-            //SetUpLayoutForPnl(pnlOfProductCategory, 650, 400);
-
-            //// Thiết lập panel ở giữa form
-            //SetUpCenterPanel(pnlOfProductCategory);
-
-            //// Xóa các control cũ trước khi thêm control mới
-            //pnlOfProductCategory.Controls.Clear();
-
-            //// Khởi tạo User Control và add vào panel
-            //UCProductCategory uCProductCategory = new UCProductCategory();
-            //pnlOfProductCategory.Controls.Add(uCProductCategory);
-
-            ProductGatetoryForm productGatetoryForm = new ProductGatetoryForm();
-            productGatetoryForm.Show();
-            this.Hide();
-        }
-        #endregion
-
-        private void SetUpCenterPanel(Panel panelCurr)
-        {
-            // Lấy kích thước của Form
-            int formWidth = this.ClientSize.Width;
-            int formHeight = this.ClientSize.Height;
-
-            // Lấy kích thước của Panel
-            int panelWidth = pnlOfProductCategory.Width;
-            int panelHeight = pnlOfProductCategory.Height;
-
-            // Tính toán vị trí để đặt Panel ở giữa màn hình
-            int panelX = (formWidth - panelWidth) / 2;
-            int panelY = (formHeight - panelHeight) / 2;
-
-            // Thiết lập vị trí mới cho Panel
-            pnlOfProductCategory.Location = new Point(panelX, panelY);
+            OpenForm(new ProductGatetoryForm());
         }
 
-        private void SetUpLayoutForPnl(Panel pnlCurr, int width, int height)
+        // Nút mở ra ca làm việc
+        private void ToolStripMenu_Shift_Click(object sender, EventArgs e)
         {
-            pnlCurr.Width = width;
-            pnlCurr.Height = height;
+            OpenUserControl(new ShiftUC(), pnlOfHai);
         }
 
-        private void ToolStripMenu_CaLamViec_Click(object sender, EventArgs e)
+        // Nút mở ra xuất hóa đơn
+        private void ToolStripMenu_OutputBill_Click(object sender, EventArgs e)
         {
-            Ultilities.Services.SetCenterPanel(this, pnlOfHai);
-            ShiftUC userControl = new ShiftUC();
-            pnlOfHai.Visible = true;
-            pnlOfHai.Controls.Clear();
-            userControl.Dock = DockStyle.Fill;
-            pnlOfHai.Controls.Add(userControl);
+            OpenUserControl(new OutputBillUC(), pnlOfHai);
         }
 
-        private void OutPutBillToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_BillView_Click(object sender, EventArgs e)
         {
-            Ultilities.Services.SetCenterPanel(this, pnlOfHai);
-            OutputBillUC userControl2 = new OutputBillUC();
-            pnlOfHai.Visible = true;
-            pnlOfHai.Controls.Clear();
-            userControl2.Dock = DockStyle.Fill;
-            pnlOfHai.Controls.Add(userControl2);
+            OpenUserControl(new BillListUC(), pnlOfHai);
         }
 
-        private void BillViewToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_CustomerInfo_Click(object sender, EventArgs e)
         {
-            Ultilities.Services.SetCenterPanel(this, pnlOfHai);
-            BillListUC userControl3 = new BillListUC();
-            pnlOfHai.Visible = true;
-            pnlOfHai.Controls.Clear();
-            userControl3.Dock = DockStyle.Fill;
-            pnlOfHai.Controls.Add(userControl3);
+            OpenUserControl(new CustomerInfoUC(), pnlOfDat);
         }
 
-        private void kháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_PurchaseHistory_Click(object sender, EventArgs e)
         {
-
+            OpenUserControl(new PurchaseHistoryUC(), pnlOfDat);
         }
 
-        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_Sale_Click(object sender, EventArgs e)
         {
-            Ultilities.Services.SetCenterPanel(this, pnlOfDat);
-            pnlOfDat.Visible = true;
-            CustomerInfoUC userControl = new CustomerInfoUC();
-            pnlOfDat.Controls.Clear();
-            userControl.Dock = DockStyle.Fill;
-            pnlOfDat.Controls.Add(userControl);
-        }
-
-        private void lịchSửToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Ultilities.Services.SetCenterPanel(this, pnlOfDat);
-            pnlOfDat.Visible = true;
-            pnlOfDat.Controls.Clear();
-            PurchaseHistoryUC lichSuMuaHangUC = new PurchaseHistoryUC();
-            lichSuMuaHangUC.Dock = DockStyle.Fill;
-            pnlOfDat.Controls.Add(lichSuMuaHangUC);
-        }
-
-        private void khuyếnMãiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaleForm saleForm = new SaleForm();
-            saleForm.ShowDialog();
+            OpenForm(new SaleForm());
         }
     }
-    //datdaden
 }
