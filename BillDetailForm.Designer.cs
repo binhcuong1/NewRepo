@@ -69,7 +69,7 @@
             this.txtCustomerFeedback.Location = new System.Drawing.Point(36, 413);
             this.txtCustomerFeedback.Name = "txtCustomerFeedback";
             this.txtCustomerFeedback.Size = new System.Drawing.Size(247, 27);
-            this.txtCustomerFeedback.TabIndex = 14;
+            this.txtCustomerFeedback.TabIndex = 1;
             // 
             // btnRefund
             // 
@@ -77,7 +77,7 @@
             this.btnRefund.Location = new System.Drawing.Point(36, 449);
             this.btnRefund.Name = "btnRefund";
             this.btnRefund.Size = new System.Drawing.Size(98, 32);
-            this.btnRefund.TabIndex = 15;
+            this.btnRefund.TabIndex = 2;
             this.btnRefund.Text = "Hoàn trả";
             this.btnRefund.UseVisualStyleBackColor = true;
             this.btnRefund.Click += new System.EventHandler(this.btnRefund_Click);
@@ -88,7 +88,7 @@
             this.btnAdjust.Location = new System.Drawing.Point(169, 449);
             this.btnAdjust.Name = "btnAdjust";
             this.btnAdjust.Size = new System.Drawing.Size(114, 32);
-            this.btnAdjust.TabIndex = 15;
+            this.btnAdjust.TabIndex = 3;
             this.btnAdjust.Text = "Điều chỉnh";
             this.btnAdjust.UseVisualStyleBackColor = true;
             this.btnAdjust.Click += new System.EventHandler(this.btnAdjust_Click);
@@ -104,7 +104,7 @@
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.dvgChiTietHoaDon);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BillDetailForm";
             this.Text = "BillDetailForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BillDetailForm_FormClosed);

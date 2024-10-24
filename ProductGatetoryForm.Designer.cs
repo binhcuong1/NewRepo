@@ -114,7 +114,7 @@
             this.txtSearchIDorNameOfProduct.Multiline = true;
             this.txtSearchIDorNameOfProduct.Name = "txtSearchIDorNameOfProduct";
             this.txtSearchIDorNameOfProduct.Size = new System.Drawing.Size(353, 37);
-            this.txtSearchIDorNameOfProduct.TabIndex = 1;
+            this.txtSearchIDorNameOfProduct.TabIndex = 2;
             // 
             // lblOfIDorNameProduct
             // 
@@ -139,7 +139,7 @@
             this.btnFilterDataOfProductGate.Margin = new System.Windows.Forms.Padding(2);
             this.btnFilterDataOfProductGate.Name = "btnFilterDataOfProductGate";
             this.btnFilterDataOfProductGate.Size = new System.Drawing.Size(267, 74);
-            this.btnFilterDataOfProductGate.TabIndex = 3;
+            this.btnFilterDataOfProductGate.TabIndex = 6;
             this.btnFilterDataOfProductGate.UseVisualStyleBackColor = false;
             this.btnFilterDataOfProductGate.Click += new System.EventHandler(this.BtnFilterDataOfProductGate_Click);
             // 
@@ -153,7 +153,7 @@
             this.cmbSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(353, 37);
-            this.cmbSupplier.TabIndex = 5;
+            this.cmbSupplier.TabIndex = 1;
             // 
             // label1
             // 
@@ -210,7 +210,7 @@
             this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(244, 76);
-            this.btnDeleteProduct.TabIndex = 3;
+            this.btnDeleteProduct.TabIndex = 4;
             this.btnDeleteProduct.UseVisualStyleBackColor = false;
             this.btnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
             // 
@@ -225,7 +225,7 @@
             this.btnResetGrid.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetGrid.Name = "btnResetGrid";
             this.btnResetGrid.Size = new System.Drawing.Size(255, 76);
-            this.btnResetGrid.TabIndex = 3;
+            this.btnResetGrid.TabIndex = 5;
             this.btnResetGrid.UseVisualStyleBackColor = false;
             this.btnResetGrid.Click += new System.EventHandler(this.btnResetGrid_Click);
             // 
