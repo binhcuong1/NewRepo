@@ -83,9 +83,6 @@ namespace QuanLyCuaHang
             AssignPermissionsByRole();
         }
 
-        // Phương thức phân quyền
-        
-
         #region Phân quyền & Hiển thị quyền 
 
         private void DisplayRoleCurrent(string roleCurrrent)
@@ -93,6 +90,7 @@ namespace QuanLyCuaHang
             string text = "Bạn đang truy cập với quyền " + roleCurrrent;
             MessageBox.Show(text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         private void DisplayHelloUser()
         {
             string tenNhanVien = UserSession.TenNhanVien;
