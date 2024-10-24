@@ -17,29 +17,6 @@ namespace QuanLyCuaHang
 {
     public partial class HomePageForm : Form
     {
-        private ContextMenuStrip contextMenuStrip1;
-        private IContainer components;
-        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
-        private ToolStripMenuItem khuyếnMãiToolStripMenuItem;
-        private ToolStripMenuItem doanhThuToolStripMenuItem;
-        private ToolStripMenuItem thôngTinToolStripMenuItem;
-        private ToolStripMenuItem kháchHàngToolStripMenuItem;
-        private ToolStripMenuItem xemHóaĐơnToolStripMenuItem;
-        private ToolStripMenuItem xuấtHóaĐơnToolStripMenuItem;
-        private ToolStripMenuItem hóaĐơnToolStripMenuItem;
-        private ToolStripMenuItem tsmProductCategory;
-        private ToolStripMenuItem sảnPhẩmToolStripMenuItem;
-        private ToolStripMenuItem lươngToolStripMenuItem;
-        private ToolStripMenuItem caLàmViệcToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem danhMụcToolStripMenuItem;
-        private MenuStrip menuStrip2;
-        private ContextMenuStrip contextMenuStrip2;
-        private Panel pnlOfHai;
-        private Label lblHelloUser;
-        private Panel pnlOfDat;
-
         public HomePageForm()
         {
             InitializeComponent();
@@ -153,6 +130,29 @@ namespace QuanLyCuaHang
 
 
         #region Không đụng vào cái này
+        private ContextMenuStrip contextMenuStrip1;
+        private IContainer components;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private ToolStripMenuItem khuyếnMãiToolStripMenuItem;
+        private ToolStripMenuItem doanhThuToolStripMenuItem;
+        private ToolStripMenuItem thôngTinToolStripMenuItem;
+        private ToolStripMenuItem kháchHàngToolStripMenuItem;
+        private ToolStripMenuItem xemHóaĐơnToolStripMenuItem;
+        private ToolStripMenuItem xuấtHóaĐơnToolStripMenuItem;
+        private ToolStripMenuItem hóaĐơnToolStripMenuItem;
+        private ToolStripMenuItem tsmProductCategory;
+        private ToolStripMenuItem sảnPhẩmToolStripMenuItem;
+        private ToolStripMenuItem lươngToolStripMenuItem;
+        private ToolStripMenuItem caLàmViệcToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem danhMụcToolStripMenuItem;
+        private MenuStrip menuStrip2;
+        private ContextMenuStrip contextMenuStrip2;
+        private Panel pnlOfHai;
+        private Label lblHelloUser;
+        private Panel pnlOfDat;
+
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
