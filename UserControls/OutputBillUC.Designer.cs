@@ -40,9 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.bttAddProduct = new System.Windows.Forms.Button();
             this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
             this.bttPay = new System.Windows.Forms.Button();
-            this.bttAddProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgXuatHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -99,16 +99,16 @@
             this.cmbProductType.Location = new System.Drawing.Point(415, 10);
             this.cmbProductType.Name = "cmbProductType";
             this.cmbProductType.Size = new System.Drawing.Size(263, 28);
-            this.cmbProductType.TabIndex = 4;
+            this.cmbProductType.TabIndex = 2;
             this.cmbProductType.Text = "Loại Sản Phẩm";
             this.cmbProductType.SelectedIndexChanged += new System.EventHandler(this.cmbProductType_SelectedIndexChanged);
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(190, 12);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(213, 16);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(196, 22);
-            this.txtPhoneNumber.TabIndex = 9;
+            this.txtPhoneNumber.TabIndex = 1;
             // 
             // contextMenuStrip2
             // 
@@ -152,26 +152,6 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Hình thức thanh toán";
             // 
-            // cmbPaymentMethod
-            // 
-            this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(190, 63);
-            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
-            this.cmbPaymentMethod.Size = new System.Drawing.Size(196, 24);
-            this.cmbPaymentMethod.TabIndex = 4;
-            // 
-            // bttPay
-            // 
-            this.bttPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttPay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bttPay.Image = global::QuanLyCuaHang.Properties.Resources.Cash_in_Hand;
-            this.bttPay.Location = new System.Drawing.Point(925, 487);
-            this.bttPay.Name = "bttPay";
-            this.bttPay.Size = new System.Drawing.Size(171, 55);
-            this.bttPay.TabIndex = 15;
-            this.bttPay.UseVisualStyleBackColor = true;
-            this.bttPay.Click += new System.EventHandler(this.bttPay_Click);
-            // 
             // bttAddProduct
             // 
             this.bttAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,6 +163,27 @@
             this.bttAddProduct.TabIndex = 6;
             this.bttAddProduct.UseVisualStyleBackColor = true;
             this.bttAddProduct.Click += new System.EventHandler(this.bttAddProduct_Click);
+            // 
+            // cmbPaymentMethod
+            // 
+            this.cmbPaymentMethod.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPaymentMethod.FormattingEnabled = true;
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(213, 63);
+            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
+            this.cmbPaymentMethod.Size = new System.Drawing.Size(196, 28);
+            this.cmbPaymentMethod.TabIndex = 3;
+            // 
+            // bttPay
+            // 
+            this.bttPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttPay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bttPay.Image = global::QuanLyCuaHang.Properties.Resources.Cash_in_Hand;
+            this.bttPay.Location = new System.Drawing.Point(925, 487);
+            this.bttPay.Name = "bttPay";
+            this.bttPay.Size = new System.Drawing.Size(171, 55);
+            this.bttPay.TabIndex = 7;
+            this.bttPay.UseVisualStyleBackColor = true;
+            this.bttPay.Click += new System.EventHandler(this.bttPay_Click);
             // 
             // OutputBillUC
             // 

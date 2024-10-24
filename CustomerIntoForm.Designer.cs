@@ -36,16 +36,16 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnSearchCustomerInfo = new System.Windows.Forms.Button();
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCustomerInfo = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSearchCustomerInfo = new System.Windows.Forms.Button();
             this.btnDelectCustomerInfo = new System.Windows.Forms.Button();
             this.btnEditCustomerInfo = new System.Windows.Forms.Button();
             this.btnAddCustomerInfo = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.btnResertCustomerInfo = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerInfo)).BeginInit();
@@ -57,7 +57,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(167, 78);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(689, 28);
-            this.txtDiaChi.TabIndex = 12;
+            this.txtDiaChi.TabIndex = 2;
             // 
             // label4
             // 
@@ -73,7 +73,7 @@
             this.txtSDT.Location = new System.Drawing.Point(167, 127);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(205, 28);
-            this.txtSDT.TabIndex = 10;
+            this.txtSDT.TabIndex = 3;
             // 
             // label3
             // 
@@ -89,7 +89,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(297, 24);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(316, 28);
-            this.txtTimKiem.TabIndex = 19;
+            this.txtTimKiem.TabIndex = 7;
             // 
             // groupBox2
             // 
@@ -114,12 +114,25 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Nhập tên hoặc sdt ";
             // 
+            // btnSearchCustomerInfo
+            // 
+            this.btnSearchCustomerInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.btnSearchCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchCustomerInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Search1;
+            this.btnSearchCustomerInfo.Location = new System.Drawing.Point(663, 13);
+            this.btnSearchCustomerInfo.Name = "btnSearchCustomerInfo";
+            this.btnSearchCustomerInfo.Size = new System.Drawing.Size(130, 45);
+            this.btnSearchCustomerInfo.TabIndex = 8;
+            this.btnSearchCustomerInfo.UseVisualStyleBackColor = false;
+            this.btnSearchCustomerInfo.Click += new System.EventHandler(this.btnSearchCustomerInfo_Click);
+            // 
             // txtTenKH
             // 
             this.txtTenKH.Location = new System.Drawing.Point(167, 35);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(316, 28);
-            this.txtTenKH.TabIndex = 3;
+            this.txtTenKH.TabIndex = 1;
             // 
             // label2
             // 
@@ -162,6 +175,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Khách Hàng";
             // 
+            // btnDelectCustomerInfo
+            // 
+            this.btnDelectCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelectCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Delete1;
+            this.btnDelectCustomerInfo.Location = new System.Drawing.Point(877, 132);
+            this.btnDelectCustomerInfo.Name = "btnDelectCustomerInfo";
+            this.btnDelectCustomerInfo.Size = new System.Drawing.Size(121, 63);
+            this.btnDelectCustomerInfo.TabIndex = 6;
+            this.btnDelectCustomerInfo.UseVisualStyleBackColor = true;
+            this.btnDelectCustomerInfo.Click += new System.EventHandler(this.btnDelectCustomerInfo_Click);
+            // 
+            // btnEditCustomerInfo
+            // 
+            this.btnEditCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Maintenance;
+            this.btnEditCustomerInfo.Location = new System.Drawing.Point(732, 132);
+            this.btnEditCustomerInfo.Name = "btnEditCustomerInfo";
+            this.btnEditCustomerInfo.Size = new System.Drawing.Size(121, 63);
+            this.btnEditCustomerInfo.TabIndex = 5;
+            this.btnEditCustomerInfo.UseVisualStyleBackColor = true;
+            this.btnEditCustomerInfo.Click += new System.EventHandler(this.btnEditCustomerInfo_Click);
+            // 
+            // btnAddCustomerInfo
+            // 
+            this.btnAddCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Add2;
+            this.btnAddCustomerInfo.Location = new System.Drawing.Point(575, 132);
+            this.btnAddCustomerInfo.Name = "btnAddCustomerInfo";
+            this.btnAddCustomerInfo.Size = new System.Drawing.Size(122, 63);
+            this.btnAddCustomerInfo.TabIndex = 4;
+            this.btnAddCustomerInfo.UseVisualStyleBackColor = true;
+            this.btnAddCustomerInfo.Click += new System.EventHandler(this.btnAddCustomerInfo_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -182,52 +228,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnSearchCustomerInfo
-            // 
-            this.btnSearchCustomerInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
-            this.btnSearchCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchCustomerInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Search1;
-            this.btnSearchCustomerInfo.Location = new System.Drawing.Point(663, 13);
-            this.btnSearchCustomerInfo.Name = "btnSearchCustomerInfo";
-            this.btnSearchCustomerInfo.Size = new System.Drawing.Size(130, 45);
-            this.btnSearchCustomerInfo.TabIndex = 31;
-            this.btnSearchCustomerInfo.UseVisualStyleBackColor = false;
-            this.btnSearchCustomerInfo.Click += new System.EventHandler(this.btnSearchCustomerInfo_Click);
-            // 
-            // btnDelectCustomerInfo
-            // 
-            this.btnDelectCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelectCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Delete1;
-            this.btnDelectCustomerInfo.Location = new System.Drawing.Point(877, 132);
-            this.btnDelectCustomerInfo.Name = "btnDelectCustomerInfo";
-            this.btnDelectCustomerInfo.Size = new System.Drawing.Size(121, 63);
-            this.btnDelectCustomerInfo.TabIndex = 7;
-            this.btnDelectCustomerInfo.UseVisualStyleBackColor = true;
-            this.btnDelectCustomerInfo.Click += new System.EventHandler(this.btnDelectCustomerInfo_Click);
-            // 
-            // btnEditCustomerInfo
-            // 
-            this.btnEditCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Maintenance;
-            this.btnEditCustomerInfo.Location = new System.Drawing.Point(732, 132);
-            this.btnEditCustomerInfo.Name = "btnEditCustomerInfo";
-            this.btnEditCustomerInfo.Size = new System.Drawing.Size(121, 63);
-            this.btnEditCustomerInfo.TabIndex = 6;
-            this.btnEditCustomerInfo.UseVisualStyleBackColor = true;
-            this.btnEditCustomerInfo.Click += new System.EventHandler(this.btnEditCustomerInfo_Click);
-            // 
-            // btnAddCustomerInfo
-            // 
-            this.btnAddCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Add2;
-            this.btnAddCustomerInfo.Location = new System.Drawing.Point(575, 132);
-            this.btnAddCustomerInfo.Name = "btnAddCustomerInfo";
-            this.btnAddCustomerInfo.Size = new System.Drawing.Size(122, 63);
-            this.btnAddCustomerInfo.TabIndex = 5;
-            this.btnAddCustomerInfo.UseVisualStyleBackColor = true;
-            this.btnAddCustomerInfo.Click += new System.EventHandler(this.btnAddCustomerInfo_Click);
-            // 
             // btnResertCustomerInfo
             // 
             this.btnResertCustomerInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
@@ -237,7 +237,7 @@
             this.btnResertCustomerInfo.Location = new System.Drawing.Point(105, 288);
             this.btnResertCustomerInfo.Name = "btnResertCustomerInfo";
             this.btnResertCustomerInfo.Size = new System.Drawing.Size(122, 45);
-            this.btnResertCustomerInfo.TabIndex = 4;
+            this.btnResertCustomerInfo.TabIndex = 9;
             this.btnResertCustomerInfo.UseVisualStyleBackColor = false;
             this.btnResertCustomerInfo.Click += new System.EventHandler(this.btnResertCustomerInfo_Click);
             // 

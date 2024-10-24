@@ -68,7 +68,7 @@
             this.txtNumberPhone.Multiline = true;
             this.txtNumberPhone.Name = "txtNumberPhone";
             this.txtNumberPhone.Size = new System.Drawing.Size(233, 33);
-            this.txtNumberPhone.TabIndex = 10;
+            this.txtNumberPhone.TabIndex = 2;
             // 
             // label1
             // 
@@ -88,7 +88,7 @@
             this.txtStaffName.Multiline = true;
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(233, 33);
-            this.txtStaffName.TabIndex = 11;
+            this.txtStaffName.TabIndex = 1;
             // 
             // txtAddress
             // 
@@ -97,7 +97,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(233, 33);
-            this.txtAddress.TabIndex = 10;
+            this.txtAddress.TabIndex = 3;
             // 
             // panel1
             // 
@@ -120,7 +120,7 @@
             this.btnBackToProductGateFrm.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackToProductGateFrm.Name = "btnBackToProductGateFrm";
             this.btnBackToProductGateFrm.Size = new System.Drawing.Size(60, 47);
-            this.btnBackToProductGateFrm.TabIndex = 8;
+            this.btnBackToProductGateFrm.TabIndex = 5;
             this.btnBackToProductGateFrm.UseVisualStyleBackColor = false;
             this.btnBackToProductGateFrm.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -135,7 +135,7 @@
             this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(132, 62);
-            this.btnAddProduct.TabIndex = 9;
+            this.btnAddProduct.TabIndex = 4;
             this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 

@@ -48,7 +48,7 @@
             this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(233, 33);
-            this.txtProductName.TabIndex = 2;
+            this.txtProductName.TabIndex = 1;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             this.cmbSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(233, 37);
-            this.cmbSupplier.TabIndex = 7;
+            this.cmbSupplier.TabIndex = 3;
             // 
             // label3
             // 
@@ -121,7 +121,7 @@
             this.cmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(233, 37);
-            this.cmbCategory.TabIndex = 7;
+            this.cmbCategory.TabIndex = 4;
             // 
             // btnBackToProductGateFrm
             // 
@@ -147,7 +147,7 @@
             this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(148, 54);
-            this.btnAddProduct.TabIndex = 0;
+            this.btnAddProduct.TabIndex = 5;
             this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bttRefresh = new System.Windows.Forms.Button();
+            this.bttSearch = new System.Windows.Forms.Button();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.txtCustomerPhoneNumer = new System.Windows.Forms.TextBox();
             this.txtBillID = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dvgListHoaDon = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bttRefresh = new System.Windows.Forms.Button();
-            this.bttSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgListHoaDon)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,30 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // bttRefresh
+            // 
+            this.bttRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bttRefresh.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation2;
+            this.bttRefresh.Location = new System.Drawing.Point(235, 151);
+            this.bttRefresh.Name = "bttRefresh";
+            this.bttRefresh.Size = new System.Drawing.Size(76, 59);
+            this.bttRefresh.TabIndex = 5;
+            this.bttRefresh.UseVisualStyleBackColor = true;
+            this.bttRefresh.Click += new System.EventHandler(this.bttRefresh_Click);
+            // 
+            // bttSearch
+            // 
+            this.bttSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bttSearch.Image = global::QuanLyCuaHang.Properties.Resources.Search2;
+            this.bttSearch.Location = new System.Drawing.Point(73, 151);
+            this.bttSearch.Name = "bttSearch";
+            this.bttSearch.Size = new System.Drawing.Size(63, 60);
+            this.bttSearch.TabIndex = 4;
+            this.bttSearch.UseVisualStyleBackColor = true;
+            this.bttSearch.Click += new System.EventHandler(this.bttSearch_Click);
+            // 
             // dateTimePickerNgayLap
             // 
             this.dateTimePickerNgayLap.CalendarFont = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,7 +90,7 @@
             this.dateTimePickerNgayLap.Location = new System.Drawing.Point(187, 117);
             this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
             this.dateTimePickerNgayLap.Size = new System.Drawing.Size(202, 28);
-            this.dateTimePickerNgayLap.TabIndex = 2;
+            this.dateTimePickerNgayLap.TabIndex = 3;
             this.dateTimePickerNgayLap.ValueChanged += new System.EventHandler(this.dateTimePickerNgayLap_ValueChanged);
             // 
             // txtCustomerPhoneNumer
@@ -74,7 +98,7 @@
             this.txtCustomerPhoneNumer.Location = new System.Drawing.Point(187, 80);
             this.txtCustomerPhoneNumer.Name = "txtCustomerPhoneNumer";
             this.txtCustomerPhoneNumer.Size = new System.Drawing.Size(203, 22);
-            this.txtCustomerPhoneNumer.TabIndex = 1;
+            this.txtCustomerPhoneNumer.TabIndex = 2;
             // 
             // txtBillID
             // 
@@ -134,30 +158,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 222);
             this.panel1.TabIndex = 4;
-            // 
-            // bttRefresh
-            // 
-            this.bttRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bttRefresh.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation2;
-            this.bttRefresh.Location = new System.Drawing.Point(235, 151);
-            this.bttRefresh.Name = "bttRefresh";
-            this.bttRefresh.Size = new System.Drawing.Size(76, 59);
-            this.bttRefresh.TabIndex = 3;
-            this.bttRefresh.UseVisualStyleBackColor = true;
-            this.bttRefresh.Click += new System.EventHandler(this.bttRefresh_Click);
-            // 
-            // bttSearch
-            // 
-            this.bttSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bttSearch.Image = global::QuanLyCuaHang.Properties.Resources.Search2;
-            this.bttSearch.Location = new System.Drawing.Point(73, 151);
-            this.bttSearch.Name = "bttSearch";
-            this.bttSearch.Size = new System.Drawing.Size(63, 60);
-            this.bttSearch.TabIndex = 3;
-            this.bttSearch.UseVisualStyleBackColor = true;
-            this.bttSearch.Click += new System.EventHandler(this.bttSearch_Click);
             // 
             // BillListUC
             // 
