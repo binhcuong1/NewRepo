@@ -37,7 +37,7 @@
             this.lblShowNameStaff = new System.Windows.Forms.Label();
             this.lblShowIDStaff = new System.Windows.Forms.Label();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCheckSalary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBackToProductGateFrm
@@ -56,7 +56,7 @@
             // txtSumSalary
             // 
             this.txtSumSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSumSalary.Location = new System.Drawing.Point(237, 568);
+            this.txtSumSalary.Location = new System.Drawing.Point(477, 405);
             this.txtSumSalary.Name = "txtSumSalary";
             this.txtSumSalary.Size = new System.Drawing.Size(213, 31);
             this.txtSumSalary.TabIndex = 10;
@@ -64,7 +64,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(237, 620);
+            this.textBox2.Location = new System.Drawing.Point(477, 457);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(213, 31);
             this.textBox2.TabIndex = 10;
@@ -72,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 574);
+            this.label1.Location = new System.Drawing.Point(315, 411);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 25);
             this.label1.TabIndex = 12;
@@ -81,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 620);
+            this.label2.Location = new System.Drawing.Point(306, 457);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 25);
             this.label2.TabIndex = 12;
@@ -141,18 +141,19 @@
             this.cmbMonth.Size = new System.Drawing.Size(296, 33);
             this.cmbMonth.TabIndex = 14;
             // 
-            // button1
+            // btnCheckSalary
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(282, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 74);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Quay Lại";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnBackToProductGateFrm_Click);
+            this.btnCheckSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCheckSalary.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnCheckSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckSalary.Location = new System.Drawing.Point(716, 319);
+            this.btnCheckSalary.Name = "btnCheckSalary";
+            this.btnCheckSalary.Size = new System.Drawing.Size(181, 45);
+            this.btnCheckSalary.TabIndex = 9;
+            this.btnCheckSalary.Text = "Kiểm Tra";
+            this.btnCheckSalary.UseVisualStyleBackColor = false;
+            this.btnCheckSalary.Click += new System.EventHandler(this.BtnCheckSalary_Click);
             // 
             // SalaryListUC
             // 
@@ -166,7 +167,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtSumSalary);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCheckSalary);
             this.Controls.Add(this.btnBackToProductGateFrm);
             this.Name = "SalaryListUC";
             this.Size = new System.Drawing.Size(1000, 700);
@@ -187,6 +188,6 @@
         private System.Windows.Forms.Label lblShowNameStaff;
         private System.Windows.Forms.Label lblShowIDStaff;
         private System.Windows.Forms.ComboBox cmbMonth;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCheckSalary;
     }
 }

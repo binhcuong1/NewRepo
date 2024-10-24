@@ -15,6 +15,10 @@ namespace QuanLyCuaHang.UserControls
     {
         ConveStoreDBContext db;
 
+        List<ShiffDetailViewModel> shiffDetailViewModels;
+
+        SalaryStaffViewModel currStaff;
+
         private Panel currPanel;
         private string currStaffID;
 
@@ -50,6 +54,36 @@ namespace QuanLyCuaHang.UserControls
                 currPanel.Visible = false; // Ẩn panel
             }
         }
+
+        private void BtnCheckSalary_Click(object sender, EventArgs e)
+        {
+            currStaff.MaNV = currStaffID;
+            currStaff.TongGioLam = GetSoGioLamTheoThang(currStaffID, cmbMonth.Text).ToString();
+        }
         #endregion
+
+        int GetSoGioLamTheoThang(string currStaffID, string currMonth)
+        {
+            int result = 0;
+
+            List<ShiffDetailViewModel> temp = db.CHITIETCALAMVIECs.Select(ct => new ShiffDetailViewModel
+            {
+                MaCa = ct.MaCa,
+                MaNV = ct.MaNV,
+                TrangThai = (ct.TrangThai ?? false) ? "1" : "0"
+            }).ToList();
+
+            foreach (var item in temp)
+            {
+                //if (string.Compare(item.TrangThai, "1", true) == 0
+                //    && string.Compare(item.MaNV, currStaffID, true) == 0
+                //    && item.)
+            }
+
+            return result;
+        }
+
+
+
     }
 }
