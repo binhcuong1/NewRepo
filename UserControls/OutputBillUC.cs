@@ -182,7 +182,8 @@ namespace QuanLyCuaHang.UserControls
                         SoHD = CreateNewSoHD(),
                         NgayLap = DateTime.Now,
                         TongTien = billList.Sum(hd => hd.ThanhTien),
-                        MaKH = khachHang?.MaKH,  // Lưu mã khách hàng nếu có
+                        MaKH = khachHang?.MaKH,  
+                        GhiChu = "Đã thanh toán",
                         MaNV = UserSession.MaNhanVienDangNhap
                     };
 
@@ -237,7 +238,11 @@ namespace QuanLyCuaHang.UserControls
 
                     MessageBox.Show("Thêm hóa đơn mới thành công!");
 
-                    BillDetailForm billDetailForm = new BillDetailForm(hoaDonMoi.SoHD, khachHang?.TenKH ?? "Khách hàng không xác định");
+                    BillDetailForm billDetailForm = new BillDetailForm(
+                        hoaDonMoi.SoHD,
+                        khachHang?.TenKH ?? "Khách hàng không xác định",
+                        khachHang?.MaKH ?? string.Empty
+                    );
                     billDetailForm.ShowDialog();
                 }
                 catch (Exception ex)

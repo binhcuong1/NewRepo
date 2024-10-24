@@ -124,7 +124,7 @@ namespace QuanLyCuaHang.UserControls
                 {
                     string customerName = string.IsNullOrEmpty(maKH) ? "Khách hàng không xác định" : GetCustomerNameByMaKH(maKH);
 
-                    BillDetailForm chiTietForm = new BillDetailForm(soHD, customerName);
+                    BillDetailForm chiTietForm = new BillDetailForm(soHD, customerName, maKH);
                     chiTietForm.ShowDialog();
                 }
                 else

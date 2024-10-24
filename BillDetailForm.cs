@@ -1,4 +1,5 @@
-﻿using QuanLyCuaHang.ViewModel;
+﻿using QuanLyCuaHang.UserControls;
+using QuanLyCuaHang.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace QuanLyCuaHang
     public partial class BillDetailForm : Form
     {
         private ConveStoreDBContext dbContext = new ConveStoreDBContext(); // Khởi tạo DbContext ở đây
+        private string selectedSoHD;
+        private string selevtedMaKH;
 
         public BillDetailForm()
         {
@@ -22,7 +25,7 @@ namespace QuanLyCuaHang
         }
 
         // Constructor nhận soHD và customerName từ event click
-        public BillDetailForm(string soHD, string customerName)
+        public BillDetailForm(string soHD, string customerName, string maKH)
         {
             InitializeComponent();
 
@@ -30,7 +33,11 @@ namespace QuanLyCuaHang
             lblCustomerName.Text = customerName;
 
             // Load dữ liệu chi tiết hóa đơn dựa trên soHD
-            LoadChiTietHoaDon(soHD);
+
+            selectedSoHD = soHD;
+            selevtedMaKH = maKH;
+
+            LoadChiTietHoaDon();
         }
 
         private void BillDetailForm_Load(object sender, EventArgs e)
@@ -39,11 +46,11 @@ namespace QuanLyCuaHang
         }
 
         // Phương thức xử lý logic LoadChiTietHoaDon nằm trực tiếp trong Form
-        public void LoadChiTietHoaDon(string soHD)
+        public void LoadChiTietHoaDon()
         {
-            // Lấy danh sách chi tiết hóa đơn dựa trên số hóa đơn
+            // Sử dụng selectedSoHD đã được gán
             var chiTietHoaDon = dbContext.CHITIETHOADONs
-                .Where(ct => ct.SoHD == soHD)
+                .Where(ct => ct.SoHD == selectedSoHD)  // Sử dụng selectedSoHD
                 .Select(ct => new BillDetailViewModel
                 {
                     SoHD = ct.SoHD,
@@ -77,6 +84,120 @@ namespace QuanLyCuaHang
             double tongTien = chiTietHoaDon.Sum(ct => ct.ThanhTien);
 
             lblTongTien.Text = $"Tổng tiền: {tongTien:N0} VND";
+        }
+        private void btnRefund_Click(object sender, EventArgs e)
+        {
+            // Lấy nội dung phản hồi từ textbox
+            var phanHoi = txtCustomerFeedback.Text;
+
+            if (string.IsNullOrWhiteSpace(phanHoi))
+            {
+                MessageBox.Show("Vui lòng nhập nội dung phản hồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tạo mã phản hồi mới (MaPH) với định dạng PH001, PH002,...
+            var lastPhanHoi = dbContext.PHANHOIKHACHHANGs.OrderByDescending(ph => ph.MaPH).FirstOrDefault();
+            string newMaPH;
+
+            if (lastPhanHoi != null)
+            {
+                // Lấy số từ MaPH cuối cùng và tăng lên 1
+                int lastMaNumber = int.Parse(lastPhanHoi.MaPH.Substring(2));
+                newMaPH = "PH" + (lastMaNumber + 1).ToString("D3");
+            }
+            else
+            {
+                // Nếu không có phản hồi nào trước đó, bắt đầu từ PH001
+                newMaPH = "PH001";
+            }
+
+            // Tạo đối tượng phản hồi mới
+            var phanHoiKhachHang = new PHANHOIKHACHHANG
+            {
+                MaPH = newMaPH,
+                MaKH = selevtedMaKH,
+                NoiDung = phanHoi,
+                NgayPhanHoi = DateTime.Now // Gán ngày phản hồi hiện tại
+            };
+
+            // Thêm phản hồi vào database
+            dbContext.PHANHOIKHACHHANGs.Add(phanHoiKhachHang);
+            dbContext.SaveChanges();
+
+            // Tìm hóa đơn hiện tại dựa trên số hóa đơn (soHD), cập nhật GhiChu
+            var hoaDon = dbContext.HOADONs.FirstOrDefault(hd => hd.SoHD == selectedSoHD); // Giả sử bạn có biến selectedSoHD chứa số hóa đơn
+            if (hoaDon != null)
+            {
+                hoaDon.MaPH = newMaPH;
+                hoaDon.GhiChu = "Đã hoàn trả";
+                dbContext.SaveChanges(); // Lưu thay đổi
+            }
+
+            MessageBox.Show("Đã gửi phản hồi và cập nhật hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Sau khi thêm, có thể làm trống textbox nếu muốn
+            txtCustomerFeedback.Clear();
+        }
+
+        private void btnAdjust_Click(object sender, EventArgs e)
+        {
+            // Lấy nội dung phản hồi từ textbox
+            var phanHoi = txtCustomerFeedback.Text;
+
+            if (string.IsNullOrWhiteSpace(phanHoi))
+            {
+                MessageBox.Show("Vui lòng nhập nội dung phản hồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tạo mã phản hồi mới (MaPH) với định dạng PH001, PH002,...
+            var lastPhanHoi = dbContext.PHANHOIKHACHHANGs.OrderByDescending(ph => ph.MaPH).FirstOrDefault();
+            string newMaPH;
+
+            if (lastPhanHoi != null)
+            {
+                // Lấy số từ MaPH cuối cùng và tăng lên 1
+                int lastMaNumber = int.Parse(lastPhanHoi.MaPH.Substring(2));
+                newMaPH = "PH" + (lastMaNumber + 1).ToString("D3");
+            }
+            else
+            {
+                // Nếu không có phản hồi nào trước đó, bắt đầu từ PH001
+                newMaPH = "PH001";
+            }
+
+            // Tạo đối tượng phản hồi mới
+            var phanHoiKhachHang = new PHANHOIKHACHHANG
+            {
+                MaPH = newMaPH,
+                MaKH = selevtedMaKH,
+                NoiDung = phanHoi,
+                NgayPhanHoi = DateTime.Now // Gán ngày phản hồi hiện tại
+            };
+
+            // Thêm phản hồi vào database
+            dbContext.PHANHOIKHACHHANGs.Add(phanHoiKhachHang);
+            dbContext.SaveChanges();
+
+            // Tìm hóa đơn hiện tại dựa trên số hóa đơn (soHD), cập nhật GhiChu
+            var hoaDon = dbContext.HOADONs.FirstOrDefault(hd => hd.SoHD == selectedSoHD); // Giả sử bạn có biến selectedSoHD chứa số hóa đơn
+            if (hoaDon != null)
+            {
+                hoaDon.MaPH = newMaPH;
+                hoaDon.GhiChu = "Đã điều chỉnh";
+                dbContext.SaveChanges(); // Lưu thay đổi
+            }
+
+            MessageBox.Show("Đã điều chỉnh và cập nhật hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Sau khi thêm, có thể làm trống textbox nếu muốn
+            txtCustomerFeedback.Clear();
+        }
+
+        private void BillDetailForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+         
         }
     }
 }
