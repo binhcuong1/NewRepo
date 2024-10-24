@@ -74,7 +74,7 @@ namespace QuanLyCuaHang
 
             DisplayRoleCurrent(roleCurrent);
 
-            //DisplayHelloUser();
+            DisplayHelloUser();
 
             AssignPermissionsByRole();
         }
@@ -94,13 +94,14 @@ namespace QuanLyCuaHang
             string text = "Bạn đang truy cập với quyền " + roleCurrrent;
             MessageBox.Show(text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        //private void DisplayHelloUser()
-        //{
-        //    string tenNhanVien = UserSession.TenNhanVien;
-        //    string chucVu = UserSession.ChucVu;
+        private void DisplayHelloUser()
+        {
+            string tenNhanVien = UserSession.TenNhanVien;
+            string chucVu = UserSession.ChucVu;
 
-        //    lblHelloUser.Text = $"Xin chào, {tenNhanVien}\nChức vụ: {chucVu}";   
-        //}
+            lblHelloUser.Text = $"Xin chào, {tenNhanVien}\nChức vụ: {chucVu}";
+            lblHelloUser.SendToBack();
+        }
         private void HomePage_Load(object sender, EventArgs e)
         {
 
@@ -170,6 +171,7 @@ namespace QuanLyCuaHang
             this.pnlOfDat = new System.Windows.Forms.Panel();
             this.lblHelloUser = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
+            this.pnlOfHai.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -312,6 +314,7 @@ namespace QuanLyCuaHang
             // 
             // pnlOfHai
             // 
+            this.pnlOfHai.Controls.Add(this.pnlOfDat);
             this.pnlOfHai.Location = new System.Drawing.Point(1290, 205);
             this.pnlOfHai.Name = "pnlOfHai";
             this.pnlOfHai.Size = new System.Drawing.Size(908, 592);
@@ -319,31 +322,32 @@ namespace QuanLyCuaHang
             // 
             // pnlOfDat
             // 
-            this.pnlOfDat.Location = new System.Drawing.Point(183, 150);
+            this.pnlOfDat.Location = new System.Drawing.Point(0, 28);
             this.pnlOfDat.Name = "pnlOfDat";
             this.pnlOfDat.Size = new System.Drawing.Size(929, 642);
             this.pnlOfDat.TabIndex = 8;
             // 
             // lblHelloUser
             // 
+            this.lblHelloUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHelloUser.AutoSize = true;
             this.lblHelloUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelloUser.Location = new System.Drawing.Point(25, 94);
+            this.lblHelloUser.Location = new System.Drawing.Point(391, 121);
             this.lblHelloUser.Name = "lblHelloUser";
-            this.lblHelloUser.Size = new System.Drawing.Size(0, 39);
+            this.lblHelloUser.Size = new System.Drawing.Size(0, 38);
             this.lblHelloUser.TabIndex = 9;
             // 
             // HomePageForm
             // 
             this.ClientSize = new System.Drawing.Size(1924, 1009);
             this.Controls.Add(this.lblHelloUser);
-            this.Controls.Add(this.pnlOfDat);
             this.Controls.Add(this.pnlOfHai);
             this.Controls.Add(this.menuStrip2);
             this.Name = "HomePageForm";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.pnlOfHai.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
