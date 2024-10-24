@@ -94,7 +94,7 @@ namespace QuanLyCuaHang
                         LoadStaffToGrid();
                         BindToGrid();
 
-                        throw new Exception("Xóa sản phẩm thành công");
+                        throw new Exception("Xóa nhân viên thành công");
                     }
                 }
             }
@@ -114,6 +114,29 @@ namespace QuanLyCuaHang
                 HomePageForm homePageForm = new HomePageForm();
                 this.Hide();
                 homePageForm.Show();
+            }
+        }
+
+        private void BtnSalaryList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(currStaffID))
+                    throw new Exception("Hãy click vào nhân viên cần xóa");
+
+                Ultilities.Services.SetCenterPanel(this, pnlEditStaff);
+
+                pnlEditStaff.Visible = true;
+                pnlEditStaff.BringToFront();
+
+                SalaryListUC salaryList = new SalaryListUC(ref pnlEditStaff, ref dgvStaff, currStaffID);
+                pnlEditStaff.Controls.Add(salaryList);
+                salaryList.Dock = DockStyle.Fill;
+            }
+            catch (Exception ex)
+            {
+                currStaffID = string.Empty;
+                MessageBox.Show(ex.Message, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         #endregion

@@ -75,7 +75,8 @@ namespace QuanLyCuaHang.UserControls
                 currPanel.Visible = false; // Ẩn panel
             }
 
-            
+
+            currDgv.DataSource = db.NHANVIENs.ToList();
         }
         #endregion
 
@@ -101,12 +102,14 @@ namespace QuanLyCuaHang.UserControls
             bool isTwoDigitNumber = numOfStaff <= 98 && numOfStaff >= 9;
             bool isThreeDigitNumber = numOfStaff <= 998 && numOfStaff >= 99;
 
-            numOfStaff += 2;
+            numOfStaff += 1;
 
             if (isTwoDigitNumber)
                 result = "NV0" + numOfStaff.ToString().Trim();
             else if (isThreeDigitNumber)
                 result = "NV" + numOfStaff.ToString().Trim();
+            else
+                result = "NV00" + numOfStaff.ToString().Trim();
 
             return result;
         }

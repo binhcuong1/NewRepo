@@ -163,6 +163,12 @@
     <Compile Include="UserControls\OutputBillUC.Designer.cs">
       <DependentUpon>OutputBillUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SalaryListUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SalaryListUC.Designer.cs">
+      <DependentUpon>SalaryListUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ShiftUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +182,7 @@
     <Compile Include="ViewModel\GatetoryViewModel.cs" />
     <Compile Include="ViewModel\InvoiceDetailViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
+    <Compile Include="ViewModel\SalaryStaffViewModel.cs" />
     <Compile Include="ViewModel\SaleViewModel.cs" />
     <Compile Include="ViewModel\ShiftViewModel.cs" />
     <Compile Include="ViewModel\StaffViewModel.cs" />
@@ -231,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OutputBillUC.resx">
       <DependentUpon>OutputBillUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SalaryListUC.resx">
+      <DependentUpon>SalaryListUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ShiftUC.resx">
       <DependentUpon>ShiftUC.cs</DependentUpon>

@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffForm));
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlEditStaff = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnSalaryList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Snow;
+            this.panel1.Controls.Add(this.btnSalaryList);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(1468, 144);
@@ -61,9 +63,19 @@
             this.panel1.Size = new System.Drawing.Size(600, 722);
             this.panel1.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(136, 222);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(239, 63);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Xóa";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.BtnDeleteStaff_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(99, 66);
+            this.button1.Location = new System.Drawing.Point(136, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(239, 63);
             this.button1.TabIndex = 0;
@@ -79,16 +91,6 @@
             this.pnlEditStaff.Size = new System.Drawing.Size(1000, 700);
             this.pnlEditStaff.TabIndex = 7;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(99, 188);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(239, 63);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.BtnDeleteStaff_Click);
-            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -101,6 +103,16 @@
             this.btnBack.Text = "Quay Lại";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // btnSalaryList
+            // 
+            this.btnSalaryList.Location = new System.Drawing.Point(136, 367);
+            this.btnSalaryList.Name = "btnSalaryList";
+            this.btnSalaryList.Size = new System.Drawing.Size(239, 63);
+            this.btnSalaryList.TabIndex = 0;
+            this.btnSalaryList.Text = "Xem Bảng Lương";
+            this.btnSalaryList.UseVisualStyleBackColor = true;
+            this.btnSalaryList.Click += new System.EventHandler(this.BtnSalaryList_Click);
             // 
             // StaffForm
             // 
@@ -129,5 +141,6 @@
         private System.Windows.Forms.Panel pnlEditStaff;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnSalaryList;
     }
 }
