@@ -49,6 +49,10 @@ namespace QuanLyCuaHang
             pnlOfDat.SendToBack();
         }
 
+        private void HomePageForm_Load(object sender, EventArgs e)
+        {
+
+        }
 
         // Hàm mở form
         void OpenForm(Form f)
@@ -79,15 +83,10 @@ namespace QuanLyCuaHang
             AssignPermissionsByRole();
         }
 
-        private void AssignPermissionsByRole()
-        {
-            string chucVu = UserSession.ChucVu;
+        // Phương thức phân quyền
+        
 
-            if (chucVu != "Admin" && chucVu != "Quản lý")
-            {
-               //ẩn gì thì cài đạt
-            }
-        }
+        #region Phân quyền & Hiển thị quyền 
 
         private void DisplayRoleCurrent(string roleCurrrent)
         {
@@ -102,10 +101,19 @@ namespace QuanLyCuaHang
             lblHelloUser.Text = $"Xin chào, {tenNhanVien}\nChức vụ: {chucVu}";
             lblHelloUser.SendToBack();
         }
-        private void HomePage_Load(object sender, EventArgs e)
-        {
 
+        // Phương thức phân quyền
+        private void AssignPermissionsByRole()
+        {
+            string chucVu = UserSession.ChucVu;
+
+            if (chucVu != "Admin" && chucVu != "Quản lý")
+            {
+                //ẩn gì thì cài đạt
+            }
         }
+
+        #endregion
 
         // Nút mở ra danh mục sản phẩm
         private void ToolStripMenu_ProductCategory_Click(object sender, EventArgs e)
@@ -145,6 +153,8 @@ namespace QuanLyCuaHang
             OpenForm(new SaleForm());
         }
 
+
+        #region Không đụng vào cái này
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -352,10 +362,6 @@ namespace QuanLyCuaHang
             this.PerformLayout();
 
         }
-
-        private void HomePageForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }
