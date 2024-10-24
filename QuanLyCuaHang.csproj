@@ -398,5 +398,71 @@
   <ItemGroup>
     <None Include="Resources\Search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update Left Rotation1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283031811863.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283031811864.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update Left Rotation2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283031811865.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash in Hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-bg.ai_17283031811866.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update Left Rotation3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

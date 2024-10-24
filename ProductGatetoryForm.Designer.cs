@@ -41,10 +41,10 @@
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnOpenProductUC = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnResetGrid = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlAddProduct = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductGatetoryOfForm)).BeginInit();
@@ -63,7 +63,7 @@
             this.Column4,
             this.Column5});
             this.dgvProductGatetoryOfForm.Location = new System.Drawing.Point(93, 321);
-            this.dgvProductGatetoryOfForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductGatetoryOfForm.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductGatetoryOfForm.Name = "dgvProductGatetoryOfForm";
             this.dgvProductGatetoryOfForm.RowHeadersWidth = 82;
             this.dgvProductGatetoryOfForm.RowTemplate.Height = 33;
@@ -110,7 +110,7 @@
             // 
             this.txtSearchIDorNameOfProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearchIDorNameOfProduct.Location = new System.Drawing.Point(615, 65);
-            this.txtSearchIDorNameOfProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchIDorNameOfProduct.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchIDorNameOfProduct.Multiline = true;
             this.txtSearchIDorNameOfProduct.Name = "txtSearchIDorNameOfProduct";
             this.txtSearchIDorNameOfProduct.Size = new System.Drawing.Size(353, 37);
@@ -131,12 +131,12 @@
             // btnFilterDataOfProductGate
             // 
             this.btnFilterDataOfProductGate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnFilterDataOfProductGate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(98)))), ((int)(((byte)(128)))));
+            this.btnFilterDataOfProductGate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnFilterDataOfProductGate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFilterDataOfProductGate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilterDataOfProductGate.Image = global::QuanLyCuaHang.Properties.Resources.Search;
             this.btnFilterDataOfProductGate.Location = new System.Drawing.Point(829, 161);
-            this.btnFilterDataOfProductGate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFilterDataOfProductGate.Margin = new System.Windows.Forms.Padding(2);
             this.btnFilterDataOfProductGate.Name = "btnFilterDataOfProductGate";
             this.btnFilterDataOfProductGate.Size = new System.Drawing.Size(267, 74);
             this.btnFilterDataOfProductGate.TabIndex = 3;
@@ -150,7 +150,7 @@
             this.cmbSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSupplier.FormattingEnabled = true;
             this.cmbSupplier.Location = new System.Drawing.Point(615, 17);
-            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(353, 37);
             this.cmbSupplier.TabIndex = 5;
@@ -179,26 +179,15 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnResetGrid);
             this.panel1.Location = new System.Drawing.Point(78, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1105, 252);
             this.panel1.TabIndex = 8;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(438, -43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(416, 51);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Danh Mục Sản Phẩm";
-            // 
             // btnOpenProductUC
             // 
             this.btnOpenProductUC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOpenProductUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(98)))), ((int)(((byte)(128)))));
+            this.btnOpenProductUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnOpenProductUC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOpenProductUC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenProductUC.Image = global::QuanLyCuaHang.Properties.Resources.Add;
@@ -213,7 +202,7 @@
             // btnDeleteProduct
             // 
             this.btnDeleteProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(98)))), ((int)(((byte)(128)))));
+            this.btnDeleteProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnDeleteProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteProduct.Image = global::QuanLyCuaHang.Properties.Resources.Delete;
@@ -228,7 +217,7 @@
             // btnResetGrid
             // 
             this.btnResetGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnResetGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(98)))), ((int)(((byte)(128)))));
+            this.btnResetGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnResetGrid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResetGrid.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetGrid.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation;
@@ -239,6 +228,17 @@
             this.btnResetGrid.TabIndex = 3;
             this.btnResetGrid.UseVisualStyleBackColor = false;
             this.btnResetGrid.Click += new System.EventHandler(this.btnResetGrid_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(438, -43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(418, 49);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Danh Mục Sản Phẩm";
             // 
             // btnBack
             // 
@@ -275,7 +275,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvProductGatetoryOfForm);
             this.Controls.Add(this.pnlAddProduct);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ProductGatetoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
