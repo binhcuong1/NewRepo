@@ -32,17 +32,17 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.dvgXuatHoaDon = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bttAddProduct = new System.Windows.Forms.Button();
             this.numericUpDownSoLuong = new System.Windows.Forms.NumericUpDown();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
             this.cmbProductType = new System.Windows.Forms.ComboBox();
-            this.bttPay = new System.Windows.Forms.Button();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.bttPay = new System.Windows.Forms.Button();
+            this.bttAddProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgXuatHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -58,6 +58,7 @@
             // 
             // dvgXuatHoaDon
             // 
+            this.dvgXuatHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dvgXuatHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgXuatHoaDon.Location = new System.Drawing.Point(39, 33);
             this.dvgXuatHoaDon.Name = "dvgXuatHoaDon";
@@ -73,55 +74,38 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // bttAddProduct
-            // 
-            this.bttAddProduct.Location = new System.Drawing.Point(505, 89);
-            this.bttAddProduct.Name = "bttAddProduct";
-            this.bttAddProduct.Size = new System.Drawing.Size(173, 42);
-            this.bttAddProduct.TabIndex = 6;
-            this.bttAddProduct.Text = "Thêm móm";
-            this.bttAddProduct.UseVisualStyleBackColor = true;
-            this.bttAddProduct.Click += new System.EventHandler(this.bttAddProduct_Click);
-            // 
             // numericUpDownSoLuong
             // 
+            this.numericUpDownSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownSoLuong.Location = new System.Drawing.Point(415, 100);
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
-            this.numericUpDownSoLuong.Size = new System.Drawing.Size(56, 22);
+            this.numericUpDownSoLuong.Size = new System.Drawing.Size(56, 28);
             this.numericUpDownSoLuong.TabIndex = 5;
             // 
             // cmbProduct
             // 
+            this.cmbProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProduct.FormattingEnabled = true;
             this.cmbProduct.Location = new System.Drawing.Point(415, 58);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(263, 24);
+            this.cmbProduct.Size = new System.Drawing.Size(263, 28);
             this.cmbProduct.TabIndex = 4;
             this.cmbProduct.Text = "Sản Phẩm";
             // 
             // cmbProductType
             // 
+            this.cmbProductType.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProductType.FormattingEnabled = true;
             this.cmbProductType.Location = new System.Drawing.Point(415, 10);
             this.cmbProductType.Name = "cmbProductType";
-            this.cmbProductType.Size = new System.Drawing.Size(263, 24);
+            this.cmbProductType.Size = new System.Drawing.Size(263, 28);
             this.cmbProductType.TabIndex = 4;
             this.cmbProductType.Text = "Loại Sản Phẩm";
             this.cmbProductType.SelectedIndexChanged += new System.EventHandler(this.cmbProductType_SelectedIndexChanged);
             // 
-            // bttPay
-            // 
-            this.bttPay.Location = new System.Drawing.Point(885, 486);
-            this.bttPay.Name = "bttPay";
-            this.bttPay.Size = new System.Drawing.Size(247, 39);
-            this.bttPay.TabIndex = 15;
-            this.bttPay.Text = "Thanh Toán";
-            this.bttPay.UseVisualStyleBackColor = true;
-            this.bttPay.Click += new System.EventHandler(this.bttPay_Click);
-            // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(173, 12);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(190, 12);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(196, 22);
             this.txtPhoneNumber.TabIndex = 9;
@@ -135,9 +119,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 14);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.Size = new System.Drawing.Size(146, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "SĐT Khách Hàng";
             // 
@@ -153,31 +138,57 @@
             this.groupBox1.Controls.Add(this.cmbProductType);
             this.groupBox1.Location = new System.Drawing.Point(39, 404);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(706, 144);
+            this.groupBox1.Size = new System.Drawing.Size(706, 159);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 66);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 16);
+            this.label2.Size = new System.Drawing.Size(178, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Hình thức thanh toán";
             // 
             // cmbPaymentMethod
             // 
             this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(173, 63);
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(190, 63);
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
             this.cmbPaymentMethod.Size = new System.Drawing.Size(196, 24);
             this.cmbPaymentMethod.TabIndex = 4;
+            // 
+            // bttPay
+            // 
+            this.bttPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttPay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bttPay.Image = global::QuanLyCuaHang.Properties.Resources.Cash_in_Hand;
+            this.bttPay.Location = new System.Drawing.Point(925, 487);
+            this.bttPay.Name = "bttPay";
+            this.bttPay.Size = new System.Drawing.Size(171, 55);
+            this.bttPay.TabIndex = 15;
+            this.bttPay.UseVisualStyleBackColor = true;
+            this.bttPay.Click += new System.EventHandler(this.bttPay_Click);
+            // 
+            // bttAddProduct
+            // 
+            this.bttAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttAddProduct.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bttAddProduct.Image = global::QuanLyCuaHang.Properties.Resources.Add5;
+            this.bttAddProduct.Location = new System.Drawing.Point(586, 88);
+            this.bttAddProduct.Name = "bttAddProduct";
+            this.bttAddProduct.Size = new System.Drawing.Size(92, 60);
+            this.bttAddProduct.TabIndex = 6;
+            this.bttAddProduct.UseVisualStyleBackColor = true;
+            this.bttAddProduct.Click += new System.EventHandler(this.bttAddProduct_Click);
             // 
             // OutputBillUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.dvgXuatHoaDon);
             this.Controls.Add(this.bttPay);
