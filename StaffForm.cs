@@ -51,6 +51,8 @@ namespace QuanLyCuaHang
                 DiaChi = nv.DiaChi,
                 NgayVaoLam = nv.NgayVaoLam
             }).ToList();
+
+            staffList.FirstOrDefault(st => st.TenNV == "Đã xóa");
         }
 
         void BindToGrid()
@@ -95,7 +97,8 @@ namespace QuanLyCuaHang
 
                     if (resultYesOrNo == DialogResult.Yes)
                     {
-                        db.NHANVIENs.Remove(staffToDelete);
+                        staffToDelete.TenNV = "Đã Xóa";
+
                         db.SaveChanges();
 
                         LoadStaffToGrid();

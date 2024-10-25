@@ -51,7 +51,7 @@ namespace QuanLyCuaHang
             {
                 MaSP = sp.MaSP,
                 TenSP = sp.TenSP,
-                DonGia = sp.DonGiA.ToString(),
+                DonGia = sp.DonGia.ToString(),
                 TenNCC = sp.NHACUNGCAP.TenNCC,
                 TenTheLoai = sp.LOAISANPHAM.TenTheLoai,
             }).ToList();

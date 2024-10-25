@@ -102,6 +102,7 @@ namespace QuanLyCuaHang
             OpenUserControl(new ShiftUC(), pnlOfHai);
         }
 
+        // Nút mở ra danh sách nhân viên
         private void ToolStripMenuItem_StaffList_Click(object sender, EventArgs e)
         {
             OpenForm(new StaffForm());
@@ -119,6 +120,7 @@ namespace QuanLyCuaHang
         {
             lblHelloUser.Visible = false;
             OpenUserControl(new BillListUC(), pnlOfHai);
+            lblOutPutBill.SendToBack();
         }
 
         // Nút mở ra thông tin khách hàng
@@ -181,10 +183,10 @@ namespace QuanLyCuaHang
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlOfHai = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlOfDat = new System.Windows.Forms.Panel();
             this.lblHelloUser = new System.Windows.Forms.Label();
             this.lblOutPutBill = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.pnlOfHai.SuspendLayout();
             this.SuspendLayout();
@@ -206,14 +208,14 @@ namespace QuanLyCuaHang
             // khuyếnMãiToolStripMenuItem
             // 
             this.khuyếnMãiToolStripMenuItem.Name = "khuyếnMãiToolStripMenuItem";
-            this.khuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.khuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.khuyếnMãiToolStripMenuItem.Text = "Khuyến Mãi";
             this.khuyếnMãiToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Sale_Click);
             // 
             // doanhThuToolStripMenuItem
             // 
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
-            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.doanhThuToolStripMenuItem.Text = "Doanh Thu";
             // 
             // thôngTinToolStripMenuItem
@@ -228,13 +230,13 @@ namespace QuanLyCuaHang
             this.kháchHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinToolStripMenuItem});
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.kháchHàngToolStripMenuItem.Text = "Khách Hàng";
             // 
             // xemHóaĐơnToolStripMenuItem
             // 
             this.xemHóaĐơnToolStripMenuItem.Name = "xemHóaĐơnToolStripMenuItem";
-            this.xemHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.xemHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(297, 44);
             this.xemHóaĐơnToolStripMenuItem.Text = "Xem Hóa Đơn";
             this.xemHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_BillView_Click);
             // 
@@ -243,7 +245,7 @@ namespace QuanLyCuaHang
             this.hóaĐơnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xemHóaĐơnToolStripMenuItem});
             this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
-            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.hóaĐơnToolStripMenuItem.Text = "Hóa Đơn";
             // 
             // tsmProductCategory
@@ -258,7 +260,7 @@ namespace QuanLyCuaHang
             this.sảnPhẩmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmProductCategory});
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản Phẩm";
             // 
             // lươngToolStripMenuItem
@@ -281,13 +283,13 @@ namespace QuanLyCuaHang
             this.caLàmViệcToolStripMenuItem,
             this.lươngToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(359, 44);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(276, 44);
             this.toolStripMenuItem1.Text = "Nhân Viên";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(273, 6);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -301,7 +303,7 @@ namespace QuanLyCuaHang
             this.khuyếnMãiToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 38);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 36);
             // 
             // menuStrip2
             // 
@@ -311,7 +313,7 @@ namespace QuanLyCuaHang
             this.danhMụcToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1924, 42);
+            this.menuStrip2.Size = new System.Drawing.Size(1924, 40);
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip1";
             // 
@@ -324,17 +326,25 @@ namespace QuanLyCuaHang
             // pnlOfHai
             // 
             this.pnlOfHai.Controls.Add(this.button2);
-            this.pnlOfHai.Controls.Add(this.pnlOfDat);
-            this.pnlOfHai.Location = new System.Drawing.Point(1290, 205);
+            this.pnlOfHai.Location = new System.Drawing.Point(1803, 946);
             this.pnlOfHai.Name = "pnlOfHai";
             this.pnlOfHai.Size = new System.Drawing.Size(908, 592);
             this.pnlOfHai.TabIndex = 7;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(555, -162);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 262);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // pnlOfDat
             // 
-            this.pnlOfDat.Location = new System.Drawing.Point(0, 28);
+            this.pnlOfDat.Location = new System.Drawing.Point(157, 946);
             this.pnlOfDat.Name = "pnlOfDat";
-            this.pnlOfDat.Size = new System.Drawing.Size(929, 642);
+            this.pnlOfDat.Size = new System.Drawing.Size(1341, 68);
             this.pnlOfDat.TabIndex = 8;
             // 
             // lblHelloUser
@@ -360,19 +370,11 @@ namespace QuanLyCuaHang
             this.lblOutPutBill.TabIndex = 11;
             this.lblOutPutBill.Text = "Xuất Hóa Đơn";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(555, -162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 262);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // HomePageForm
             // 
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1924, 1009);
+            this.Controls.Add(this.pnlOfDat);
             this.Controls.Add(this.lblOutPutBill);
             this.Controls.Add(this.lblHelloUser);
             this.Controls.Add(this.pnlOfHai);
