@@ -45,10 +45,9 @@
             this.btnBackToProductGateFrm.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnBackToProductGateFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToProductGateFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackToProductGateFrm.Location = new System.Drawing.Point(2, 2);
-            this.btnBackToProductGateFrm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBackToProductGateFrm.Location = new System.Drawing.Point(3, 3);
             this.btnBackToProductGateFrm.Name = "btnBackToProductGateFrm";
-            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(161, 47);
+            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(242, 73);
             this.btnBackToProductGateFrm.TabIndex = 9;
             this.btnBackToProductGateFrm.Text = "Quay Lại";
             this.btnBackToProductGateFrm.UseVisualStyleBackColor = false;
@@ -57,38 +56,38 @@
             // txtSumSalary
             // 
             this.txtSumSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSumSalary.Location = new System.Drawing.Point(318, 259);
-            this.txtSumSalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSumSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumSalary.Location = new System.Drawing.Point(502, 471);
             this.txtSumSalary.Name = "txtSumSalary";
-            this.txtSumSalary.Size = new System.Drawing.Size(143, 22);
+            this.txtSumSalary.Size = new System.Drawing.Size(212, 44);
             this.txtSumSalary.TabIndex = 10;
             // 
             // txtTotalWorkingHours
             // 
             this.txtTotalWorkingHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTotalWorkingHours.Location = new System.Drawing.Point(318, 292);
-            this.txtTotalWorkingHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalWorkingHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalWorkingHours.Location = new System.Drawing.Point(502, 536);
             this.txtTotalWorkingHours.Name = "txtTotalWorkingHours";
-            this.txtTotalWorkingHours.Size = new System.Drawing.Size(143, 22);
+            this.txtTotalWorkingHours.Size = new System.Drawing.Size(212, 44);
             this.txtTotalWorkingHours.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(210, 263);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(249, 471);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(190, 37);
             this.label1.TabIndex = 12;
             this.label1.Text = "Tổng Lương";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 292);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(249, 536);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 16);
+            this.label2.Size = new System.Drawing.Size(222, 37);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tổng Giờ Làm";
             // 
@@ -96,10 +95,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 168);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(88, 267);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 16);
+            this.label3.Size = new System.Drawing.Size(401, 37);
             this.label3.TabIndex = 12;
             this.label3.Text = "Chọn tháng cần xem lương";
             // 
@@ -108,28 +107,27 @@
             this.lblShowNameStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblShowNameStaff.AutoSize = true;
             this.lblShowNameStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowNameStaff.Location = new System.Drawing.Point(231, 79);
-            this.lblShowNameStaff.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShowNameStaff.Location = new System.Drawing.Point(249, 144);
             this.lblShowNameStaff.Name = "lblShowNameStaff";
-            this.lblShowNameStaff.Size = new System.Drawing.Size(242, 29);
+            this.lblShowNameStaff.Size = new System.Drawing.Size(280, 42);
             this.lblShowNameStaff.TabIndex = 12;
-            this.lblShowNameStaff.Text = "Chỗ này hiển thị tên";
+            this.lblShowNameStaff.Text = "Tên nhân viên:";
             // 
             // lblShowIDStaff
             // 
             this.lblShowIDStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblShowIDStaff.AutoSize = true;
             this.lblShowIDStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowIDStaff.Location = new System.Drawing.Point(232, 47);
-            this.lblShowIDStaff.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShowIDStaff.Location = new System.Drawing.Point(249, 86);
             this.lblShowIDStaff.Name = "lblShowIDStaff";
-            this.lblShowIDStaff.Size = new System.Drawing.Size(241, 29);
+            this.lblShowIDStaff.Size = new System.Drawing.Size(94, 42);
             this.lblShowIDStaff.TabIndex = 12;
-            this.lblShowIDStaff.Text = "Chỗ này hiển thị Mã";
+            this.lblShowIDStaff.Text = "Mã: ";
             // 
             // cmbMonth
             // 
             this.cmbMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Items.AddRange(new object[] {
             "Tháng 1",
@@ -144,10 +142,9 @@
             "Tháng 10",
             "Tháng 11",
             "Tháng 12"});
-            this.cmbMonth.Location = new System.Drawing.Point(318, 163);
-            this.cmbMonth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMonth.Location = new System.Drawing.Point(542, 259);
             this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(199, 24);
+            this.cmbMonth.Size = new System.Drawing.Size(296, 45);
             this.cmbMonth.TabIndex = 14;
             // 
             // btnCheckSalary
@@ -155,11 +152,10 @@
             this.btnCheckSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCheckSalary.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnCheckSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckSalary.Location = new System.Drawing.Point(477, 204);
-            this.btnCheckSalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckSalary.Location = new System.Drawing.Point(724, 330);
             this.btnCheckSalary.Name = "btnCheckSalary";
-            this.btnCheckSalary.Size = new System.Drawing.Size(121, 29);
+            this.btnCheckSalary.Size = new System.Drawing.Size(182, 65);
             this.btnCheckSalary.TabIndex = 9;
             this.btnCheckSalary.Text = "Kiểm Tra";
             this.btnCheckSalary.UseVisualStyleBackColor = false;
@@ -167,7 +163,7 @@
             // 
             // SalaryListUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cmbMonth);
             this.Controls.Add(this.label2);
@@ -179,9 +175,8 @@
             this.Controls.Add(this.txtSumSalary);
             this.Controls.Add(this.btnCheckSalary);
             this.Controls.Add(this.btnBackToProductGateFrm);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SalaryListUC";
-            this.Size = new System.Drawing.Size(667, 448);
+            this.Size = new System.Drawing.Size(1000, 700);
             this.Load += new System.EventHandler(this.SalaryListUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

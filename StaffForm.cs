@@ -55,6 +55,13 @@ namespace QuanLyCuaHang
 
         void BindToGrid()
         {
+            // Thiết lập tên của cột sẽ hiển thị thuộc tính trong dgv
+            dgvStaff.Columns["column1"].DataPropertyName = "MaNV";
+            dgvStaff.Columns["column2"].DataPropertyName = "TenNV";
+            dgvStaff.Columns["column3"].DataPropertyName = "Sdt";
+            dgvStaff.Columns["column4"].DataPropertyName = "DiaChi";
+            dgvStaff.Columns["column5"].DataPropertyName = "NgayVaoLam";
+
             dgvStaff.DataSource = staffList;
         }
 
@@ -122,7 +129,7 @@ namespace QuanLyCuaHang
             try
             {
                 if (string.IsNullOrEmpty(currStaffID))
-                    throw new Exception("Hãy click vào nhân viên cần xóa");
+                    throw new Exception("Hãy click vào nhân viên cần xem lương");
 
                 Ultilities.Services.SetCenterPanel(this, pnlEditStaff);
 
