@@ -17,6 +17,20 @@ namespace QuanLyCuaHang
         public ConveStoreDBContext dbContext;
         private List<CustomerViewModel> customerList;
 
+        public CustomerIntoForm(string phoneNumber = null)
+        {
+            InitializeComponent();
+
+            dbContext = new ConveStoreDBContext();
+
+            if (!string.IsNullOrEmpty(phoneNumber))
+            {
+                txtSDT.Text = phoneNumber;
+            }
+
+            LoadData();
+            dgvCustomerInfo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
         public CustomerIntoForm()
         {
             InitializeComponent();
