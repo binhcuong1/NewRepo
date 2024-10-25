@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCancelProduct = new System.Windows.Forms.Button();
             this.bttAddProduct = new System.Windows.Forms.Button();
             this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
             this.bttPay = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@
             this.dvgXuatHoaDon.ShowEditingIcon = false;
             this.dvgXuatHoaDon.Size = new System.Drawing.Size(1093, 350);
             this.dvgXuatHoaDon.TabIndex = 13;
+            this.dvgXuatHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgXuatHoaDon_CellContentClick);
             // 
             // contextMenuStrip1
             // 
@@ -78,11 +80,6 @@
             // 
             this.numericUpDownSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownSoLuong.Location = new System.Drawing.Point(415, 100);
-            this.numericUpDownSoLuong.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
             this.numericUpDownSoLuong.Size = new System.Drawing.Size(56, 28);
             this.numericUpDownSoLuong.TabIndex = 5;
@@ -91,7 +88,7 @@
             // 
             this.cmbProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProduct.FormattingEnabled = true;
-            this.cmbProduct.Location = new System.Drawing.Point(415, 58);
+            this.cmbProduct.Location = new System.Drawing.Point(424, 55);
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(263, 28);
             this.cmbProduct.TabIndex = 4;
@@ -101,7 +98,7 @@
             // 
             this.cmbProductType.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProductType.FormattingEnabled = true;
-            this.cmbProductType.Location = new System.Drawing.Point(415, 10);
+            this.cmbProductType.Location = new System.Drawing.Point(424, 16);
             this.cmbProductType.Name = "cmbProductType";
             this.cmbProductType.Size = new System.Drawing.Size(263, 28);
             this.cmbProductType.TabIndex = 2;
@@ -110,9 +107,10 @@
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(213, 16);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(196, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(196, 27);
             this.txtPhoneNumber.TabIndex = 1;
             // 
             // contextMenuStrip2
@@ -125,7 +123,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 14);
+            this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 20);
             this.label1.TabIndex = 10;
@@ -136,6 +134,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
+            this.groupBox1.Controls.Add(this.btnCancelProduct);
             this.groupBox1.Controls.Add(this.bttAddProduct);
             this.groupBox1.Controls.Add(this.numericUpDownSoLuong);
             this.groupBox1.Controls.Add(this.cmbPaymentMethod);
@@ -151,11 +150,23 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 63);
+            this.label2.Location = new System.Drawing.Point(6, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Hình thức thanh toán";
+            // 
+            // btnCancelProduct
+            // 
+            this.btnCancelProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelProduct.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelProduct.Image = global::QuanLyCuaHang.Properties.Resources.Delete;
+            this.btnCancelProduct.Location = new System.Drawing.Point(488, 88);
+            this.btnCancelProduct.Name = "btnCancelProduct";
+            this.btnCancelProduct.Size = new System.Drawing.Size(92, 60);
+            this.btnCancelProduct.TabIndex = 6;
+            this.btnCancelProduct.UseVisualStyleBackColor = true;
+            this.btnCancelProduct.Click += new System.EventHandler(this.btnCancelProduct_Click);
             // 
             // bttAddProduct
             // 
@@ -173,7 +184,7 @@
             // 
             this.cmbPaymentMethod.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(213, 63);
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(213, 55);
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
             this.cmbPaymentMethod.Size = new System.Drawing.Size(196, 28);
             this.cmbPaymentMethod.TabIndex = 3;
@@ -199,7 +210,7 @@
             this.Controls.Add(this.dvgXuatHoaDon);
             this.Controls.Add(this.bttPay);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OutputBillUC";
             this.Size = new System.Drawing.Size(1188, 581);
             this.Load += new System.EventHandler(this.OutputBillUC_Load);
@@ -227,5 +238,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbPaymentMethod;
+        private System.Windows.Forms.Button btnCancelProduct;
     }
 }

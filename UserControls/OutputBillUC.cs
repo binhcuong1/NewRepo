@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace QuanLyCuaHang.UserControls
         private BillViewModel viewModel;
         private ConveStoreDBContext dbContext;
         private List<BillViewModel> billList = new List<BillViewModel>();
-
+        private string currMaSP;
         public OutputBillUC()
         {
             InitializeComponent();
@@ -27,8 +28,8 @@ namespace QuanLyCuaHang.UserControls
             dvgXuatHoaDon.RowHeadersVisible = false;
             dvgXuatHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dvgXuatHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dvgXuatHoaDon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-
         private void OutputBillUC_Load(object sender, EventArgs e)
         {
             LoadProductGatetoryToComboBox();
@@ -38,7 +39,6 @@ namespace QuanLyCuaHang.UserControls
             cmbProduct.SelectedItem = null;
             cmbPaymentMethod.SelectedItem = null;
         }
-
         private void LoadProductToComboBox()
         {
             var loaiSanPhamList = dbContext.LOAISANPHAMs.ToList();
@@ -47,7 +47,6 @@ namespace QuanLyCuaHang.UserControls
             cmbProductType.DisplayMember = "TenTheLoai";
             cmbProductType.ValueMember = "MaTheLoai";
         }
-
         private void LoadProductGatetoryToComboBox()
         {
             var loaiSanPhamList = dbContext.LOAISANPHAMs.ToList();
@@ -56,7 +55,7 @@ namespace QuanLyCuaHang.UserControls
             cmbProductType.DisplayMember = "TenTheLoai";
             cmbProductType.ValueMember = "MaTheLoai";
         }
-        public void LoadPaymentMethodToCombobox()
+        private void LoadPaymentMethodToCombobox()
         {
             var hinhThucThanhToanList = dbContext.PHUONGTHUCTHANHTOANs.ToList();
 
@@ -92,7 +91,7 @@ namespace QuanLyCuaHang.UserControls
             {
                 var khuyenMai = dbContext.CHITITETKHUYENMAIs.FirstOrDefault(km => km.MaSP == selectedSanPham.MaSP);
 
-                double donGia = selectedSanPham.DonGiA ?? 0;
+                double donGia = selectedSanPham.DonGia ?? 0;
 
                 double giaSauKhuyenMai = (khuyenMai != null) ? khuyenMai.MucGiaKhuyenMai ?? donGia : donGia;
 
@@ -119,9 +118,9 @@ namespace QuanLyCuaHang.UserControls
                 }
                 dvgXuatHoaDon.DataSource = null;
                 dvgXuatHoaDon.DataSource = billList;
-
                 dvgXuatHoaDon.Columns["SoHD"].Visible = false; 
-                dvgXuatHoaDon.Columns["PhuongThuc"].Visible = false;  
+                dvgXuatHoaDon.Columns["PhuongThuc"].Visible = false;
+                dvgXuatHoaDon.Columns["MaSP"].Visible = false;
 
                 numericUpDownSoLuong.Value = 0;
                 TinhTongTien();  
@@ -152,7 +151,7 @@ namespace QuanLyCuaHang.UserControls
                         if (result == DialogResult.Yes)
                         {
                             // Mở form thêm khách hàng mới
-                            using (CustomerIntoForm customerInfoForm = new CustomerIntoForm())
+                            using (CustomerIntoForm customerInfoForm = new CustomerIntoForm(txtPhoneNumber.Text))
                             {
                                 customerInfoForm.ShowDialog();  // Mở form thêm khách hàng
 
@@ -164,30 +163,36 @@ namespace QuanLyCuaHang.UserControls
                                 if (khachHang == null)
                                 {
                                     MessageBox.Show("Không thể thêm khách hàng mới. Vui lòng thử lại.");
+
+                                    billList.Clear();
+                                    dvgXuatHoaDon.DataSource = null;
+                                    dvgXuatHoaDon.DataSource = billList;
                                     return;
                                 }
                             }
                         }
                         else
                         {
-                            // Nếu chọn "No", tạo hóa đơn mà không có khách hàng
                             MessageBox.Show("Đang lưu hóa đơn mà không có khách hàng.");
+
+                            billList.Clear();
+                            dvgXuatHoaDon.DataSource = null;
+                            dvgXuatHoaDon.DataSource = billList;
                         }
                     }
 
-                    // Tiếp tục quá trình tạo hóa đơn
+                    // Tạo hóa đơn mới
                     var hoaDonMoi = new HOADON
                     {
                         SoHD = CreateNewSoHD(),
                         NgayLap = DateTime.Now,
                         TongTien = billList.Sum(hd => hd.ThanhTien),
-                        MaKH = khachHang?.MaKH,  
+                        MaKH = khachHang?.MaKH,
                         GhiChu = "Đã thanh toán",
                         MaNV = UserSession.MaNhanVienDangNhap
                     };
 
                     dbContext.HOADONs.Add(hoaDonMoi);
-                    dbContext.SaveChanges();
 
                     // Lưu chi tiết hóa đơn
                     foreach (var chiTiet in billList)
@@ -201,7 +206,7 @@ namespace QuanLyCuaHang.UserControls
                                 SoHD = hoaDonMoi.SoHD,
                                 MaSP = chiTiet.MaSP,
                                 SoLuong = chiTiet.SoLuong,
-                                ThanhTien = (sanPham.DonGiA ?? 0) * chiTiet.SoLuong
+                                ThanhTien = (sanPham.DonGia ?? 0) * chiTiet.SoLuong
                             };
 
                             dbContext.CHITIETHOADONs.Add(chiTietMoi);
@@ -211,7 +216,8 @@ namespace QuanLyCuaHang.UserControls
                             MessageBox.Show($"Không tìm thấy sản phẩm với mã {chiTiet.MaSP}");
                         }
                     }
-                    // Lưu phương thức thanh toán vào bảng CHI_THANHTOAN
+
+                    // Kiểm tra phương thức thanh toán
                     if (cmbPaymentMethod.SelectedValue != null)
                     {
                         var maPTTT = cmbPaymentMethod.SelectedValue.ToString();
@@ -223,7 +229,6 @@ namespace QuanLyCuaHang.UserControls
                         };
 
                         dbContext.CHITIETTHANHTOANs.Add(chiThanhToan);
-                        dbContext.SaveChanges();  // Thêm dòng này nếu chưa có
                     }
                     else
                     {
@@ -231,7 +236,7 @@ namespace QuanLyCuaHang.UserControls
                         return; // Ngừng nếu không có phương thức thanh toán nào được chọn
                     }
 
-                    // Lưu tất cả thay đổi vào cơ sở dữ liệu và commit giao dịch
+                    // Chỉ gọi SaveChanges một lần để lưu tất cả thay đổi
                     dbContext.SaveChanges();
                     transaction.Commit();
 
@@ -261,7 +266,9 @@ namespace QuanLyCuaHang.UserControls
             if (billList.Any())
             {
                 ThemHoaDonMoi();
+                billList.Clear();
                 dvgXuatHoaDon.DataSource = null;
+                dvgXuatHoaDon.DataSource = billList; 
                 txtPhoneNumber.Clear();
                 cmbPaymentMethod.SelectedItem = null;
                 cmbProductType.SelectedItem = null;
@@ -289,5 +296,48 @@ namespace QuanLyCuaHang.UserControls
 
             return "HD" + numberPart.ToString("D3");
         }
+        private void dvgXuatHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dvgXuatHoaDon.Rows[e.RowIndex];
+                if (selectedRow.Cells["MaSP"].Value != null)
+                {
+                    currMaSP = selectedRow.Cells["MaSP"].Value.ToString();
+                }
+            }
+        }
+        private void btnCancelProduct_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(currMaSP))
+            {
+                // Tìm và xóa sản phẩm khỏi billList
+                var itemToRemove = billList.FirstOrDefault(item => item.MaSP == currMaSP);
+                if (itemToRemove != null)
+                {
+                    billList.Remove(itemToRemove);
+
+                    // Cập nhật lại DataGridView
+                    dvgXuatHoaDon.DataSource = null;
+                    dvgXuatHoaDon.DataSource = billList;
+
+                    // Reset currMaSP để tránh lỗi xóa nhầm
+                    currMaSP = null;
+                }
+                dvgXuatHoaDon.Columns["SoHD"].Visible = false;
+                dvgXuatHoaDon.Columns["PhuongThuc"].Visible = false;
+                dvgXuatHoaDon.Columns["MaSP"].Visible = false;
+
+                cmbProductType.SelectedItem = null;
+                cmbProduct.SelectedItem = null;
+
+                TinhTongTien();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn sản phẩm để xóa.");
+            }
+        }
+
     }
 }

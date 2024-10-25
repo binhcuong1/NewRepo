@@ -90,7 +90,7 @@ namespace QuanLyCuaHang
 
             result.MaSP = CreateNewProductID();
             result.TenSP = txtProductName.Text.Trim();
-            result.DonGiA = double.Parse(txtPrice.Text.Trim());
+            result.DonGia = double.Parse(txtPrice.Text.Trim());
 
             result.MaNCC = (cmbSupplier.SelectedItem as SupplierViewModel).MaNCC;
 

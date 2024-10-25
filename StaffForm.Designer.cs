@@ -190,7 +190,7 @@
             this.Controls.Add(this.dgvStaff);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StaffForm";
-            this.Text = "StaffForm";
+            this.Text = "v ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StaffForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
