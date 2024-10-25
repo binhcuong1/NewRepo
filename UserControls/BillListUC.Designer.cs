@@ -45,6 +45,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.bttRefresh);
             this.groupBox1.Controls.Add(this.bttSearch);
             this.groupBox1.Controls.Add(this.dateTimePickerNgayLap);
@@ -53,123 +54,144 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 40);
+            this.groupBox1.Location = new System.Drawing.Point(38, 125);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 223);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(575, 349);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // bttRefresh
             // 
+            this.bttRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bttRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttRefresh.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation2;
-            this.bttRefresh.Location = new System.Drawing.Point(242, 152);
+            this.bttRefresh.Location = new System.Drawing.Point(352, 236);
+            this.bttRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bttRefresh.Name = "bttRefresh";
-            this.bttRefresh.Size = new System.Drawing.Size(76, 59);
+            this.bttRefresh.Size = new System.Drawing.Size(114, 92);
             this.bttRefresh.TabIndex = 5;
             this.bttRefresh.UseVisualStyleBackColor = true;
             this.bttRefresh.Click += new System.EventHandler(this.bttRefresh_Click);
             // 
             // bttSearch
             // 
+            this.bttSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bttSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttSearch.Image = global::QuanLyCuaHang.Properties.Resources.Search2;
-            this.bttSearch.Location = new System.Drawing.Point(73, 151);
+            this.bttSearch.Location = new System.Drawing.Point(110, 236);
+            this.bttSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bttSearch.Name = "bttSearch";
-            this.bttSearch.Size = new System.Drawing.Size(63, 60);
+            this.bttSearch.Size = new System.Drawing.Size(94, 94);
             this.bttSearch.TabIndex = 4;
             this.bttSearch.UseVisualStyleBackColor = true;
             this.bttSearch.Click += new System.EventHandler(this.bttSearch_Click);
             // 
             // dateTimePickerNgayLap
             // 
+            this.dateTimePickerNgayLap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerNgayLap.CalendarFont = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayLap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(187, 117);
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(280, 183);
+            this.dateTimePickerNgayLap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
-            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(202, 28);
+            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(301, 41);
             this.dateTimePickerNgayLap.TabIndex = 3;
             this.dateTimePickerNgayLap.ValueChanged += new System.EventHandler(this.dateTimePickerNgayLap_ValueChanged);
             // 
             // txtCustomerPhoneNumer
             // 
-            this.txtCustomerPhoneNumer.Location = new System.Drawing.Point(187, 80);
+            this.txtCustomerPhoneNumer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCustomerPhoneNumer.Location = new System.Drawing.Point(280, 125);
+            this.txtCustomerPhoneNumer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomerPhoneNumer.Name = "txtCustomerPhoneNumer";
-            this.txtCustomerPhoneNumer.Size = new System.Drawing.Size(203, 22);
+            this.txtCustomerPhoneNumer.Size = new System.Drawing.Size(302, 31);
             this.txtCustomerPhoneNumer.TabIndex = 2;
             // 
             // txtBillID
             // 
-            this.txtBillID.Location = new System.Drawing.Point(186, 40);
+            this.txtBillID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBillID.Location = new System.Drawing.Point(279, 62);
+            this.txtBillID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBillID.Name = "txtBillID";
-            this.txtBillID.Size = new System.Drawing.Size(204, 22);
+            this.txtBillID.Size = new System.Drawing.Size(304, 31);
             this.txtBillID.TabIndex = 1;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 119);
+            this.label3.Location = new System.Drawing.Point(21, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.Size = new System.Drawing.Size(134, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ngày Lập";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 80);
+            this.label2.Location = new System.Drawing.Point(21, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 20);
+            this.label2.Size = new System.Drawing.Size(233, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "SDT Khách Hàng";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(20, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(162, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số Hóa Đơn";
             // 
             // dvgListHoaDon
             // 
+            this.dvgListHoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dvgListHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dvgListHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgListHoaDon.Location = new System.Drawing.Point(405, 40);
+            this.dvgListHoaDon.Location = new System.Drawing.Point(664, 78);
+            this.dvgListHoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dvgListHoaDon.Name = "dvgListHoaDon";
             this.dvgListHoaDon.RowHeadersWidth = 51;
             this.dvgListHoaDon.RowTemplate.Height = 24;
-            this.dvgListHoaDon.Size = new System.Drawing.Size(707, 567);
+            this.dvgListHoaDon.Size = new System.Drawing.Size(1462, 886);
             this.dvgListHoaDon.TabIndex = 2;
             this.dvgListHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgListHoaDon_CellContentClick);
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.Remove_bg7;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(100, 316);
+            this.panel1.Location = new System.Drawing.Point(184, 557);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 222);
+            this.panel1.Size = new System.Drawing.Size(332, 348);
             this.panel1.TabIndex = 4;
             // 
             // BillListUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dvgListHoaDon);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BillListUC";
-            this.Size = new System.Drawing.Size(1135, 648);
+            this.Size = new System.Drawing.Size(1920, 1080);
             this.Load += new System.EventHandler(this.BillListUC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

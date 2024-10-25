@@ -91,7 +91,7 @@ namespace QuanLyCuaHang.UserControls
             {
                 var khuyenMai = dbContext.CHITITETKHUYENMAIs.FirstOrDefault(km => km.MaSP == selectedSanPham.MaSP);
 
-                double donGia = selectedSanPham.DonGiA ?? 0;
+                double donGia = selectedSanPham.DonGia ?? 0;
 
                 double giaSauKhuyenMai = (khuyenMai != null) ? khuyenMai.MucGiaKhuyenMai ?? donGia : donGia;
 
@@ -206,7 +206,7 @@ namespace QuanLyCuaHang.UserControls
                                 SoHD = hoaDonMoi.SoHD,
                                 MaSP = chiTiet.MaSP,
                                 SoLuong = chiTiet.SoLuong,
-                                ThanhTien = (sanPham.DonGiA ?? 0) * chiTiet.SoLuong
+                                ThanhTien = (sanPham.DonGia ?? 0) * chiTiet.SoLuong
                             };
 
                             dbContext.CHITIETHOADONs.Add(chiTietMoi);

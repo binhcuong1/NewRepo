@@ -25,7 +25,7 @@ namespace QuanLyCuaHang.ViewModel
         [StringLength(50)]
         public string TenSP { get; set; }
 
-        public double? DonGiA { get; set; }
+        public double? DonGia { get; set; }
 
         [StringLength(20)]
         public string MaNCC { get; set; }

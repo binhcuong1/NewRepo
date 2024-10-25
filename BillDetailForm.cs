@@ -57,7 +57,7 @@ namespace QuanLyCuaHang
                     MaSP = ct.MaSP,
                     TenSP = ct.SANPHAM != null ? ct.SANPHAM.TenSP : "Không có tên sản phẩm", // Kiểm tra null
                     SoLuong = ct.SoLuong ?? 0,
-                    DonGiA = ct.SANPHAM != null ? ct.SANPHAM.DonGiA ?? 0 : 0, // Kiểm tra null
+                    DonGiA = ct.SANPHAM != null ? ct.SANPHAM.DonGia ?? 0 : 0, // Kiểm tra null
                 }).ToList();
 
             // Xử lý các phần không thể đưa vào truy vấn SQL (khuyến mãi và thành tiền)

@@ -19,7 +19,7 @@ namespace QuanLyCuaHang
             //Application.Run(new LoginForm());
             Application.Run(new HomePageForm());
             //Application.Run(new ProductGatetoryForm());
-            Application.Run(new StaffForm());
+            //Application.Run(new StaffForm());
             //Application.Run(new SaleForm());
         }
     }
