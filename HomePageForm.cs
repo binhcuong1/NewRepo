@@ -38,7 +38,6 @@ namespace QuanLyCuaHang
         // Hàm mở form
         void OpenForm(Form f)
         {
-            //ProductGatetoryForm productGatetoryForm = new ProductGatetoryForm();
             f.Show();
             this.Hide();
         }

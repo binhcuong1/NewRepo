@@ -66,7 +66,6 @@ namespace QuanLyCuaHang.UserControls
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            // Ẩn UserControl
             this.Visible = false;
 
             // Ẩn panel chứa UserControl
@@ -75,8 +74,8 @@ namespace QuanLyCuaHang.UserControls
                 currPanel.Visible = false; // Ẩn panel
             }
 
-
-            currDgv.DataSource = db.NHANVIENs.ToList();
+            StaffForm f = new StaffForm();
+            f.Show();
         }
         #endregion
 

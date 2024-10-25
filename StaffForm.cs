@@ -43,16 +43,20 @@ namespace QuanLyCuaHang
 
         void LoadStaffToGrid()
         {
-            staffList = db.NHANVIENs.Select(nv => new StaffViewModel
-            {
-                MaNV = nv.MaNV,
-                TenNV = nv.TenNV,
-                Sdt = nv.Sdt,
-                DiaChi = nv.DiaChi,
-                NgayVaoLam = nv.NgayVaoLam
-            }).ToList();
+            // Lọc những nhân viên có tên khác "Đã Xóa"
+            var staffListFake = db.NHANVIENs
+                .Where(nv => nv.TenNV.Trim().ToLower() != "đã xóa")
+                .Select(nv => new StaffViewModel
+                {
+                    MaNV = nv.MaNV,
+                    TenNV = nv.TenNV,
+                    Sdt = nv.Sdt,
+                    DiaChi = nv.DiaChi,
+                    NgayVaoLam = nv.NgayVaoLam
+                }).ToList();
 
-            staffList.FirstOrDefault(st => st.TenNV == "Đã xóa");
+            staffList = null;
+            staffList = staffListFake;
         }
 
         void BindToGrid()
