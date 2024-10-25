@@ -64,7 +64,7 @@
             this.bttRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttRefresh.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation2;
-            this.bttRefresh.Location = new System.Drawing.Point(235, 151);
+            this.bttRefresh.Location = new System.Drawing.Point(242, 152);
             this.bttRefresh.Name = "bttRefresh";
             this.bttRefresh.Size = new System.Drawing.Size(76, 59);
             this.bttRefresh.TabIndex = 5;
