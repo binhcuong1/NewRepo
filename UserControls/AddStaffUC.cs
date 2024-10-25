@@ -48,7 +48,7 @@ namespace QuanLyCuaHang.UserControls
             try
             {
                 if (isEmptyInput)
-                    throw new Exception("Bạn phải chọn đầy đủ các lựa chọn");
+                    throw new Exception("Bắt buộc nhập số điện thoại và tên");
 
 
                 NHANVIEN newSfaff = FillInputToEntityProduct();

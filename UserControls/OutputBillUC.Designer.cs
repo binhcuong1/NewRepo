@@ -77,7 +77,12 @@
             // numericUpDownSoLuong
             // 
             this.numericUpDownSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownSoLuong.Location = new System.Drawing.Point(415, 105);
+            this.numericUpDownSoLuong.Location = new System.Drawing.Point(415, 100);
+            this.numericUpDownSoLuong.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
             this.numericUpDownSoLuong.Size = new System.Drawing.Size(56, 28);
             this.numericUpDownSoLuong.TabIndex = 5;
@@ -105,10 +110,9 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(213, 10);
-            this.txtPhoneNumber.Multiline = true;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(213, 16);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(196, 28);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(196, 22);
             this.txtPhoneNumber.TabIndex = 1;
             // 
             // contextMenuStrip2
@@ -169,7 +173,7 @@
             // 
             this.cmbPaymentMethod.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(213, 58);
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(213, 63);
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
             this.cmbPaymentMethod.Size = new System.Drawing.Size(196, 28);
             this.cmbPaymentMethod.TabIndex = 3;

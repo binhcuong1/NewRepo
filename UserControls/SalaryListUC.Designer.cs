@@ -30,7 +30,7 @@
         {
             this.btnBackToProductGateFrm = new System.Windows.Forms.Button();
             this.txtSumSalary = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTotalWorkingHours = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.btnBackToProductGateFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToProductGateFrm.Location = new System.Drawing.Point(3, 3);
             this.btnBackToProductGateFrm.Name = "btnBackToProductGateFrm";
-            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(241, 74);
+            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(242, 73);
             this.btnBackToProductGateFrm.TabIndex = 9;
             this.btnBackToProductGateFrm.Text = "Quay Lại";
             this.btnBackToProductGateFrm.UseVisualStyleBackColor = false;
@@ -56,34 +56,38 @@
             // txtSumSalary
             // 
             this.txtSumSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSumSalary.Location = new System.Drawing.Point(477, 405);
+            this.txtSumSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumSalary.Location = new System.Drawing.Point(502, 471);
             this.txtSumSalary.Name = "txtSumSalary";
-            this.txtSumSalary.Size = new System.Drawing.Size(213, 31);
+            this.txtSumSalary.Size = new System.Drawing.Size(212, 44);
             this.txtSumSalary.TabIndex = 10;
             // 
-            // textBox2
+            // txtTotalWorkingHours
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(477, 457);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 31);
-            this.textBox2.TabIndex = 10;
+            this.txtTotalWorkingHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTotalWorkingHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalWorkingHours.Location = new System.Drawing.Point(502, 536);
+            this.txtTotalWorkingHours.Name = "txtTotalWorkingHours";
+            this.txtTotalWorkingHours.Size = new System.Drawing.Size(212, 44);
+            this.txtTotalWorkingHours.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(315, 411);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(249, 471);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 25);
+            this.label1.Size = new System.Drawing.Size(190, 37);
             this.label1.TabIndex = 12;
             this.label1.Text = "Tổng Lương";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 457);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(249, 536);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.Size = new System.Drawing.Size(222, 37);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tổng Giờ Làm";
             // 
@@ -91,9 +95,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 262);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(88, 267);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(269, 25);
+            this.label3.Size = new System.Drawing.Size(401, 37);
             this.label3.TabIndex = 12;
             this.label3.Text = "Chọn tháng cần xem lương";
             // 
@@ -102,26 +107,27 @@
             this.lblShowNameStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblShowNameStaff.AutoSize = true;
             this.lblShowNameStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowNameStaff.Location = new System.Drawing.Point(347, 124);
+            this.lblShowNameStaff.Location = new System.Drawing.Point(249, 144);
             this.lblShowNameStaff.Name = "lblShowNameStaff";
-            this.lblShowNameStaff.Size = new System.Drawing.Size(370, 42);
+            this.lblShowNameStaff.Size = new System.Drawing.Size(280, 42);
             this.lblShowNameStaff.TabIndex = 12;
-            this.lblShowNameStaff.Text = "Chỗ này hiển thị tên";
+            this.lblShowNameStaff.Text = "Tên nhân viên:";
             // 
             // lblShowIDStaff
             // 
             this.lblShowIDStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblShowIDStaff.AutoSize = true;
             this.lblShowIDStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowIDStaff.Location = new System.Drawing.Point(348, 73);
+            this.lblShowIDStaff.Location = new System.Drawing.Point(249, 86);
             this.lblShowIDStaff.Name = "lblShowIDStaff";
-            this.lblShowIDStaff.Size = new System.Drawing.Size(369, 42);
+            this.lblShowIDStaff.Size = new System.Drawing.Size(94, 42);
             this.lblShowIDStaff.TabIndex = 12;
-            this.lblShowIDStaff.Text = "Chỗ này hiển thị Mã";
+            this.lblShowIDStaff.Text = "Mã: ";
             // 
             // cmbMonth
             // 
             this.cmbMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Items.AddRange(new object[] {
             "Tháng 1",
@@ -136,9 +142,9 @@
             "Tháng 10",
             "Tháng 11",
             "Tháng 12"});
-            this.cmbMonth.Location = new System.Drawing.Point(477, 254);
+            this.cmbMonth.Location = new System.Drawing.Point(542, 259);
             this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(296, 33);
+            this.cmbMonth.Size = new System.Drawing.Size(296, 45);
             this.cmbMonth.TabIndex = 14;
             // 
             // btnCheckSalary
@@ -146,10 +152,10 @@
             this.btnCheckSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCheckSalary.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnCheckSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckSalary.Location = new System.Drawing.Point(716, 319);
+            this.btnCheckSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckSalary.Location = new System.Drawing.Point(724, 330);
             this.btnCheckSalary.Name = "btnCheckSalary";
-            this.btnCheckSalary.Size = new System.Drawing.Size(181, 45);
+            this.btnCheckSalary.Size = new System.Drawing.Size(182, 65);
             this.btnCheckSalary.TabIndex = 9;
             this.btnCheckSalary.Text = "Kiểm Tra";
             this.btnCheckSalary.UseVisualStyleBackColor = false;
@@ -165,7 +171,7 @@
             this.Controls.Add(this.lblShowNameStaff);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTotalWorkingHours);
             this.Controls.Add(this.txtSumSalary);
             this.Controls.Add(this.btnCheckSalary);
             this.Controls.Add(this.btnBackToProductGateFrm);
@@ -181,7 +187,7 @@
 
         private System.Windows.Forms.Button btnBackToProductGateFrm;
         private System.Windows.Forms.TextBox txtSumSalary;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalWorkingHours;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

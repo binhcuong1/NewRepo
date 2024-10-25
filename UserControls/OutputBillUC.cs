@@ -24,9 +24,6 @@ namespace QuanLyCuaHang.UserControls
             viewModel = new BillViewModel();
             dbContext = new ConveStoreDBContext();
 
-            cmbProductType.SelectedItem = null;
-            cmbProduct.SelectedItem = null;
-
             dvgXuatHoaDon.RowHeadersVisible = false;
             dvgXuatHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dvgXuatHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -37,6 +34,9 @@ namespace QuanLyCuaHang.UserControls
             LoadProductGatetoryToComboBox();
             LoadProductToComboBox();
             LoadPaymentMethodToCombobox();
+            cmbProductType.SelectedItem = null;
+            cmbProduct.SelectedItem = null;
+            cmbPaymentMethod.SelectedItem = null;
         }
 
         private void LoadProductToComboBox()
@@ -56,7 +56,6 @@ namespace QuanLyCuaHang.UserControls
             cmbProductType.DisplayMember = "TenTheLoai";
             cmbProductType.ValueMember = "MaTheLoai";
         }
-
         public void LoadPaymentMethodToCombobox()
         {
             var hinhThucThanhToanList = dbContext.PHUONGTHUCTHANHTOANs.ToList();
@@ -262,6 +261,12 @@ namespace QuanLyCuaHang.UserControls
             if (billList.Any())
             {
                 ThemHoaDonMoi();
+                dvgXuatHoaDon.DataSource = null;
+                txtPhoneNumber.Clear();
+                cmbPaymentMethod.SelectedItem = null;
+                cmbProductType.SelectedItem = null;
+                cmbProduct.SelectedItem = null;
+                lblTongTien.Text = null;
             }
             else
             {
