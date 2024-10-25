@@ -55,6 +55,7 @@
             // 
             // dvgChiTietHoaDon
             // 
+            this.dvgChiTietHoaDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.dvgChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgChiTietHoaDon.Location = new System.Drawing.Point(34, 60);
             this.dvgChiTietHoaDon.Name = "dvgChiTietHoaDon";
@@ -73,24 +74,29 @@
             // 
             // btnRefund
             // 
+            this.btnRefund.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.btnRefund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefund.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefund.Location = new System.Drawing.Point(36, 449);
             this.btnRefund.Name = "btnRefund";
             this.btnRefund.Size = new System.Drawing.Size(98, 32);
             this.btnRefund.TabIndex = 2;
             this.btnRefund.Text = "Hoàn trả";
-            this.btnRefund.UseVisualStyleBackColor = true;
+            this.btnRefund.UseVisualStyleBackColor = false;
             this.btnRefund.Click += new System.EventHandler(this.btnRefund_Click);
             // 
             // btnAdjust
             // 
+            this.btnAdjust.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.btnAdjust.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdjust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdjust.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdjust.Location = new System.Drawing.Point(169, 449);
             this.btnAdjust.Name = "btnAdjust";
             this.btnAdjust.Size = new System.Drawing.Size(114, 32);
             this.btnAdjust.TabIndex = 3;
             this.btnAdjust.Text = "Điều chỉnh";
-            this.btnAdjust.UseVisualStyleBackColor = true;
+            this.btnAdjust.UseVisualStyleBackColor = false;
             this.btnAdjust.Click += new System.EventHandler(this.btnAdjust_Click);
             // 
             // BillDetailForm

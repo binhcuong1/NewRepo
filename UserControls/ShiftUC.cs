@@ -38,9 +38,9 @@ namespace QuanLyCuaHang.UserControls
             cmbStaff.SelectedItem = null;
 
             dgvOfShiftUC.CellFormatting += dgvCaLamViec_CellFormatting;
-            dgvOfShiftUC.RowHeadersVisible = false;
-            dgvOfShiftUC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvOfShiftUC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dgvOfShiftUC.RowHeadersVisible = false;
+            //dgvOfShiftUC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dgvOfShiftUC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOfShiftUC.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 

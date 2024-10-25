@@ -467,5 +467,44 @@
   <ItemGroup>
     <None Include="Resources\Back4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

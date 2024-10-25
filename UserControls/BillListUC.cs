@@ -26,9 +26,9 @@ namespace QuanLyCuaHang.UserControls
             dateTimePickerNgayLap.Format = DateTimePickerFormat.Custom;
 
             dvgListHoaDon.Columns["MaKH"].Visible = false;
-            dvgListHoaDon.RowHeadersVisible = false;
-            dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dvgListHoaDon.RowHeadersVisible = false;
+            //dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvgListHoaDon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
