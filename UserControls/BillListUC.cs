@@ -205,6 +205,7 @@ namespace QuanLyCuaHang.UserControls
             ResetSearchFields();
             BindBillToGrid();
         }
-   
+
+     
     }
 }

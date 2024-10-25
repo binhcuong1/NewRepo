@@ -119,6 +119,7 @@
             this.btnSearchCustomerInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnSearchCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchCustomerInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnSearchCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Search1;
             this.btnSearchCustomerInfo.Location = new System.Drawing.Point(663, 13);
             this.btnSearchCustomerInfo.Name = "btnSearchCustomerInfo";
@@ -178,6 +179,7 @@
             // btnDelectCustomerInfo
             // 
             this.btnDelectCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelectCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnDelectCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Delete1;
             this.btnDelectCustomerInfo.Location = new System.Drawing.Point(877, 132);
             this.btnDelectCustomerInfo.Name = "btnDelectCustomerInfo";
@@ -189,6 +191,7 @@
             // btnEditCustomerInfo
             // 
             this.btnEditCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnEditCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Maintenance;
             this.btnEditCustomerInfo.Location = new System.Drawing.Point(732, 132);
             this.btnEditCustomerInfo.Name = "btnEditCustomerInfo";
@@ -200,6 +203,7 @@
             // btnAddCustomerInfo
             // 
             this.btnAddCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnAddCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Add2;
             this.btnAddCustomerInfo.Location = new System.Drawing.Point(575, 132);
             this.btnAddCustomerInfo.Name = "btnAddCustomerInfo";
@@ -219,6 +223,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.button1.Image = global::QuanLyCuaHang.Properties.Resources.Back1;
             this.button1.Location = new System.Drawing.Point(2, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -233,6 +238,7 @@
             this.btnResertCustomerInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnResertCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResertCustomerInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResertCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnResertCustomerInfo.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation1;
             this.btnResertCustomerInfo.Location = new System.Drawing.Point(105, 288);
             this.btnResertCustomerInfo.Name = "btnResertCustomerInfo";

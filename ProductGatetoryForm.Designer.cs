@@ -134,6 +134,7 @@
             this.btnFilterDataOfProductGate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnFilterDataOfProductGate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFilterDataOfProductGate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilterDataOfProductGate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnFilterDataOfProductGate.Image = global::QuanLyCuaHang.Properties.Resources.Search;
             this.btnFilterDataOfProductGate.Location = new System.Drawing.Point(829, 161);
             this.btnFilterDataOfProductGate.Margin = new System.Windows.Forms.Padding(2);
@@ -190,6 +191,7 @@
             this.btnOpenProductUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnOpenProductUC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOpenProductUC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenProductUC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnOpenProductUC.Image = global::QuanLyCuaHang.Properties.Resources.Add;
             this.btnOpenProductUC.Location = new System.Drawing.Point(12, 161);
             this.btnOpenProductUC.Margin = new System.Windows.Forms.Padding(2);
@@ -205,6 +207,7 @@
             this.btnDeleteProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnDeleteProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnDeleteProduct.Image = global::QuanLyCuaHang.Properties.Resources.Delete;
             this.btnDeleteProduct.Location = new System.Drawing.Point(276, 161);
             this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(2);
@@ -220,6 +223,7 @@
             this.btnResetGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnResetGrid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResetGrid.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnResetGrid.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation;
             this.btnResetGrid.Location = new System.Drawing.Point(547, 159);
             this.btnResetGrid.Margin = new System.Windows.Forms.Padding(2);

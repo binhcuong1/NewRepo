@@ -128,6 +128,7 @@
             this.btnBackToProductGateFrm.BackColor = System.Drawing.Color.White;
             this.btnBackToProductGateFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToProductGateFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToProductGateFrm.ForeColor = System.Drawing.Color.White;
             this.btnBackToProductGateFrm.Image = global::QuanLyCuaHang.Properties.Resources.Back2;
             this.btnBackToProductGateFrm.Location = new System.Drawing.Point(2, 0);
             this.btnBackToProductGateFrm.Margin = new System.Windows.Forms.Padding(2);
@@ -142,6 +143,7 @@
             this.btnAddProduct.BackColor = System.Drawing.Color.White;
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Image = global::QuanLyCuaHang.Properties.Resources.Add3;
             this.btnAddProduct.Location = new System.Drawing.Point(257, 367);
             this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
