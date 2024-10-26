@@ -121,14 +121,9 @@ namespace QuanLyCuaHang
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            DialogResult dg = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dg == DialogResult.Yes)
-            {
-                HomePageForm homePageForm = new HomePageForm();
-                this.Hide();
-                homePageForm.Show();
-            }
+            HomePageForm homePageForm = new HomePageForm();
+            this.Hide();
+            homePageForm.Show();
         }
 
         private void BtnSalaryList_Click(object sender, EventArgs e)

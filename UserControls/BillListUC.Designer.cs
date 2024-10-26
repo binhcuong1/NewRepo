@@ -158,12 +158,15 @@
             // 
             // dvgListHoaDon
             // 
+            this.dvgListHoaDon.AllowUserToAddRows = false;
+            this.dvgListHoaDon.AllowUserToDeleteRows = false;
             this.dvgListHoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dvgListHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dvgListHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgListHoaDon.Location = new System.Drawing.Point(664, 78);
             this.dvgListHoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dvgListHoaDon.Name = "dvgListHoaDon";
+            this.dvgListHoaDon.ReadOnly = true;
             this.dvgListHoaDon.RowHeadersWidth = 51;
             this.dvgListHoaDon.RowTemplate.Height = 24;
             this.dvgListHoaDon.Size = new System.Drawing.Size(1462, 886);

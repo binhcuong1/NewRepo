@@ -49,7 +49,9 @@ namespace QuanLyCuaHang
 
         private void LoadData()
         {
-            customerList = dbContext.KHACHHANGs.Select(p => new CustomerViewModel
+            customerList = dbContext.KHACHHANGs
+                .Where(kh => kh.TenKH != "đã xóa")
+                .Select(p => new CustomerViewModel
             {
                 MaKH = p.MaKH,
                 TenKH = p.TenKH,
@@ -150,7 +152,8 @@ namespace QuanLyCuaHang
                     var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (confirmResult == DialogResult.Yes)
                     {
-                        dbContext.KHACHHANGs.Remove(customerToDelete);
+                        customerToDelete.TenKH = "đã xóa";
+
                         dbContext.SaveChanges();
 
                         // Cập nhật danh sách khách hàng và DataGridView

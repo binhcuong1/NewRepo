@@ -59,7 +59,9 @@ namespace QuanLyCuaHang
 
         private void LoadProducts()
         {
-            productList = db.SANPHAMs.Select(sp => new ProductViewModel
+            productList = db.SANPHAMs
+                .Where(sp => sp.TenSP.ToLower().Trim() != "đã xóa")
+                .Select(sp => new ProductViewModel
             {
                 MaSP = sp.MaSP,
                 TenSP = sp.TenSP,
@@ -176,7 +178,8 @@ namespace QuanLyCuaHang
 
                     if (resultYesOrNo == DialogResult.Yes)
                     {
-                        db.SANPHAMs.Remove(productToDelete);
+                        productToDelete.TenSP = "Đã xóa";
+
                         db.SaveChanges();
 
                         LoadProducts();
@@ -294,9 +297,5 @@ namespace QuanLyCuaHang
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

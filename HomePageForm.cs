@@ -280,7 +280,7 @@ namespace QuanLyCuaHang
             this.khuyếnMãiToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 38);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 36);
             // 
             // menuStrip2
             // 
@@ -290,7 +290,7 @@ namespace QuanLyCuaHang
             this.danhMụcToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1924, 42);
+            this.menuStrip2.Size = new System.Drawing.Size(1924, 40);
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip1";
             // 
@@ -372,6 +372,7 @@ namespace QuanLyCuaHang
             this.Controls.Add(this.pnlOfHai);
             this.Controls.Add(this.menuStrip2);
             this.Name = "HomePageForm";
+            this.Text = "Trang Chủ";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

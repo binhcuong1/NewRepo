@@ -71,7 +71,19 @@ namespace QuanLyCuaHang
 
         private void BindToGrid(List<SaleViewModel> sales)
         {
+            // Thiết lập tên của cột sẽ hiển thị thuộc tính trong dgv
+            dgvSale.Columns["column1"].DataPropertyName = "TenKM";
+            dgvSale.Columns["column2"].DataPropertyName = "TenSP";
+            dgvSale.Columns["column3"].DataPropertyName = "MucGiaKhuyenMai";
+            dgvSale.Columns["column4"].DataPropertyName = "NgayBatDau";
+            dgvSale.Columns["column5"].DataPropertyName = "NgayKetThuc";
+
             dgvSale.DataSource = sales;
+
+            if (dgvSale.Columns.Contains("MaKM"))
+            {
+                dgvSale.Columns["MaKM"].Visible = false;
+            }
         }
 
         private void btnAddSale_Click(object sender, EventArgs e)

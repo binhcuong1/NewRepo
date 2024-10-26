@@ -17,10 +17,11 @@ namespace QuanLyCuaHang
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
-            Application.Run(new HomePageForm());
+            //Application.Run(new HomePageForm());
             //Application.Run(new ProductGatetoryForm());
             //Application.Run(new StaffForm());
-            //Application.Run(new SaleForm());
+            Application.Run(new SaleForm());
+            //Application.Run(new StaffForm());
         }
     }
 }
