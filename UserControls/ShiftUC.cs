@@ -209,7 +209,7 @@ namespace QuanLyCuaHang.UserControls
         {
             try
             {
-                var CaLamViecHienTai = dbContext.CHITIETCALAMVIECs.FirstOrDefault(c => c.MaCa.Trim() == txtMaCa.Text.Trim());
+                var CaLamViecHienTai = dbContext.CHITIETCALAMVIECs.FirstOrDefault(c => c.MaCa.Trim() == cmbStaff.Text.Trim());
 
                 if (CaLamViecHienTai != null)
                 {
@@ -252,9 +252,7 @@ namespace QuanLyCuaHang.UserControls
         private void ResetSearchFields()
         {
             cmbStaff.SelectedIndex = -1;
-
             cmbShift.SelectedIndex = -1;
-
             dateTimePickerNgayLam.CustomFormat = " ";
             dateTimePickerNgayLam.Format = DateTimePickerFormat.Custom;
         }
