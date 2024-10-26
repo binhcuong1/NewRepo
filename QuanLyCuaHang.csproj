@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Include="SaleForm.Designer.cs">
       <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleRevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleRevenueForm.Designer.cs">
+      <DependentUpon>SaleRevenueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffForm.cs">
       <SubType>Form</SubType>
@@ -183,6 +190,7 @@
     <Compile Include="ViewModel\InvoiceDetailViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
     <Compile Include="ViewModel\SalaryStaffViewModel.cs" />
+    <Compile Include="ViewModel\SaleRevenueViewModel.cs" />
     <Compile Include="ViewModel\SaleViewModel.cs" />
     <Compile Include="ViewModel\ShiffDetailViewModel.cs" />
     <Compile Include="ViewModel\ShiftViewModel.cs" />
@@ -199,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleRevenueForm.resx">
+      <DependentUpon>SaleRevenueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>

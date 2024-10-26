@@ -79,7 +79,7 @@
             // numericUpDownSoLuong
             // 
             this.numericUpDownSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownSoLuong.Location = new System.Drawing.Point(415, 100);
+            this.numericUpDownSoLuong.Location = new System.Drawing.Point(426, 105);
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
             this.numericUpDownSoLuong.Size = new System.Drawing.Size(56, 28);
             this.numericUpDownSoLuong.TabIndex = 5;

@@ -128,17 +128,24 @@ namespace QuanLyCuaHang.UserControls
         }
         private void ThemHoaDonMoi()
         {
+            // Kiểm tra số điện thoại có hợp lệ không
+            if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
+            {
+                MessageBox.Show("Số điện thoại không được để trống. Vui lòng nhập số điện thoại.");
+                return; // Dừng quá trình nếu không có số điện thoại
+            }
+
+            // Kiểm tra phương thức thanh toán
+            if (cmbPaymentMethod.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn phương thức thanh toán.");
+                return; // Dừng quá trình nếu không có phương thức thanh toán
+            }
+
             using (var transaction = dbContext.Database.BeginTransaction())
             {
                 try
                 {
-                    // Kiểm tra số điện thoại có hợp lệ không
-                    if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
-                    {
-                        MessageBox.Show("Số điện thoại không được để trống. Đang thêm hóa đơn mới...");
-                        return;
-                    }
-
                     // Tìm kiếm khách hàng trong cơ sở dữ liệu
                     var khachHang = dbContext.KHACHHANGs
                         .FirstOrDefault(kh => kh.Sdt == txtPhoneNumber.Text);
@@ -153,7 +160,7 @@ namespace QuanLyCuaHang.UserControls
                             // Mở form thêm khách hàng mới
                             using (CustomerIntoForm customerInfoForm = new CustomerIntoForm(txtPhoneNumber.Text))
                             {
-                                customerInfoForm.ShowDialog();  // Mở form thêm khách hàng
+                                customerInfoForm.ShowDialog();
 
                                 // Sau khi form đóng lại, kiểm tra xem khách hàng đã được thêm chưa
                                 khachHang = dbContext.KHACHHANGs
@@ -163,7 +170,6 @@ namespace QuanLyCuaHang.UserControls
                                 if (khachHang == null)
                                 {
                                     MessageBox.Show("Không thể thêm khách hàng mới. Vui lòng thử lại.");
-
                                     billList.Clear();
                                     dvgXuatHoaDon.DataSource = null;
                                     dvgXuatHoaDon.DataSource = billList;
@@ -173,16 +179,66 @@ namespace QuanLyCuaHang.UserControls
                         }
                         else
                         {
-                            MessageBox.Show("Đang lưu hóa đơn mà không có khách hàng.");
+                            MessageBox.Show("Lưu hóa đơn mới không có khách hàng.");
 
-                            billList.Clear();
-                            dvgXuatHoaDon.DataSource = null;
-                            dvgXuatHoaDon.DataSource = billList;
+                            // Tạo hóa đơn mới không có mã khách hàng
+                            var hoaDonMoi = new HOADON
+                            {
+                                SoHD = CreateNewSoHD(),
+                                NgayLap = DateTime.Now,
+                                TongTien = billList.Sum(hd => hd.ThanhTien),
+                                GhiChu = "Đã thanh toán",
+                                MaNV = UserSession.MaNhanVienDangNhap
+                            };
+
+                            dbContext.HOADONs.Add(hoaDonMoi);
+
+                            // Lưu các chi tiết hóa đơn và thanh toán như thông thường
+                            foreach (var chiTiet in billList)
+                            {
+                                var sanPham = dbContext.SANPHAMs.FirstOrDefault(sp => sp.MaSP == chiTiet.MaSP);
+                                if (sanPham != null)
+                                {
+                                    var chiTietMoi = new CHITIETHOADON
+                                    {
+                                        SoHD = hoaDonMoi.SoHD,
+                                        MaSP = chiTiet.MaSP,
+                                        SoLuong = chiTiet.SoLuong,
+                                        ThanhTien = (sanPham.DonGia ?? 0) * chiTiet.SoLuong
+                                    };
+                                    dbContext.CHITIETHOADONs.Add(chiTietMoi);
+                                }
+                            }
+
+                            var maPTTT = cmbPaymentMethod.SelectedValue.ToString();
+                            var chiThanhToan = new CHITIETTHANHTOAN
+                            {
+                                SoHD = hoaDonMoi.SoHD,
+                                MaLTT = maPTTT,
+                                NgayThanhToan = DateTime.Now,
+                            };
+
+                            dbContext.CHITIETTHANHTOANs.Add(chiThanhToan);
+
+                            // SaveChanges và Commit transaction
+                            dbContext.SaveChanges();
+                            transaction.Commit();
+
+                            MessageBox.Show("Thêm hóa đơn mới không có khách hàng thành công!");
+
+                            // Hiển thị hóa đơn
+                            BillDetailForm billDetailForm = new BillDetailForm(
+                                hoaDonMoi.SoHD,
+                                "Khách hàng không xác định",
+                                string.Empty
+                            );
+                            billDetailForm.ShowDialog();
+                            return;
                         }
                     }
 
-                    // Tạo hóa đơn mới
-                    var hoaDonMoi = new HOADON
+                    // Tạo hóa đơn mới có mã khách hàng
+                    var hoaDon = new HOADON
                     {
                         SoHD = CreateNewSoHD(),
                         NgayLap = DateTime.Now,
@@ -192,7 +248,7 @@ namespace QuanLyCuaHang.UserControls
                         MaNV = UserSession.MaNhanVienDangNhap
                     };
 
-                    dbContext.HOADONs.Add(hoaDonMoi);
+                    dbContext.HOADONs.Add(hoaDon);
 
                     // Lưu chi tiết hóa đơn
                     foreach (var chiTiet in billList)
@@ -203,7 +259,7 @@ namespace QuanLyCuaHang.UserControls
                         {
                             var chiTietMoi = new CHITIETHOADON
                             {
-                                SoHD = hoaDonMoi.SoHD,
+                                SoHD = hoaDon.SoHD,
                                 MaSP = chiTiet.MaSP,
                                 SoLuong = chiTiet.SoLuong,
                                 ThanhTien = (sanPham.DonGia ?? 0) * chiTiet.SoLuong
@@ -217,37 +273,29 @@ namespace QuanLyCuaHang.UserControls
                         }
                     }
 
-                    // Kiểm tra phương thức thanh toán
-                    if (cmbPaymentMethod.SelectedValue != null)
+                    // Lưu chi tiết thanh toán
+                    var paymentMethodId = cmbPaymentMethod.SelectedValue.ToString();
+                    var paymentDetail = new CHITIETTHANHTOAN
                     {
-                        var maPTTT = cmbPaymentMethod.SelectedValue.ToString();
-                        var chiThanhToan = new CHITIETTHANHTOAN
-                        {
-                            SoHD = hoaDonMoi.SoHD,
-                            MaLTT = maPTTT,
-                            NgayThanhToan = DateTime.Now,
-                        };
+                        SoHD = hoaDon.SoHD,
+                        MaLTT = paymentMethodId,
+                        NgayThanhToan = DateTime.Now,
+                    };
 
-                        dbContext.CHITIETTHANHTOANs.Add(chiThanhToan);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng chọn phương thức thanh toán.");
-                        return; // Ngừng nếu không có phương thức thanh toán nào được chọn
-                    }
+                    dbContext.CHITIETTHANHTOANs.Add(paymentDetail);
 
-                    // Chỉ gọi SaveChanges một lần để lưu tất cả thay đổi
+                    // Lưu tất cả thay đổi
                     dbContext.SaveChanges();
                     transaction.Commit();
 
                     MessageBox.Show("Thêm hóa đơn mới thành công!");
 
-                    BillDetailForm billDetailForm = new BillDetailForm(
-                        hoaDonMoi.SoHD,
+                    BillDetailForm billDetailFormWithCustomer = new BillDetailForm(
+                        hoaDon.SoHD,
                         khachHang?.TenKH ?? "Khách hàng không xác định",
                         khachHang?.MaKH ?? string.Empty
                     );
-                    billDetailForm.ShowDialog();
+                    billDetailFormWithCustomer.ShowDialog();
                 }
                 catch (Exception ex)
                 {
@@ -338,6 +386,5 @@ namespace QuanLyCuaHang.UserControls
                 MessageBox.Show("Chưa chọn sản phẩm để xóa.");
             }
         }
-
     }
 }
