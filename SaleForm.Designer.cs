@@ -38,7 +38,6 @@
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearchSale = new System.Windows.Forms.Button();
-            this.btnDeleteSale = new System.Windows.Forms.Button();
             this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.txtSalePrice = new System.Windows.Forms.TextBox();
@@ -47,9 +46,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddSale = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnResetGrid = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteSale = new System.Windows.Forms.Button();
+            this.btnAddSale = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,10 +57,9 @@
             // 
             this.txtSaleName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSaleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaleName.Location = new System.Drawing.Point(463, 649);
-            this.txtSaleName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSaleName.Location = new System.Drawing.Point(373, 445);
             this.txtSaleName.Name = "txtSaleName";
-            this.txtSaleName.Size = new System.Drawing.Size(459, 44);
+            this.txtSaleName.Size = new System.Drawing.Size(307, 30);
             this.txtSaleName.TabIndex = 1;
             // 
             // dgvSale
@@ -68,6 +67,7 @@
             this.dgvSale.AllowUserToAddRows = false;
             this.dgvSale.AllowUserToDeleteRows = false;
             this.dgvSale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSale.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(98)))), ((int)(((byte)(128)))));
             this.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -75,13 +75,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvSale.Location = new System.Drawing.Point(238, -55);
-            this.dgvSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvSale.Location = new System.Drawing.Point(159, -5);
             this.dgvSale.Name = "dgvSale";
             this.dgvSale.ReadOnly = true;
             this.dgvSale.RowHeadersWidth = 51;
             this.dgvSale.RowTemplate.Height = 24;
-            this.dgvSale.Size = new System.Drawing.Size(1420, 637);
+            this.dgvSale.Size = new System.Drawing.Size(1074, 408);
             this.dgvSale.TabIndex = 15;
             // 
             // Column1
@@ -136,70 +135,53 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(174, 649);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(180, 445);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 37);
+            this.label5.Size = new System.Drawing.Size(117, 25);
             this.label5.TabIndex = 28;
             this.label5.Text = "Khuyến Mãi";
             // 
             // btnSearchSale
             // 
             this.btnSearchSale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearchSale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchSale.Location = new System.Drawing.Point(1129, 592);
-            this.btnSearchSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearchSale.Location = new System.Drawing.Point(841, 425);
             this.btnSearchSale.Name = "btnSearchSale";
-            this.btnSearchSale.Size = new System.Drawing.Size(529, 53);
+            this.btnSearchSale.Size = new System.Drawing.Size(353, 34);
             this.btnSearchSale.TabIndex = 4;
             this.btnSearchSale.Text = "Tìm Khuyến Mãi Theo Sản Phẩm";
             this.btnSearchSale.UseVisualStyleBackColor = true;
             this.btnSearchSale.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
-            // btnDeleteSale
-            // 
-            this.btnDeleteSale.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSale.Location = new System.Drawing.Point(1067, 922);
-            this.btnDeleteSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDeleteSale.Name = "btnDeleteSale";
-            this.btnDeleteSale.Size = new System.Drawing.Size(282, 53);
-            this.btnDeleteSale.TabIndex = 3;
-            this.btnDeleteSale.Text = "Delete Sale";
-            this.btnDeleteSale.UseVisualStyleBackColor = true;
-            this.btnDeleteSale.Click += new System.EventHandler(this.btnDeleteSale_Click_1);
-            // 
             // dtNgayKetThuc
             // 
             this.dtNgayKetThuc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtNgayKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayKetThuc.Location = new System.Drawing.Point(351, 926);
-            this.dtNgayKetThuc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtNgayKetThuc.Location = new System.Drawing.Point(298, 623);
             this.dtNgayKetThuc.Name = "dtNgayKetThuc";
-            this.dtNgayKetThuc.Size = new System.Drawing.Size(521, 44);
+            this.dtNgayKetThuc.Size = new System.Drawing.Size(349, 30);
             this.dtNgayKetThuc.TabIndex = 25;
             // 
             // dtNgayBatDau
             // 
             this.dtNgayBatDau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtNgayBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayBatDau.Location = new System.Drawing.Point(401, 833);
-            this.dtNgayBatDau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtNgayBatDau.Location = new System.Drawing.Point(331, 563);
             this.dtNgayBatDau.Name = "dtNgayBatDau";
-            this.dtNgayBatDau.Size = new System.Drawing.Size(521, 44);
+            this.dtNgayBatDau.Size = new System.Drawing.Size(349, 30);
             this.dtNgayBatDau.TabIndex = 24;
             // 
             // txtSalePrice
             // 
             this.txtSalePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalePrice.Location = new System.Drawing.Point(1360, 798);
-            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSalePrice.Location = new System.Drawing.Point(971, 541);
             this.txtSalePrice.Name = "txtSalePrice";
-            this.txtSalePrice.Size = new System.Drawing.Size(298, 44);
+            this.txtSalePrice.Size = new System.Drawing.Size(200, 30);
             this.txtSalePrice.TabIndex = 6;
             // 
             // label4
@@ -208,10 +190,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(1025, 810);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(747, 548);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(312, 37);
+            this.label4.Size = new System.Drawing.Size(195, 25);
             this.label4.TabIndex = 22;
             this.label4.Text = "Mức Giá Khuyến Mãi";
             // 
@@ -220,10 +201,9 @@
             this.cmbProductID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProductID.FormattingEnabled = true;
-            this.cmbProductID.Location = new System.Drawing.Point(463, 736);
-            this.cmbProductID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbProductID.Location = new System.Drawing.Point(373, 501);
             this.cmbProductID.Name = "cmbProductID";
-            this.cmbProductID.Size = new System.Drawing.Size(459, 45);
+            this.cmbProductID.Size = new System.Drawing.Size(307, 33);
             this.cmbProductID.TabIndex = 5;
             // 
             // label3
@@ -232,10 +212,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(147, 744);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(162, 506);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 37);
+            this.label3.Size = new System.Drawing.Size(144, 25);
             this.label3.TabIndex = 20;
             this.label3.Text = "Tên Sản Phẩm";
             // 
@@ -245,10 +224,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(130, 916);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(151, 616);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 37);
+            this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 19;
             this.label2.Text = "Ngày kết thúc";
             // 
@@ -258,39 +236,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(147, 839);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(162, 567);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 37);
+            this.label1.Size = new System.Drawing.Size(133, 25);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ngày Bắt Đầu";
-            // 
-            // btnAddSale
-            // 
-            this.btnAddSale.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSale.Location = new System.Drawing.Point(1372, 919);
-            this.btnAddSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAddSale.Name = "btnAddSale";
-            this.btnAddSale.Size = new System.Drawing.Size(239, 56);
-            this.btnAddSale.TabIndex = 2;
-            this.btnAddSale.Text = "Add Sale";
-            this.btnAddSale.UseVisualStyleBackColor = true;
-            this.btnAddSale.Click += new System.EventHandler(this.btnAddSale_Click_2);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
-            this.button1.Image = global::QuanLyCuaHang.Properties.Resources.Back5;
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 72);
-            this.button1.TabIndex = 35;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnResetGrid
             // 
@@ -300,19 +250,64 @@
             this.btnResetGrid.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnResetGrid.Image = global::QuanLyCuaHang.Properties.Resources.Update_Left_Rotation;
-            this.btnResetGrid.Location = new System.Drawing.Point(1828, 763);
+            this.btnResetGrid.Location = new System.Drawing.Point(1283, 518);
+            this.btnResetGrid.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetGrid.Name = "btnResetGrid";
-            this.btnResetGrid.Size = new System.Drawing.Size(154, 112);
+            this.btnResetGrid.Size = new System.Drawing.Size(103, 72);
             this.btnResetGrid.TabIndex = 36;
+            this.btnResetGrid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResetGrid.UseVisualStyleBackColor = false;
             this.btnResetGrid.Click += new System.EventHandler(this.btnResetGrid_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.button1.Image = global::QuanLyCuaHang.Properties.Resources.Back5;
+            this.button1.Location = new System.Drawing.Point(8, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 46);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnDeleteSale
+            // 
+            this.btnDeleteSale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.btnDeleteSale.Image = global::QuanLyCuaHang.Properties.Resources.Delete3;
+            this.btnDeleteSale.Location = new System.Drawing.Point(782, 596);
+            this.btnDeleteSale.Name = "btnDeleteSale";
+            this.btnDeleteSale.Size = new System.Drawing.Size(188, 65);
+            this.btnDeleteSale.TabIndex = 3;
+            this.btnDeleteSale.UseVisualStyleBackColor = true;
+            this.btnDeleteSale.Click += new System.EventHandler(this.btnDeleteSale_Click_1);
+            // 
+            // btnAddSale
+            // 
+            this.btnAddSale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.btnAddSale.Image = global::QuanLyCuaHang.Properties.Resources.Add7;
+            this.btnAddSale.Location = new System.Drawing.Point(992, 595);
+            this.btnAddSale.Name = "btnAddSale";
+            this.btnAddSale.Size = new System.Drawing.Size(159, 66);
+            this.btnAddSale.TabIndex = 2;
+            this.btnAddSale.UseVisualStyleBackColor = true;
+            this.btnAddSale.Click += new System.EventHandler(this.btnAddSale_Click_2);
+            // 
             // SaleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.ClientSize = new System.Drawing.Size(1390, 706);
             this.Controls.Add(this.btnResetGrid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSaleName);
@@ -329,6 +324,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddSale);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SaleForm";
             this.Text = "Khuyến Mãi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

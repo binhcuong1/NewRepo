@@ -517,5 +517,23 @@
   <ItemGroup>
     <None Include="Resources\Cancel6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sorting Arrows Horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
