@@ -87,7 +87,8 @@ namespace QuanLyCuaHang
 
             if (chucVu != "Admin" && chucVu != "Quản lý")
             {
-                //ẩn gì thì cài đạt
+                toolStripMenuItem1.Visible = false;
+                doanhThuToolStripMenuItem.Visible = false;
             }
         }
 
