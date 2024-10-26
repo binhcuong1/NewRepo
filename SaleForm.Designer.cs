@@ -150,12 +150,12 @@
             // 
             this.btnSearchSale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearchSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchSale.Location = new System.Drawing.Point(1244, 592);
+            this.btnSearchSale.Location = new System.Drawing.Point(1129, 592);
             this.btnSearchSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchSale.Name = "btnSearchSale";
-            this.btnSearchSale.Size = new System.Drawing.Size(414, 53);
+            this.btnSearchSale.Size = new System.Drawing.Size(529, 53);
             this.btnSearchSale.TabIndex = 4;
-            this.btnSearchSale.Text = "Lọc Theo Sản Phẩm";
+            this.btnSearchSale.Text = "Tìm Khuyến Mãi Theo Sản Phẩm";
             this.btnSearchSale.UseVisualStyleBackColor = true;
             this.btnSearchSale.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 

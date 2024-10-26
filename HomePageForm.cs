@@ -17,13 +17,19 @@ namespace QuanLyCuaHang
 {
     public partial class HomePageForm : Form
     {
+        private bool isOpenNote;
+
         private string originalText;
         public HomePageForm()
         {
             InitializeComponent();
             pnlOfDat.SendToBack();
             pnlOfHai.SendToBack();
-            originalText = "Cương khùngggg nha ae !          ";
+
+            isOpenNote = false;
+
+            lblNote.SendToBack();
+            originalText = "*********** Bớt bấm đt lại nha mấy em ***********";
             lblNote.Text = originalText;
             timerNote.Start();
         }
@@ -33,6 +39,8 @@ namespace QuanLyCuaHang
             OpenUserControl(new OutputBillUC(), pnlOfHai);
 
             lblHelloUser.BringToFront();
+
+            Ultilities.Services.SetCenterLabel(this, lblNote);
         }
 
         // Hàm mở form
@@ -139,6 +147,10 @@ namespace QuanLyCuaHang
             OpenForm(new SaleForm());
         }
 
+        private void ToolStripMenuItem_Revenue_Click(object sender, EventArgs e)
+        {
+            OpenForm(new SaleRevenueForm());
+        }
 
         #region Không đụng vào cái này
         private ContextMenuStrip contextMenuStrip1;
@@ -162,6 +174,7 @@ namespace QuanLyCuaHang
         private Button button2;
         private Label lblNote;
         private Timer timerNote;
+        private Button btnOpenOrCloseNote;
         private Panel pnlOfDat;
 
         private void InitializeComponent()
@@ -189,6 +202,7 @@ namespace QuanLyCuaHang
             this.lblOutPutBill = new System.Windows.Forms.Label();
             this.lblNote = new System.Windows.Forms.Label();
             this.timerNote = new System.Windows.Forms.Timer(this.components);
+            this.btnOpenOrCloseNote = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.pnlOfHai.SuspendLayout();
             this.SuspendLayout();
@@ -210,49 +224,49 @@ namespace QuanLyCuaHang
             // khuyếnMãiToolStripMenuItem
             // 
             this.khuyếnMãiToolStripMenuItem.Name = "khuyếnMãiToolStripMenuItem";
-            this.khuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.khuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(371, 44);
             this.khuyếnMãiToolStripMenuItem.Text = "Khuyến Mãi";
             this.khuyếnMãiToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Sale_Click);
             // 
             // doanhThuToolStripMenuItem
             // 
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
-            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(371, 44);
             this.doanhThuToolStripMenuItem.Text = "Doanh Thu";
-            this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.doanhThuToolStripMenuItem_Click);
+            this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Revenue_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(371, 44);
             this.kháchHàngToolStripMenuItem.Text = "Khách Hàng";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_CustomerInfo_Click);
             // 
             // hóaĐơnToolStripMenuItem
             // 
             this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
-            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(371, 44);
             this.hóaĐơnToolStripMenuItem.Text = "Lịch Sử Hóa Đơn";
             this.hóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_BillView_Click);
             // 
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(371, 44);
             this.sảnPhẩmToolStripMenuItem.Text = "Danh Mục Sản Phẩm";
             this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenu_ProductCategory_Click);
             // 
             // lươngToolStripMenuItem
             // 
             this.lươngToolStripMenuItem.Name = "lươngToolStripMenuItem";
-            this.lươngToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.lươngToolStripMenuItem.Size = new System.Drawing.Size(381, 44);
             this.lươngToolStripMenuItem.Text = "Danh Sách Nhân Viên";
             this.lươngToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_StaffList_Click);
             // 
             // caLàmViệcToolStripMenuItem
             // 
             this.caLàmViệcToolStripMenuItem.Name = "caLàmViệcToolStripMenuItem";
-            this.caLàmViệcToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.caLàmViệcToolStripMenuItem.Size = new System.Drawing.Size(381, 44);
             this.caLàmViệcToolStripMenuItem.Text = "Ca Làm Việc";
             this.caLàmViệcToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenu_Shift_Click);
             // 
@@ -262,13 +276,13 @@ namespace QuanLyCuaHang
             this.caLàmViệcToolStripMenuItem,
             this.lươngToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(371, 44);
             this.toolStripMenuItem1.Text = "Nhân Viên";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(225, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(368, 6);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -282,10 +296,11 @@ namespace QuanLyCuaHang
             this.khuyếnMãiToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(46, 36);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 36);
             // 
             // menuStrip2
             // 
+            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.danhMụcToolStripMenuItem});
@@ -332,7 +347,7 @@ namespace QuanLyCuaHang
             this.lblHelloUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloUser.Location = new System.Drawing.Point(297, 114);
             this.lblHelloUser.Name = "lblHelloUser";
-            this.lblHelloUser.Size = new System.Drawing.Size(333, 38);
+            this.lblHelloUser.Size = new System.Drawing.Size(540, 61);
             this.lblHelloUser.TabIndex = 9;
             this.lblHelloUser.Text = "Hiển thị thông tin user";
             // 
@@ -344,17 +359,19 @@ namespace QuanLyCuaHang
             this.lblOutPutBill.Location = new System.Drawing.Point(854, 172);
             this.lblOutPutBill.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOutPutBill.Name = "lblOutPutBill";
-            this.lblOutPutBill.Size = new System.Drawing.Size(266, 45);
+            this.lblOutPutBill.Size = new System.Drawing.Size(429, 73);
             this.lblOutPutBill.TabIndex = 11;
             this.lblOutPutBill.Text = "Xuất Hóa Đơn";
             // 
             // lblNote
             // 
-            this.lblNote.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNote.ForeColor = System.Drawing.Color.Black;
-            this.lblNote.Location = new System.Drawing.Point(28, 505);
+            this.lblNote.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNote.AutoSize = true;
+            this.lblNote.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNote.ForeColor = System.Drawing.Color.Red;
+            this.lblNote.Location = new System.Drawing.Point(904, 749);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(275, 32);
+            this.lblNote.Size = new System.Drawing.Size(120, 55);
             this.lblNote.TabIndex = 12;
             this.lblNote.Text = "Note";
             this.lblNote.Click += new System.EventHandler(this.timerNote_Click);
@@ -363,10 +380,23 @@ namespace QuanLyCuaHang
             // 
             this.timerNote.Tick += new System.EventHandler(this.timerNote_Click);
             // 
+            // btnOpenOrCloseNote
+            // 
+            this.btnOpenOrCloseNote.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenOrCloseNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenOrCloseNote.Location = new System.Drawing.Point(363, 756);
+            this.btnOpenOrCloseNote.Name = "btnOpenOrCloseNote";
+            this.btnOpenOrCloseNote.Size = new System.Drawing.Size(298, 53);
+            this.btnOpenOrCloseNote.TabIndex = 13;
+            this.btnOpenOrCloseNote.Text = "Xem ghi chú của sếp";
+            this.btnOpenOrCloseNote.UseVisualStyleBackColor = true;
+            this.btnOpenOrCloseNote.Click += new System.EventHandler(this.BtnOpenOrCloseNote_Click);
+            // 
             // HomePageForm
             // 
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1924, 1009);
+            this.Controls.Add(this.btnOpenOrCloseNote);
             this.Controls.Add(this.lblNote);
             this.Controls.Add(this.lblOutPutBill);
             this.Controls.Add(this.lblHelloUser);
@@ -393,10 +423,20 @@ namespace QuanLyCuaHang
             lblNote.Text = originalText;
         }
 
-        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BtnOpenOrCloseNote_Click(object sender, EventArgs e)
         {
-            OpenForm(new SaleRevenueForm());
-
+            if (!isOpenNote)
+            {
+                lblNote.BringToFront();
+                isOpenNote = true;
+                btnOpenOrCloseNote.Text = "Ẩn Ghi Chú";
+            }
+            else
+            {
+                lblNote.SendToBack();
+                isOpenNote = false;
+                btnOpenOrCloseNote.Text = "Xem Ghi Chú";
+            }
         }
     }
 }

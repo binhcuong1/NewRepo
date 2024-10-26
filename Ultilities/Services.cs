@@ -22,5 +22,14 @@ namespace QuanLyCuaHang.Ultilities
             panel.Location = new Point(x, y);
         }
 
+        // Hàm dùng để set label ở vị trí giữa form
+        public static void SetCenterLabel(Form form, Label label)
+        {
+            // Tính toán vị trí X để đặt Label ở giữa trục X của form
+            int x = (form.ClientSize.Width - label.Width) / 2;
+
+            // Giữ nguyên vị trí Y của Label, chỉ căn giữa theo trục X
+            label.Location = new Point(x, label.Location.Y);
+        }
     }
 }
