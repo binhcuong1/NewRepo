@@ -101,7 +101,7 @@ namespace QuanLyCuaHang
             double mucTieuDoanhThuTrongNgay = 1000000; // Ví dụ: mục tiêu doanh thu mỗi ngày là 1 triệu VND
 
             // Tính doanh thu của ngày hôm nay
-            var doanhThuTong = dbContext.HOADONs
+            double doanhThuTong = dbContext.HOADONs
                 .Where(hd => hd.NgayLap.HasValue &&
                      hd.NgayLap.Value.Day == today.Day &&
                      hd.NgayLap.Value.Month == today.Month &&
@@ -110,7 +110,7 @@ namespace QuanLyCuaHang
                      hd => hd.SoHD,
                      cthd => cthd.SoHD,
                      (hd, cthd) => cthd.ThanhTien)
-                .Sum(thanhTien => thanhTien ?? 0);
+                .Sum(thanhTien => thanhTien) ?? 0;
 
             return new SaleRevenueViewModel
             {

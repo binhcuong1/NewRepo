@@ -39,11 +39,11 @@
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnFilterDataOfProductGate = new System.Windows.Forms.Button();
             this.btnOpenProductUC = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnResetGrid = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlAddProduct = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductGatetoryOfForm)).BeginInit();
@@ -162,17 +162,6 @@
             this.panel1.Size = new System.Drawing.Size(1658, 394);
             this.panel1.TabIndex = 8;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(438, -43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(418, 49);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Danh Mục Sản Phẩm";
-            // 
             // btnFilterDataOfProductGate
             // 
             this.btnFilterDataOfProductGate.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -181,10 +170,10 @@
             this.btnFilterDataOfProductGate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilterDataOfProductGate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.btnFilterDataOfProductGate.Image = global::QuanLyCuaHang.Properties.Resources.Search;
-            this.btnFilterDataOfProductGate.Location = new System.Drawing.Point(829, 161);
+            this.btnFilterDataOfProductGate.Location = new System.Drawing.Point(1239, 248);
             this.btnFilterDataOfProductGate.Margin = new System.Windows.Forms.Padding(2);
             this.btnFilterDataOfProductGate.Name = "btnFilterDataOfProductGate";
-            this.btnFilterDataOfProductGate.Size = new System.Drawing.Size(267, 74);
+            this.btnFilterDataOfProductGate.Size = new System.Drawing.Size(382, 119);
             this.btnFilterDataOfProductGate.TabIndex = 6;
             this.btnFilterDataOfProductGate.UseVisualStyleBackColor = false;
             this.btnFilterDataOfProductGate.Click += new System.EventHandler(this.BtnFilterDataOfProductGate_Click);
@@ -233,6 +222,17 @@
             this.btnResetGrid.TabIndex = 5;
             this.btnResetGrid.UseVisualStyleBackColor = false;
             this.btnResetGrid.Click += new System.EventHandler(this.btnResetGrid_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(438, -43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(663, 78);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Danh Mục Sản Phẩm";
             // 
             // btnBack
             // 

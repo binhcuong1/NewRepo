@@ -15,6 +15,8 @@ namespace QuanLyCuaHang
 {
     public partial class SaleForm : Form
     {
+        string currNameSale = string.Empty;
+
         public ConveStoreDBContext dbContext;
         private List<SaleViewModel> sales;
         private List<ProductViewModel> Products;
@@ -25,6 +27,8 @@ namespace QuanLyCuaHang
             InitializeComponent();
             loadcmbProductID();
             LoadSaleName();
+
+            dgvSale.CellClick += dgvSaleForm_CellContentClick;
         }
 
         private void SaleForm_Load(object sender, EventArgs e)
@@ -45,7 +49,9 @@ namespace QuanLyCuaHang
 
         private void LoadSaleName()
         {
-            sales = dbContext.CHITITETKHUYENMAIs.Select(c => new SaleViewModel
+            sales = dbContext.CHITITETKHUYENMAIs
+                .Where(c => c.KHUYENMAI.TenKM != "đã xóa")
+                .Select(c => new SaleViewModel
             {
                 MaKM = c.MaKM,
                 TenKM = c.KHUYENMAI.TenKM,
@@ -62,6 +68,7 @@ namespace QuanLyCuaHang
             BindToGrid(sales);
             BindTocmbProductID(Products);
         }
+
         private void BindTocmbProductID(List<ProductViewModel> products)
         {
             cmbProductID.DataSource = products;
@@ -86,60 +93,44 @@ namespace QuanLyCuaHang
             }
         }
 
-        private void btnAddSale_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnAddSale_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                CHITITETKHUYENMAI km = new CHITITETKHUYENMAI()
-                {
-                    MaKM = txtSaleName.Text,
-                    MaSP = cmbProductID.SelectedValue.ToString(),
-                    NgayBatDau = dateTimePicker1.Value,
-                    NgayKetThuc = dateTimePicker2.Value,
-                    MucGiaKhuyenMai = Double.Parse(txtSalePrice.Text)
-
-                };
-                dbContext.CHITITETKHUYENMAIs.Add(km);
-                dbContext.SaveChanges();
-                MessageBox.Show("Thanh Cong");
-                LoadSaleName();
-                BindToGrid(sales);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "That Bai");
-            }
-
-        }
-
         private void btnAddSale_Click_2(object sender, EventArgs e)
         {
             try
             {
-                CHITITETKHUYENMAI km = new CHITITETKHUYENMAI()
-                {
-                    MaKM = txtSaleName.Text,
-                    MaSP = cmbProductID.SelectedValue.ToString(),
-                    NgayBatDau = dateTimePicker1.Value,
-                    NgayKetThuc = dateTimePicker2.Value,
-                    MucGiaKhuyenMai = Double.Parse(txtSalePrice.Text)
+                bool isEmptyInput = cmbProductID.SelectedIndex == -1
+                    || string.IsNullOrEmpty(txtSalePrice.Text)
+                    || string.IsNullOrEmpty(txtSaleName.Text);
 
-                };
-                dbContext.CHITITETKHUYENMAIs.Add(km);
+                if (isEmptyInput)
+                    throw new Exception("Hãy điền đầy đủ các thông tin");
+
+                KHUYENMAI newKhuyenMai = new KHUYENMAI();
+                newKhuyenMai.MaKM = CreateNewSaleID();
+                newKhuyenMai.TenKM = txtSaleName.Text;
+
+                dbContext.KHUYENMAIs.Add(newKhuyenMai);
                 dbContext.SaveChanges();
-                MessageBox.Show("Thanh Cong");
-                LoadSaleName();
-                BindToGrid(sales);
+
+                CHITITETKHUYENMAI newCTKM = new CHITITETKHUYENMAI();
+                newCTKM.MaKM = newKhuyenMai.MaKM;
+                newCTKM.MaSP = cmbProductID.SelectedValue.ToString();
+                newCTKM.NgayBatDau = dtNgayBatDau.Value;
+                newCTKM.NgayKetThuc = dtNgayKetThuc.Value;
+                newCTKM.MucGiaKhuyenMai = double.Parse(txtSalePrice.Text);
+
+                dbContext.CHITITETKHUYENMAIs.Add(newCTKM);
+                dbContext.SaveChanges();
+                throw new Exception("Thêm khuyến mãi thành công");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex + "That Bai");
+                LoadSaleName();
+
+                BindToGrid(sales);
+
+                ResetInputSaleFrm();
+
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -147,65 +138,28 @@ namespace QuanLyCuaHang
         {
             try
             {
-                var salesToDelete = dbContext.CHITITETKHUYENMAIs.Where(x => x.MaKM == txtSaleName.Text).ToList();
+                if (string.IsNullOrEmpty(currNameSale))
+                    throw new Exception("Hãy click vào 1 khuyến mãi mãi để xóa");
 
+                KHUYENMAI saleToDelete = dbContext.KHUYENMAIs
+                    .FirstOrDefault(km => km.TenKM.ToLower().Contains(currNameSale.ToLower()));
 
-                if (salesToDelete.Any())
-                {
-                    dbContext.CHITITETKHUYENMAIs.RemoveRange(salesToDelete);
-                    dbContext.SaveChanges();
-                    MessageBox.Show("Xóa thành công!");
+                saleToDelete.TenKM = "đã xóa";
 
-                    LoadSaleName();
-                    BindToGrid(sales);
-                }
-                else
-                {
-                    MessageBox.Show("Không Có");
-                }
-
+                dbContext.SaveChanges();
+                throw new Exception("Xóa khuyến mãi thành công");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xóa thất bại: " + ex.Message);
-            }
-        }
+                currNameSale = string.Empty;
 
-        private void btnSearchSale_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                string maKM = txtSaleName.Text.Trim();
-                if (string.IsNullOrEmpty(maKM))
-                {
-                    MessageBox.Show("Vui lòng nhập mã khuyến mãi để tìm kiếm.");
-                    return;
-                }
+                LoadSaleName();
 
-                foreach (DataGridViewRow row in dgvSale.Rows)
-                {
-                    row.Selected = false;
-                }
+                BindToGrid(sales);
 
-                bool found = false;
-                foreach (DataGridViewRow row in dgvSale.Rows)
-                {
-                    var saleViewModel = row.DataBoundItem as SaleViewModel;
-                    if (saleViewModel != null && saleViewModel.MaKM.Equals(maKM, StringComparison.OrdinalIgnoreCase))
-                    {
-                        row.Selected = true;
-                        found = true;
-                    }
-                }
+                ResetInputSaleFrm();
 
-                if (!found)
-                {
-                    MessageBox.Show("Không tìm thấy khuyến mãi với mã đã nhập.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -214,6 +168,80 @@ namespace QuanLyCuaHang
             HomePageForm homePageForm = new HomePageForm();
             this.Hide();
             homePageForm.Show();
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbProductID.SelectedIndex == -1)
+                    throw new Exception("Chưa chọn sản phẩm để lọc");
+
+                string valueToSearch = cmbProductID.SelectedValue.ToString();
+
+                var currList = dbContext.CHITITETKHUYENMAIs
+                    .Where(km => km.MaSP == valueToSearch)
+                    .Select(km => new SaleViewModel
+                    {
+                        MaKM = km.MaKM,
+                        TenKM = km.KHUYENMAI.TenKM,
+                        TenSP = km.SANPHAM.TenSP,
+                        MucGiaKhuyenMai = km.MucGiaKhuyenMai,
+                        NgayBatDau = km.NgayBatDau,
+                        NgayKetThuc = km.NgayKetThuc
+                    })
+                    .ToList();
+
+                BindToGrid(currList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } 
+        }
+
+        private void btnResetGrid_Click(object sender, EventArgs e)
+        {
+            LoadSaleName();
+
+            BindToGrid(sales);
+
+            ResetInputSaleFrm();
+        }
+
+        private string CreateNewSaleID()
+        {
+            var numOfSaleList = dbContext.KHUYENMAIs.Count();
+
+            string result = string.Empty;
+            bool isTwoDigitNumber = numOfSaleList <= 98 && numOfSaleList >= 9;
+            bool isThreeDigitNumber = numOfSaleList <= 998 && numOfSaleList >= 99;
+
+            numOfSaleList += 2;
+
+            if (isTwoDigitNumber)
+                result = "KM0" + numOfSaleList.ToString().Trim();
+            else if (isThreeDigitNumber)
+                result = "KM" + numOfSaleList.ToString().Trim();
+
+            return result;
+        }
+
+        private void ResetInputSaleFrm()
+        {
+            txtSaleName.Text = string.Empty;
+            txtSalePrice.Text = string.Empty;
+            cmbProductID.SelectedIndex = -1;
+        }
+
+        private void dgvSaleForm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string saleID = dgvSale.Rows[e.RowIndex].Cells["column1"].Value.ToString();
+
+                currNameSale = saleID;
+            }
         }
     }
 }  
