@@ -316,6 +316,7 @@ namespace QuanLyCuaHang
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.danhMụcToolStripMenuItem});
@@ -360,7 +361,7 @@ namespace QuanLyCuaHang
             this.lblHelloUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHelloUser.AutoSize = true;
             this.lblHelloUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelloUser.Location = new System.Drawing.Point(297, 114);
+            this.lblHelloUser.Location = new System.Drawing.Point(302, 90);
             this.lblHelloUser.Name = "lblHelloUser";
             this.lblHelloUser.Size = new System.Drawing.Size(333, 38);
             this.lblHelloUser.TabIndex = 9;
