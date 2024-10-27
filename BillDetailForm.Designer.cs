@@ -48,9 +48,9 @@
             // lblCustomerName
             // 
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(29, 20);
+            this.lblCustomerName.Location = new System.Drawing.Point(31, 9);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(206, 23);
+            this.lblCustomerName.Size = new System.Drawing.Size(310, 37);
             this.lblCustomerName.TabIndex = 12;
             // 
             // dvgChiTietHoaDon
