@@ -344,17 +344,6 @@ namespace QuanLyCuaHang.UserControls
 
             return "HD" + numberPart.ToString("D3");
         }
-        private void dvgXuatHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedRow = dvgXuatHoaDon.Rows[e.RowIndex];
-                if (selectedRow.Cells["MaSP"].Value != null)
-                {
-                    currMaSP = selectedRow.Cells["MaSP"].Value.ToString();
-                }
-            }
-        }
         private void btnCancelProduct_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(currMaSP))
@@ -384,6 +373,18 @@ namespace QuanLyCuaHang.UserControls
             else
             {
                 MessageBox.Show("Chưa chọn sản phẩm để xóa.");
+            }
+        }
+        private void dvgXuatHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dvgXuatHoaDon.Rows[e.RowIndex];
+                if (selectedRow.Cells["MaSP"].Value != null)
+                {
+                    currMaSP = selectedRow.Cells["MaSP"].Value.ToString();
+                }
             }
         }
     }
