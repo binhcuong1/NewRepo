@@ -35,17 +35,17 @@ namespace QuanLyCuaHang.UserControls
             LoadProductGatetoryToComboBox();
             LoadProductToComboBox();
             LoadPaymentMethodToCombobox();
-            cmbProductType.SelectedItem = null;
             cmbProduct.SelectedItem = null;
+            cmbProductType.SelectedItem = null;
             cmbPaymentMethod.SelectedItem = null;
         }
         private void LoadProductToComboBox()
         {
-            var loaiSanPhamList = dbContext.LOAISANPHAMs.ToList();
+            var sanPhamList = dbContext.SANPHAMs.ToList();
 
-            cmbProductType.DataSource = loaiSanPhamList;
-            cmbProductType.DisplayMember = "TenTheLoai";
-            cmbProductType.ValueMember = "MaTheLoai";
+            cmbProduct.DataSource = sanPhamList;
+            cmbProduct.DisplayMember = "TenSP";
+            cmbProduct.ValueMember = "MaSP";
         }
         private void LoadProductGatetoryToComboBox()
         {
