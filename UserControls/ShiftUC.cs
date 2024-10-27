@@ -256,5 +256,10 @@ namespace QuanLyCuaHang.UserControls
             dateTimePickerNgayLam.CustomFormat = " ";
             dateTimePickerNgayLam.Format = DateTimePickerFormat.Custom;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

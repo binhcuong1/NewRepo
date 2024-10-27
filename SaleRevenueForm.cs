@@ -257,5 +257,10 @@ namespace QuanLyCuaHang
             // Cập nhật Chart Control để hiển thị
             chartMonthlyRevenue.Invalidate();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

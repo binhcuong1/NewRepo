@@ -20,6 +20,8 @@ namespace QuanLyCuaHang
         private bool isOpenNote;
 
         private string originalText;
+
+        #region contrucstor methods
         public HomePageForm()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace QuanLyCuaHang
             lblNote.SendToBack();
             originalText = "*********** Bớt bấm đt lại nha mấy em ***********";
             lblNote.Text = originalText;
-            timerNote.Start();
+            //timerNote.Start();
         }
 
         public HomePageForm(string roleCurrent)
@@ -53,6 +55,7 @@ namespace QuanLyCuaHang
             lblNote.Text = originalText;
             timerNote.Start();
         }
+        #endregion
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
@@ -67,7 +70,6 @@ namespace QuanLyCuaHang
         void OpenForm(Form f)
         {
             f.Show();
-            this.Hide();
         }
 
         // Hàm mở usercontrol
@@ -81,7 +83,6 @@ namespace QuanLyCuaHang
         }
 
         
-
         #region Phân quyền & Hiển thị quyền 
         private void HomePageForm_Activated(object sender, EventArgs e)
         {
@@ -115,6 +116,7 @@ namespace QuanLyCuaHang
         }
 
         #endregion
+
 
         // Nút mở ra danh mục sản phẩm
         private void ToolStripMenu_ProductCategory_Click(object sender, EventArgs e)
@@ -428,13 +430,13 @@ namespace QuanLyCuaHang
         }
 
         #endregion
-        
+
         private void timerNote_Click(object sender, EventArgs e)
         {
-            originalText = originalText.Substring(1) + originalText[0];
+            //originalText = originalText.Substring(1) + originalText[0];
 
-            // Cập nhật lại văn bản cho Label
-            lblNote.Text = originalText;
+            //// Cập nhật lại văn bản cho Label
+            //lblNote.Text = originalText;
         }
 
         private void BtnOpenOrCloseNote_Click(object sender, EventArgs e)

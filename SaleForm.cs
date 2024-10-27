@@ -165,9 +165,7 @@ namespace QuanLyCuaHang
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            HomePageForm homePageForm = new HomePageForm();
             this.Hide();
-            homePageForm.Show();
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)

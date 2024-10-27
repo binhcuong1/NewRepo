@@ -207,6 +207,11 @@ namespace QuanLyCuaHang.UserControls
                                         ThanhTien = (sanPham.DonGia ?? 0) * chiTiet.SoLuong
                                     };
                                     dbContext.CHITIETHOADONs.Add(chiTietMoi);
+
+                                    TONKHO currSanPham = dbContext.TONKHOes
+                                .FirstOrDefault(sp => sp.MaSP.ToLower().Trim().Contains(chiTietMoi.MaSP.ToLower().Trim()));
+
+                                    currSanPham.SoLuongTonKho = currSanPham.SoLuongTonKho - chiTietMoi.SoLuong;
                                 }
                             }
 
@@ -386,6 +391,13 @@ namespace QuanLyCuaHang.UserControls
                     currMaSP = selectedRow.Cells["MaSP"].Value.ToString();
                 }
             }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            var num = numericUpDownSoLuong.Value;
+
+            MessageBox.Show(num.ToString());
         }
     }
 }

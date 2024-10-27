@@ -57,7 +57,7 @@ namespace QuanLyCuaHang
         public string IsLogin(string username, string password)
         {
             var accountCurrent = db.TAIKHOANs
-                .FirstOrDefault(u => u.TenTK == username && u.MatKhau == password);
+                .FirstOrDefault(u => u.TenTK == username.Trim() && u.MatKhau == password.Trim());
 
 
             if (accountCurrent != null)
@@ -86,6 +86,6 @@ namespace QuanLyCuaHang
         }
 
 
-        #endregion
+        #endregion 
     }
 }

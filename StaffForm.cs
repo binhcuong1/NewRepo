@@ -121,9 +121,7 @@ namespace QuanLyCuaHang
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            HomePageForm homePageForm = new HomePageForm();
             this.Hide();
-            homePageForm.Show();
         }
 
         private void BtnSalaryList_Click(object sender, EventArgs e)

@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvOfShiftUC = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOfShiftUC)).BeginInit();
             this.SuspendLayout();
@@ -195,11 +196,26 @@
             this.dgvOfShiftUC.TabIndex = 4;
             this.dgvOfShiftUC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOfShiftUC_CellContentClick);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.button3.Image = global::QuanLyCuaHang.Properties.Resources.Back5;
+            this.button3.Location = new System.Drawing.Point(15, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(111, 72);
+            this.button3.TabIndex = 36;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ShiftUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvOfShiftUC);
             this.Name = "ShiftUC";
@@ -227,5 +243,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dgvOfShiftUC;
+        private System.Windows.Forms.Button button3;
     }
 }
