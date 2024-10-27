@@ -85,8 +85,7 @@ namespace QuanLyCuaHang
             Application.Exit();
         }
 
-        #endregion
 
-      
+        #endregion
     }
 }

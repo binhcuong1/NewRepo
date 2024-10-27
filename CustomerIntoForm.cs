@@ -176,7 +176,8 @@ namespace QuanLyCuaHang
             string searchValue = txtTimKiem.Text.ToLower();
             var searchResult = customerList.Where(c => c.TenKH.ToLower().Contains(searchValue) ||
                                                        c.DiaChi.ToLower().Contains(searchValue) ||
-                                                       c.Sdt.Contains(searchValue)).ToList();
+                                                       c.Sdt.Contains(searchValue))
+                .ToList();
             dgvCustomerInfo.DataSource = searchResult;
 
             if (searchResult.Count == 0)

@@ -75,7 +75,7 @@ namespace QuanLyCuaHang
             // Thiết lập Chart Control
             chart1.Series.Clear(); // Xóa dữ liệu cũ nếu có
             chart1.ChartAreas[0].AxisX.Title = "Ngày";
-            chart1.ChartAreas[0].AxisY.Title = "Doanh Thu (triệu VND)";
+            chart1.ChartAreas[0].AxisY.Title = "Doanh Thu (VND)";
 
             // Thêm Series
             var series = new Series
@@ -122,27 +122,28 @@ namespace QuanLyCuaHang
         }
         public void LoadDailyTargetChart()
         {
+            // Lấy dữ liệu doanh thu của ngày hôm nay
             var data = GetRevenueForToday();
 
             // Thiết lập Chart Control
             chartDailyTarget.Series.Clear(); // Xóa dữ liệu cũ nếu có
-            chartDailyTarget.Titles.Clear();
-            chartDailyTarget.Titles.Add($"Mục Tiêu Doanh Thu Ngày {data.Ngay}/{data.Thang}");
+            chartDailyTarget.Titles.Clear(); // Xóa tiêu đề cũ nếu có
+            chartDailyTarget.Titles.Add($"Mục Tiêu Doanh Thu Ngày {data.Ngay}/{data.Thang}"); // Thêm tiêu đề mới cho biểu đồ
 
             // Tạo Series cho biểu đồ tròn
             var series = new Series
             {
                 Name = "DoanhThuNgay",
-                ChartType = SeriesChartType.Pie
+                ChartType = SeriesChartType.Pie // Đặt kiểu biểu đồ là biểu đồ tròn
             };
-            chartDailyTarget.Series.Add(series);
+            chartDailyTarget.Series.Add(series); // Thêm Series vào biểu đồ
 
-            // Tính toán phần doanh thu đạt được và phần còn lại của mục tiêu
-            series.Points.AddXY("Đã đạt", data.DoanhThuTong);
-            double remaining = data.MucTieuDoanhThu - data.DoanhThuTong;
+            // Tính toán phần doanh thu đã đạt được và phần còn lại của mục tiêu
+            series.Points.AddXY("Đã đạt", data.DoanhThuTong); // Thêm điểm biểu diễn doanh thu đã đạt
+            double remaining = data.MucTieuDoanhThu - data.DoanhThuTong; // Tính phần doanh thu còn lại của mục tiêu
             if (remaining > 0)
             {
-                series.Points.AddXY("Còn lại", remaining);
+                series.Points.AddXY("Còn lại", remaining); // Thêm điểm biểu diễn phần chưa đạt được của mục tiêu
             }
 
             // Thiết lập hiển thị phần trăm
@@ -150,12 +151,14 @@ namespace QuanLyCuaHang
             series["PieLabelStyle"] = "Outside"; // Hiển thị nhãn bên ngoài biểu đồ
 
             // Định dạng màu sắc để dễ nhận biết
-            series.Points[0].Color = Color.Blue; // Doanh thu đã đạt
+            series.Points[0].Color = Color.Blue; // Màu xanh biểu diễn doanh thu đã đạt
+            series.Points[0].LegendText = "Đã đạt";
+
             if (remaining > 0)
             {
-                series.Points[1].Color = Color.Gray; // Mục tiêu chưa đạt
+                series.Points[1].Color = Color.Gray; // Màu xám biểu diễn phần mục tiêu chưa đạt được
+                series.Points[1].LegendText = "Còn lại";
             }
-
             // Cập nhật Chart Control để hiển thị
             chartDailyTarget.Invalidate();
         }

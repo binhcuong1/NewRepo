@@ -140,6 +140,8 @@ namespace QuanLyCuaHang
             LoadProducts();
 
             BindToGrid(productList);
+
+            txtNumOfProduct.Text = string.Empty;
         }
 
         private void btnOpenProductUC_Click(object sender, EventArgs e)
@@ -294,6 +296,18 @@ namespace QuanLyCuaHang
                 string ProductID = dgvProductGatetoryOfForm.Rows[e.RowIndex].Cells["column1"].Value.ToString();
 
                 currProductID = ProductID;
+
+                if (!string.IsNullOrEmpty(currProductID))
+                {
+                    var currProduct = db.TONKHOes.FirstOrDefault(tk => tk.MaSP == currProductID);
+
+                    if (currProduct != null)
+                        txtNumOfProduct.Text = currProduct.SoLuongTonKho.ToString();
+                    else
+                        txtNumOfProduct.Text = "0";
+                }
+                else
+                    txtNumOfProduct.Text = string.Empty;
             }
         }
 

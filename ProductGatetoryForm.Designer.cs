@@ -46,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlAddProduct = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNumOfProduct = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductGatetoryOfForm)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -251,10 +253,31 @@
             // 
             // pnlAddProduct
             // 
-            this.pnlAddProduct.Location = new System.Drawing.Point(1804, 33);
+            this.pnlAddProduct.Location = new System.Drawing.Point(1812, 839);
             this.pnlAddProduct.Name = "pnlAddProduct";
             this.pnlAddProduct.Size = new System.Drawing.Size(1000, 700);
             this.pnlAddProduct.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1805, 362);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(275, 37);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Số lượng tồn kho";
+            // 
+            // txtNumOfProduct
+            // 
+            this.txtNumOfProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNumOfProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumOfProduct.Location = new System.Drawing.Point(1899, 402);
+            this.txtNumOfProduct.Name = "txtNumOfProduct";
+            this.txtNumOfProduct.Size = new System.Drawing.Size(100, 44);
+            this.txtNumOfProduct.TabIndex = 11;
             // 
             // ProductGatetoryForm
             // 
@@ -262,8 +285,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.Controls.Add(this.txtNumOfProduct);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvProductGatetoryOfForm);
             this.Controls.Add(this.pnlAddProduct);
@@ -301,5 +326,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNumOfProduct;
     }
 }

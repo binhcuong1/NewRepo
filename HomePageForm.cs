@@ -34,6 +34,26 @@ namespace QuanLyCuaHang
             timerNote.Start();
         }
 
+        public HomePageForm(string roleCurrent)
+        {
+            InitializeComponent();
+            pnlOfDat.SendToBack();
+            pnlOfHai.SendToBack();
+
+            isOpenNote = false;
+            DisplayRoleCurrent(roleCurrent);
+
+            DisplayHelloUser();
+
+            AssignPermissionsByRole();
+
+            // Đoạn dùng để chạy text note
+            lblNote.SendToBack();
+            originalText = "*********** Bớt bấm đt lại nha mấy em ***********";
+            lblNote.Text = originalText;
+            timerNote.Start();
+        }
+
         private void HomePageForm_Load(object sender, EventArgs e)
         {
             OpenUserControl(new OutputBillUC(), pnlOfHai);
@@ -60,16 +80,7 @@ namespace QuanLyCuaHang
             pnl.Controls.Add(uc);
         }
 
-        public HomePageForm(string roleCurrent)
-        {
-            InitializeComponent();
-
-            DisplayRoleCurrent(roleCurrent);
-
-            DisplayHelloUser();
-
-            AssignPermissionsByRole();
-        }
+        
 
         #region Phân quyền & Hiển thị quyền 
 
