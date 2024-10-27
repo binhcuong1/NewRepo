@@ -16,7 +16,10 @@ namespace QuanLyCuaHang.UserControls
     {
         private DateTime? selectedDate = null;
         private ConveStoreDBContext dbContext;
-        public BillListUC()
+
+        Panel currPanel;
+
+        public BillListUC(Panel currPanel)
         {
             InitializeComponent();
             dbContext = new ConveStoreDBContext();
@@ -30,6 +33,8 @@ namespace QuanLyCuaHang.UserControls
             //dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //dvgListHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvgListHoaDon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            this.currPanel = currPanel;
         }
 
         private void BillListUC_Load(object sender, EventArgs e)
@@ -206,6 +211,14 @@ namespace QuanLyCuaHang.UserControls
             BindBillToGrid();
         }
 
-     
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            currPanel.Controls.Clear();
+            OutputBillUC uc = new OutputBillUC();
+            uc.Dock = DockStyle.Fill;
+            currPanel.Controls.Add(uc);
+        }
     }
 }

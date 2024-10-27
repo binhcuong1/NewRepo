@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dvgListHoaDon = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBackToProductGateFrm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgListHoaDon)).BeginInit();
             this.SuspendLayout();
@@ -169,7 +170,7 @@
             this.dvgListHoaDon.ReadOnly = true;
             this.dvgListHoaDon.RowHeadersWidth = 51;
             this.dvgListHoaDon.RowTemplate.Height = 24;
-            this.dvgListHoaDon.Size = new System.Drawing.Size(1462, 886);
+            this.dvgListHoaDon.Size = new System.Drawing.Size(1227, 886);
             this.dvgListHoaDon.TabIndex = 2;
             this.dvgListHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgListHoaDon_CellContentClick);
             // 
@@ -185,11 +186,27 @@
             this.panel1.Size = new System.Drawing.Size(332, 348);
             this.panel1.TabIndex = 4;
             // 
+            // btnBackToProductGateFrm
+            // 
+            this.btnBackToProductGateFrm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackToProductGateFrm.BackColor = System.Drawing.Color.White;
+            this.btnBackToProductGateFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToProductGateFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToProductGateFrm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBackToProductGateFrm.Image = global::QuanLyCuaHang.Properties.Resources.Cancel6;
+            this.btnBackToProductGateFrm.Location = new System.Drawing.Point(1827, 3);
+            this.btnBackToProductGateFrm.Name = "btnBackToProductGateFrm";
+            this.btnBackToProductGateFrm.Size = new System.Drawing.Size(90, 73);
+            this.btnBackToProductGateFrm.TabIndex = 38;
+            this.btnBackToProductGateFrm.UseVisualStyleBackColor = false;
+            this.btnBackToProductGateFrm.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
             // BillListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnBackToProductGateFrm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dvgListHoaDon);
@@ -216,5 +233,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dvgListHoaDon;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnBackToProductGateFrm;
     }
 }

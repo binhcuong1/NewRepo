@@ -44,10 +44,10 @@
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnResetGrid = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.pnlAddProduct = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumOfProduct = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductGatetoryOfForm)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -236,21 +236,6 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Danh Mục Sản Phẩm";
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
-            this.btnBack.Image = global::QuanLyCuaHang.Properties.Resources.Back6;
-            this.btnBack.Location = new System.Drawing.Point(8, 8);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(56, 43);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.BtnBackToHomePage_Click);
-            // 
             // pnlAddProduct
             // 
             this.pnlAddProduct.Location = new System.Drawing.Point(1812, 839);
@@ -279,17 +264,31 @@
             this.txtNumOfProduct.Size = new System.Drawing.Size(100, 44);
             this.txtNumOfProduct.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
+            this.button1.Image = global::QuanLyCuaHang.Properties.Resources.Back5;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 72);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.BtnBackToHomePage_Click);
+            // 
             // ProductGatetoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNumOfProduct);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvProductGatetoryOfForm);
             this.Controls.Add(this.pnlAddProduct);
             this.MaximizeBox = false;
@@ -316,7 +315,6 @@
         private System.Windows.Forms.ComboBox cmbSupplier;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOpenProductUC;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnlAddProduct;
         private System.Windows.Forms.Button btnDeleteProduct;
         private System.Windows.Forms.Panel panel1;
@@ -328,5 +326,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumOfProduct;
+        private System.Windows.Forms.Button button1;
     }
 }

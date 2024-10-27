@@ -22,7 +22,9 @@ namespace QuanLyCuaHang.UserControls
 
         private DateTime? selectedDate = null;
 
-        public ShiftUC()
+        Panel currPanel;
+
+        public ShiftUC(Panel currPanel)
         {
             InitializeComponent();
             dbContext = new ConveStoreDBContext();
@@ -42,6 +44,7 @@ namespace QuanLyCuaHang.UserControls
             //dgvOfShiftUC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //dgvOfShiftUC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOfShiftUC.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.currPanel = currPanel;
         }
 
         private void ShiftUC_Load(object sender, EventArgs e)
@@ -257,9 +260,14 @@ namespace QuanLyCuaHang.UserControls
             dateTimePickerNgayLam.Format = DateTimePickerFormat.Custom;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
+
+            currPanel.Controls.Clear();
+            OutputBillUC uc = new OutputBillUC();
+            uc.Dock = DockStyle.Fill;
+            currPanel.Controls.Add(uc);
         }
     }
 }
