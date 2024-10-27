@@ -33,7 +33,7 @@ namespace QuanLyCuaHang
             lblNote.SendToBack();
             originalText = "*********** Bớt bấm đt lại nha mấy em ***********";
             lblNote.Text = originalText;
-            //timerNote.Start();
+            timerNote.Start();
         }
 
         public HomePageForm(string roleCurrent)
@@ -433,10 +433,10 @@ namespace QuanLyCuaHang
 
         private void timerNote_Click(object sender, EventArgs e)
         {
-            //originalText = originalText.Substring(1) + originalText[0];
+            originalText = originalText.Substring(1) + originalText[0];
 
-            //// Cập nhật lại văn bản cho Label
-            //lblNote.Text = originalText;
+            // Cập nhật lại văn bản cho Label
+            lblNote.Text = originalText;
         }
 
         private void BtnOpenOrCloseNote_Click(object sender, EventArgs e)
