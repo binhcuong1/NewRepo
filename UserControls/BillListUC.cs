@@ -43,7 +43,7 @@ namespace QuanLyCuaHang.UserControls
         }
         public void BindBillToGrid()
         {
-            var hoaDonList = LoadHoaDon(); // Gọi phương thức lấy dữ liệu
+            var hoaDonList = LoadHoaDon(); 
             dvgListHoaDon.DataSource = hoaDonList;
 
         }
@@ -53,12 +53,12 @@ namespace QuanLyCuaHang.UserControls
             {
                 SoHD = ct.SoHD,
                 NgayLap = ct.NgayLap,
-                GhiChu = ct.GhiChu,
-                MaNV = ct.MaNV,
-                MaPH = ct.MaPH,
-                MaKH = ct.MaKH,
+                GhiChu = ct.GhiChu,            
+                TenNV = ct.NHANVIEN.TenNV,
                 TenKH = ct.KHACHHANG.TenKH,
                 Sdt = ct.KHACHHANG.Sdt,
+                NoiDung = ct.PHANHOIKHACHHANG.NoiDung,
+                NgayPhanHoi = ct.PHANHOIKHACHHANG.NgayPhanHoi,
             }).ToList();
 
             // Xử lý các phương thức riêng như trước
