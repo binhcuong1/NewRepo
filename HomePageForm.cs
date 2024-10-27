@@ -18,7 +18,7 @@ namespace QuanLyCuaHang
     public partial class HomePageForm : Form
     {
         private string originalText;
-
+        private Button btnLogOut;
         string currRole;
 
         #region contrucstor methods
@@ -150,6 +150,26 @@ namespace QuanLyCuaHang
             OpenForm(new SaleRevenueForm());
         }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo);
+
+                if (DialogResult == DialogResult.Yes)
+                {
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+
         #region Không đụng vào cái này
         private ContextMenuStrip contextMenuStrip1;
         private IContainer components;
@@ -195,6 +215,7 @@ namespace QuanLyCuaHang
             this.pnlOfDat = new System.Windows.Forms.Panel();
             this.lblHelloUser = new System.Windows.Forms.Label();
             this.timerNote = new System.Windows.Forms.Timer(this.components);
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.pnlOfHai.SuspendLayout();
             this.SuspendLayout();
@@ -288,7 +309,7 @@ namespace QuanLyCuaHang
             this.khuyếnMãiToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 44);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(52, 36);
             // 
             // menuStrip2
             // 
@@ -299,7 +320,7 @@ namespace QuanLyCuaHang
             this.danhMụcToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1924, 48);
+            this.menuStrip2.Size = new System.Drawing.Size(1924, 40);
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip1";
             // 
@@ -344,13 +365,25 @@ namespace QuanLyCuaHang
             this.lblHelloUser.TabIndex = 9;
             this.lblHelloUser.Text = "Hiển thị thông tin user";
             // 
-            // timerNote
+            // btnLogOut
             // 
+            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(1709, 12);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(203, 76);
+            this.btnLogOut.TabIndex = 10;
+            this.btnLogOut.Text = "Đăng Xuất";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // HomePageForm
             // 
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1924, 1009);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.lblHelloUser);
             this.Controls.Add(this.pnlOfHai);
             this.Controls.Add(this.menuStrip2);
@@ -367,5 +400,7 @@ namespace QuanLyCuaHang
         }
 
         #endregion
+
+        
     }
 }
