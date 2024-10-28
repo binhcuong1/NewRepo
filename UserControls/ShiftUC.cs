@@ -119,7 +119,7 @@ namespace QuanLyCuaHang.UserControls
         }
 
         
-        private void dgvOfShiftUC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvOfShiftUC_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -137,7 +137,6 @@ namespace QuanLyCuaHang.UserControls
                         break;
                     }
                 }
-
                 txtMaCa.Text = row.Cells["MaCa"].Value.ToString();
                 cmbShift.Text = row.Cells["TenCa"].Value.ToString();
                 dateTimePickerNgayLam.Value = DateTime.Parse(row.Cells["NgayLam"].Value.ToString());
@@ -212,33 +211,36 @@ namespace QuanLyCuaHang.UserControls
         {
             try
             {
-                var CaLamViecHienTai = dbContext.CHITIETCALAMVIECs.FirstOrDefault(c => c.MaCa.Trim() == cmbStaff.Text.Trim());
+                string maCa = txtMaCa.Text.Trim();
+                var CaLamViecHienTai = dbContext.CHITIETCALAMVIECs.FirstOrDefault(c => c.MaCa == maCa);
+                string maNhanVien = cmbStaff.SelectedValue?.ToString() ?? "NV000";
 
                 if (CaLamViecHienTai != null)
                 {
-                    string maNhanVien = cmbStaff.SelectedValue?.ToString() ?? "NV000"; 
+                    // Nếu muốn thay đổi MaNV, xóa bản ghi hiện tại và thêm bản ghi mới
+                    dbContext.CHITIETCALAMVIECs.Remove(CaLamViecHienTai);
+                    dbContext.SaveChanges();
 
-                    if (CaLamViecHienTai.MaNV == "NV000")
+                    // Thêm bản ghi mới với MaNV mới
+                    var newShift = new CHITIETCALAMVIEC
                     {
-                        CaLamViecHienTai.MaNV = maNhanVien;
-                        dbContext.SaveChanges();
+                        MaCa = maCa,
+                        MaNV = maNhanVien,
+                        // Thêm các thông tin cần thiết khác tại đây nếu cần
+                    };
 
-                        MessageBox.Show("Thêm ca làm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        CaLamViecHienTai.MaNV = maNhanVien;
-                        dbContext.SaveChanges();
+                    dbContext.CHITIETCALAMVIECs.Add(newShift);
+                    dbContext.SaveChanges();
 
-                        MessageBox.Show("Sửa ca làm việc thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    LoadShiftToGrid();
-                    ResetSearchFields();
+                    MessageBox.Show("Thêm ca làm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show("Không tìm thấy ca làm việc với mã ca này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                LoadShiftToGrid();
+                ResetSearchFields();
             }
             catch (Exception ex)
             {

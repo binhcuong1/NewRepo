@@ -196,7 +196,7 @@
             this.dgvOfShiftUC.RowTemplate.Height = 24;
             this.dgvOfShiftUC.Size = new System.Drawing.Size(1113, 850);
             this.dgvOfShiftUC.TabIndex = 4;
-            this.dgvOfShiftUC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOfShiftUC_CellContentClick);
+            this.dgvOfShiftUC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOfShiftUC_CellClick);
             // 
             // btnBackToProductGateFrm
             // 
