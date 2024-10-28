@@ -53,7 +53,8 @@ namespace QuanLyCuaHang.UserControls
             {
                 SoHD = ct.SoHD,
                 NgayLap = ct.NgayLap,
-                GhiChu = ct.GhiChu,            
+                GhiChu = ct.GhiChu,
+                MaKH = ct.MaKH,
                 TenNV = ct.NHANVIEN.TenNV,
                 TenKH = ct.KHACHHANG.TenKH,
                 Sdt = ct.KHACHHANG.Sdt,
