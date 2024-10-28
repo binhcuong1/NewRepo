@@ -269,5 +269,76 @@ namespace QuanLyCuaHang.UserControls
             uc.Dock = DockStyle.Fill;
             currPanel.Controls.Add(uc);
         }
+
+        private void btnCreateShift_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime currDate = new DateTime();
+                currDate = dtCreateShift.Value;
+
+                var var = dbContext.CALAMVIECs
+                    .FirstOrDefault(c => c.NgayLam.Value.Day == currDate.Day 
+                                    && c.NgayLam.Value.Month == currDate.Month
+                                    && c.NgayLam.Value.Year == currDate.Year);
+
+                if (var != null)
+                    throw new Exception("Đã có ngày này trong ca làm việc");
+                else
+                {
+                    FillAShift(currDate);
+
+                    throw new Exception("Sinh ca thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                LoadData();
+
+                LoadShiftToGrid();
+
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+
+        void FillAShift(DateTime currDate)
+        {
+            var loaiCaList = dbContext.LOAICALAMVIECs.ToList();
+            foreach (var item in loaiCaList)
+            {
+                CALAMVIEC newCalamviec = new CALAMVIEC();
+                CHITIETCALAMVIEC newCTCLV = new CHITIETCALAMVIEC();
+
+                newCalamviec.NgayLam = currDate;
+                newCalamviec.MaCa = CreateShiftID();
+                newCalamviec.MaLoaiCa = item.MaLoaiCa;
+
+                newCTCLV.MaCa = newCalamviec.MaCa;
+                newCTCLV.MaNV = "NV000";
+
+                dbContext.CALAMVIECs.Add(newCalamviec);
+                dbContext.CHITIETCALAMVIECs.Add(newCTCLV);
+                dbContext.SaveChanges();
+            }
+        }
+
+        private string CreateShiftID()
+        {
+            int numOfShiftList = dbContext.CALAMVIECs.Count();
+
+            string result = string.Empty;
+            bool isTwoDigitNumber = numOfShiftList <= 98 && numOfShiftList >= 9;
+            bool isThreeDigitNumber = numOfShiftList <= 998 && numOfShiftList >= 99;
+
+            numOfShiftList += 2;
+
+            if (isTwoDigitNumber)
+                result = "CA0" + numOfShiftList.ToString().Trim();
+            else if (isThreeDigitNumber)
+                result = "CA" + numOfShiftList.ToString().Trim();
+            else result = "CA00" + numOfShiftList.ToString().Trim();
+
+            return result;
+        }
     }
 }

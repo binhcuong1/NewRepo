@@ -43,6 +43,9 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvOfShiftUC = new System.Windows.Forms.DataGridView();
             this.btnBackToProductGateFrm = new System.Windows.Forms.Button();
+            this.btnCreateShift = new System.Windows.Forms.Button();
+            this.dtCreateShift = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOfShiftUC)).BeginInit();
             this.SuspendLayout();
@@ -78,12 +81,11 @@
             // 
             // txtMaCa
             // 
-            this.txtMaCa.Location = new System.Drawing.Point(442, 234);
+            this.txtMaCa.Location = new System.Drawing.Point(364, 234);
             this.txtMaCa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaCa.Name = "txtMaCa";
-            this.txtMaCa.Size = new System.Drawing.Size(60, 31);
+            this.txtMaCa.Size = new System.Drawing.Size(138, 31);
             this.txtMaCa.TabIndex = 6;
-            this.txtMaCa.Visible = false;
             // 
             // dateTimePickerNgayLam
             // 
@@ -211,11 +213,45 @@
             this.btnBackToProductGateFrm.UseVisualStyleBackColor = false;
             this.btnBackToProductGateFrm.Click += new System.EventHandler(this.BtnBack_Click);
             // 
+            // btnCreateShift
+            // 
+            this.btnCreateShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateShift.Location = new System.Drawing.Point(235, 653);
+            this.btnCreateShift.Name = "btnCreateShift";
+            this.btnCreateShift.Size = new System.Drawing.Size(247, 97);
+            this.btnCreateShift.TabIndex = 38;
+            this.btnCreateShift.Text = "Sinh ca làm việc";
+            this.btnCreateShift.UseVisualStyleBackColor = true;
+            this.btnCreateShift.Click += new System.EventHandler(this.btnCreateShift_Click);
+            // 
+            // dtCreateShift
+            // 
+            this.dtCreateShift.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtCreateShift.Location = new System.Drawing.Point(37, 591);
+            this.dtCreateShift.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtCreateShift.Name = "dtCreateShift";
+            this.dtCreateShift.Size = new System.Drawing.Size(492, 41);
+            this.dtCreateShift.TabIndex = 5;
+            this.dtCreateShift.ValueChanged += new System.EventHandler(this.dateTimePickerNgayLam_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(122, 533);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(295, 31);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Chọn ngày để sinh ca";
+            // 
             // ShiftUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnCreateShift);
+            this.Controls.Add(this.dtCreateShift);
             this.Controls.Add(this.btnBackToProductGateFrm);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvOfShiftUC);
@@ -226,6 +262,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOfShiftUC)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -245,5 +282,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dgvOfShiftUC;
         private System.Windows.Forms.Button btnBackToProductGateFrm;
+        private System.Windows.Forms.Button btnCreateShift;
+        private System.Windows.Forms.DateTimePicker dtCreateShift;
+        private System.Windows.Forms.Label label5;
     }
 }
