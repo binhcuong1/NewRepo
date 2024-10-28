@@ -86,6 +86,7 @@
             this.txtMaCa.Name = "txtMaCa";
             this.txtMaCa.Size = new System.Drawing.Size(138, 31);
             this.txtMaCa.TabIndex = 6;
+            this.txtMaCa.Visible = false;
             // 
             // dateTimePickerNgayLam
             // 
